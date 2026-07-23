@@ -7,6 +7,7 @@
 - Added restrained paper, blueprint, scanline, and film-grain surface treatments with low-contrast safeguards.
 - Expanded the stack-neutral application atlas from seven to twelve complete responsive examples: landing, portfolio, top-nav, sidebar, dashboard, data admin, catalog, knowledge base, settings, staged flow, mobile, and deep systems.
 - Kept the icon catalog unchanged at 161 previously reviewed conventional product symbols; no speculative niche glyphs were introduced.
+- Replaced the internal build workflow in the public package with a zero-dependency validator for manifests, required assets, local links, examples, and icon counts.
 
 ## 1.4.0 — 2026-07-23
 
