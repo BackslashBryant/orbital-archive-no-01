@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" role="img">
+  <title>Refresh content</title>
+  <path d="M20 7v5h-5" />
+  <path d="M4 17v-5h5" />
+  <path d="M6.1 8a7 7 0 0 1 11.7-2L20 8" />
+  <path d="M17.9 16a7 7 0 0 1-11.7 2L4 16" />
+</svg>

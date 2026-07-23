@@ -1,0 +1,994 @@
+{
+  "name": "Orbital Archive No. 01 Native Icons",
+  "version": "1.5.0",
+  "artboard": 24,
+  "defaultStrokeWidth": 1.5,
+  "supportedSizes": [
+    16,
+    20,
+    24,
+    32,
+    48
+  ],
+  "license": "MIT",
+  "count": 161,
+  "categories": {
+    "navigation": 36,
+    "action": 47,
+    "status": 22,
+    "data": 36,
+    "communication": 20
+  },
+  "icons": [
+    {
+      "name": "arrow-up",
+      "category": "navigation",
+      "description": "Move or navigate upward",
+      "aliases": []
+    },
+    {
+      "name": "arrow-down",
+      "category": "navigation",
+      "description": "Move or navigate downward",
+      "aliases": []
+    },
+    {
+      "name": "arrow-left",
+      "category": "navigation",
+      "description": "Move or navigate left",
+      "aliases": []
+    },
+    {
+      "name": "arrow-right",
+      "category": "navigation",
+      "description": "Move or navigate right",
+      "aliases": []
+    },
+    {
+      "name": "chevron-up",
+      "category": "navigation",
+      "description": "Expand or move upward",
+      "aliases": []
+    },
+    {
+      "name": "chevron-down",
+      "category": "navigation",
+      "description": "Expand or move downward",
+      "aliases": []
+    },
+    {
+      "name": "chevron-left",
+      "category": "navigation",
+      "description": "Navigate to the previous item",
+      "aliases": []
+    },
+    {
+      "name": "chevron-right",
+      "category": "navigation",
+      "description": "Navigate to the next item",
+      "aliases": []
+    },
+    {
+      "name": "home",
+      "category": "navigation",
+      "description": "Home destination",
+      "aliases": []
+    },
+    {
+      "name": "return",
+      "category": "navigation",
+      "description": "Return to a shallower context",
+      "aliases": []
+    },
+    {
+      "name": "external-link",
+      "category": "navigation",
+      "description": "Open an external destination",
+      "aliases": []
+    },
+    {
+      "name": "expand",
+      "category": "navigation",
+      "description": "Expand view",
+      "aliases": []
+    },
+    {
+      "name": "collapse",
+      "category": "navigation",
+      "description": "Collapse view",
+      "aliases": []
+    },
+    {
+      "name": "maximize",
+      "category": "navigation",
+      "description": "Maximize panel",
+      "aliases": []
+    },
+    {
+      "name": "minimize",
+      "category": "navigation",
+      "description": "Minimize panel",
+      "aliases": []
+    },
+    {
+      "name": "menu",
+      "category": "navigation",
+      "description": "Open navigation menu",
+      "aliases": []
+    },
+    {
+      "name": "close",
+      "category": "navigation",
+      "description": "Close or dismiss",
+      "aliases": []
+    },
+    {
+      "name": "more-horizontal",
+      "category": "navigation",
+      "description": "More actions",
+      "aliases": []
+    },
+    {
+      "name": "more-vertical",
+      "category": "navigation",
+      "description": "More actions",
+      "aliases": []
+    },
+    {
+      "name": "corner-up-left",
+      "category": "navigation",
+      "description": "Turn or reply left",
+      "aliases": []
+    },
+    {
+      "name": "corner-up-right",
+      "category": "navigation",
+      "description": "Turn or forward right",
+      "aliases": []
+    },
+    {
+      "name": "move",
+      "category": "navigation",
+      "description": "Move in any direction",
+      "aliases": []
+    },
+    {
+      "name": "navigation",
+      "category": "navigation",
+      "description": "Directional navigation pointer",
+      "aliases": []
+    },
+    {
+      "name": "route",
+      "category": "navigation",
+      "description": "Route between points",
+      "aliases": []
+    },
+    {
+      "name": "add",
+      "category": "action",
+      "description": "Add an item",
+      "aliases": []
+    },
+    {
+      "name": "remove",
+      "category": "action",
+      "description": "Remove an item",
+      "aliases": []
+    },
+    {
+      "name": "edit",
+      "category": "action",
+      "description": "Edit content",
+      "aliases": []
+    },
+    {
+      "name": "copy",
+      "category": "action",
+      "description": "Copy content",
+      "aliases": []
+    },
+    {
+      "name": "check",
+      "category": "action",
+      "description": "Confirm or complete",
+      "aliases": []
+    },
+    {
+      "name": "search",
+      "category": "action",
+      "description": "Search content",
+      "aliases": []
+    },
+    {
+      "name": "filter",
+      "category": "action",
+      "description": "Filter results",
+      "aliases": []
+    },
+    {
+      "name": "download",
+      "category": "action",
+      "description": "Download an asset",
+      "aliases": []
+    },
+    {
+      "name": "upload",
+      "category": "action",
+      "description": "Upload an asset",
+      "aliases": []
+    },
+    {
+      "name": "refresh",
+      "category": "action",
+      "description": "Refresh content",
+      "aliases": []
+    },
+    {
+      "name": "sync",
+      "category": "action",
+      "description": "Synchronize state",
+      "aliases": []
+    },
+    {
+      "name": "play",
+      "category": "action",
+      "description": "Start playback or process",
+      "aliases": []
+    },
+    {
+      "name": "pause",
+      "category": "action",
+      "description": "Pause playback or process",
+      "aliases": []
+    },
+    {
+      "name": "stop",
+      "category": "action",
+      "description": "Stop playback or process",
+      "aliases": []
+    },
+    {
+      "name": "power",
+      "category": "action",
+      "description": "Power control",
+      "aliases": []
+    },
+    {
+      "name": "settings",
+      "category": "action",
+      "description": "System settings",
+      "aliases": []
+    },
+    {
+      "name": "lock",
+      "category": "action",
+      "description": "Locked state",
+      "aliases": []
+    },
+    {
+      "name": "unlock",
+      "category": "action",
+      "description": "Unlocked state",
+      "aliases": []
+    },
+    {
+      "name": "eye",
+      "category": "action",
+      "description": "Show or view content",
+      "aliases": []
+    },
+    {
+      "name": "eye-off",
+      "category": "action",
+      "description": "Hide content",
+      "aliases": []
+    },
+    {
+      "name": "pin",
+      "category": "action",
+      "description": "Pin an item",
+      "aliases": []
+    },
+    {
+      "name": "archive",
+      "category": "action",
+      "description": "Archive content",
+      "aliases": []
+    },
+    {
+      "name": "trash",
+      "category": "action",
+      "description": "Delete content",
+      "aliases": []
+    },
+    {
+      "name": "save",
+      "category": "action",
+      "description": "Save content",
+      "aliases": []
+    },
+    {
+      "name": "print",
+      "category": "action",
+      "description": "Print content",
+      "aliases": []
+    },
+    {
+      "name": "share",
+      "category": "action",
+      "description": "Share content",
+      "aliases": []
+    },
+    {
+      "name": "link",
+      "category": "action",
+      "description": "Link content",
+      "aliases": []
+    },
+    {
+      "name": "unlink",
+      "category": "action",
+      "description": "Remove a link",
+      "aliases": []
+    },
+    {
+      "name": "scan",
+      "category": "action",
+      "description": "Scan or acquire target",
+      "aliases": []
+    },
+    {
+      "name": "crop",
+      "category": "action",
+      "description": "Crop or frame content",
+      "aliases": []
+    },
+    {
+      "name": "sort",
+      "category": "action",
+      "description": "Sort a collection",
+      "aliases": []
+    },
+    {
+      "name": "info",
+      "category": "status",
+      "description": "Informational status",
+      "aliases": []
+    },
+    {
+      "name": "help",
+      "category": "status",
+      "description": "Help or unknown status",
+      "aliases": []
+    },
+    {
+      "name": "alert",
+      "category": "status",
+      "description": "Warning status",
+      "aliases": []
+    },
+    {
+      "name": "error",
+      "category": "status",
+      "description": "Error or fault status",
+      "aliases": []
+    },
+    {
+      "name": "warning",
+      "category": "status",
+      "description": "Degraded or warning status",
+      "aliases": []
+    },
+    {
+      "name": "success",
+      "category": "status",
+      "description": "Success or nominal status",
+      "aliases": []
+    },
+    {
+      "name": "prohibited",
+      "category": "status",
+      "description": "Prohibited action",
+      "aliases": []
+    },
+    {
+      "name": "offline",
+      "category": "status",
+      "description": "Offline or disconnected state",
+      "aliases": []
+    },
+    {
+      "name": "shield",
+      "category": "status",
+      "description": "Protection or security",
+      "aliases": []
+    },
+    {
+      "name": "shield-check",
+      "category": "status",
+      "description": "Verified protection",
+      "aliases": []
+    },
+    {
+      "name": "shield-alert",
+      "category": "status",
+      "description": "Security alert",
+      "aliases": []
+    },
+    {
+      "name": "bell",
+      "category": "status",
+      "description": "Notification",
+      "aliases": []
+    },
+    {
+      "name": "bell-off",
+      "category": "status",
+      "description": "Notifications disabled",
+      "aliases": []
+    },
+    {
+      "name": "flag",
+      "category": "status",
+      "description": "Flag or priority marker",
+      "aliases": []
+    },
+    {
+      "name": "spark",
+      "category": "status",
+      "description": "New or enhanced state",
+      "aliases": []
+    },
+    {
+      "name": "activity",
+      "category": "status",
+      "description": "System activity",
+      "aliases": []
+    },
+    {
+      "name": "file",
+      "category": "data",
+      "description": "File asset",
+      "aliases": []
+    },
+    {
+      "name": "file-text",
+      "category": "data",
+      "description": "Text document",
+      "aliases": []
+    },
+    {
+      "name": "folder",
+      "category": "data",
+      "description": "Folder",
+      "aliases": []
+    },
+    {
+      "name": "folder-open",
+      "category": "data",
+      "description": "Open folder",
+      "aliases": []
+    },
+    {
+      "name": "clipboard",
+      "category": "data",
+      "description": "Clipboard",
+      "aliases": []
+    },
+    {
+      "name": "database",
+      "category": "data",
+      "description": "Database",
+      "aliases": []
+    },
+    {
+      "name": "server",
+      "category": "data",
+      "description": "Server resource",
+      "aliases": []
+    },
+    {
+      "name": "terminal",
+      "category": "data",
+      "description": "Command terminal",
+      "aliases": []
+    },
+    {
+      "name": "code",
+      "category": "data",
+      "description": "Source code",
+      "aliases": []
+    },
+    {
+      "name": "table",
+      "category": "data",
+      "description": "Data table",
+      "aliases": []
+    },
+    {
+      "name": "chart-line",
+      "category": "data",
+      "description": "Line chart",
+      "aliases": []
+    },
+    {
+      "name": "chart-bar",
+      "category": "data",
+      "description": "Bar chart",
+      "aliases": []
+    },
+    {
+      "name": "chart-pie",
+      "category": "data",
+      "description": "Pie chart",
+      "aliases": []
+    },
+    {
+      "name": "grid",
+      "category": "data",
+      "description": "Grid view",
+      "aliases": []
+    },
+    {
+      "name": "list",
+      "category": "data",
+      "description": "List view",
+      "aliases": []
+    },
+    {
+      "name": "layers",
+      "category": "data",
+      "description": "Layer stack",
+      "aliases": []
+    },
+    {
+      "name": "package",
+      "category": "data",
+      "description": "Package or module",
+      "aliases": []
+    },
+    {
+      "name": "inbox",
+      "category": "data",
+      "description": "Incoming items",
+      "aliases": []
+    },
+    {
+      "name": "outbox",
+      "category": "data",
+      "description": "Outgoing items",
+      "aliases": []
+    },
+    {
+      "name": "hard-drive",
+      "category": "data",
+      "description": "Storage device",
+      "aliases": []
+    },
+    {
+      "name": "cpu",
+      "category": "data",
+      "description": "Processor or compute",
+      "aliases": []
+    },
+    {
+      "name": "network",
+      "category": "data",
+      "description": "Connected network",
+      "aliases": []
+    },
+    {
+      "name": "key",
+      "category": "data",
+      "description": "Access key or credential",
+      "aliases": []
+    },
+    {
+      "name": "hash",
+      "category": "data",
+      "description": "Identifier or number",
+      "aliases": []
+    },
+    {
+      "name": "sliders",
+      "category": "data",
+      "description": "Adjust parameters",
+      "aliases": []
+    },
+    {
+      "name": "brackets",
+      "category": "data",
+      "description": "Structured data",
+      "aliases": []
+    },
+    {
+      "name": "binary",
+      "category": "data",
+      "description": "Binary data",
+      "aliases": []
+    },
+    {
+      "name": "user",
+      "category": "communication",
+      "description": "User account",
+      "aliases": []
+    },
+    {
+      "name": "users",
+      "category": "communication",
+      "description": "User group",
+      "aliases": []
+    },
+    {
+      "name": "message",
+      "category": "communication",
+      "description": "Message",
+      "aliases": []
+    },
+    {
+      "name": "messages",
+      "category": "communication",
+      "description": "Message thread",
+      "aliases": []
+    },
+    {
+      "name": "mail",
+      "category": "communication",
+      "description": "Email",
+      "aliases": []
+    },
+    {
+      "name": "send",
+      "category": "communication",
+      "description": "Send message",
+      "aliases": []
+    },
+    {
+      "name": "calendar",
+      "category": "communication",
+      "description": "Calendar date",
+      "aliases": []
+    },
+    {
+      "name": "clock",
+      "category": "communication",
+      "description": "Time",
+      "aliases": []
+    },
+    {
+      "name": "timer",
+      "category": "communication",
+      "description": "Countdown timer",
+      "aliases": []
+    },
+    {
+      "name": "history",
+      "category": "communication",
+      "description": "History or recent activity",
+      "aliases": []
+    },
+    {
+      "name": "phone",
+      "category": "communication",
+      "description": "Phone contact",
+      "aliases": []
+    },
+    {
+      "name": "radio",
+      "category": "communication",
+      "description": "Radio communications",
+      "aliases": []
+    },
+    {
+      "name": "microphone",
+      "category": "communication",
+      "description": "Voice input",
+      "aliases": []
+    },
+    {
+      "name": "volume",
+      "category": "communication",
+      "description": "Audio volume",
+      "aliases": []
+    },
+    {
+      "name": "mute",
+      "category": "communication",
+      "description": "Audio muted",
+      "aliases": []
+    },
+    {
+      "name": "first-page",
+      "category": "navigation",
+      "description": "Navigate to the first page",
+      "aliases": []
+    },
+    {
+      "name": "last-page",
+      "category": "navigation",
+      "description": "Navigate to the last page",
+      "aliases": []
+    },
+    {
+      "name": "skip-back",
+      "category": "navigation",
+      "description": "Skip to the previous item",
+      "aliases": []
+    },
+    {
+      "name": "skip-forward",
+      "category": "navigation",
+      "description": "Skip to the next item",
+      "aliases": []
+    },
+    {
+      "name": "login",
+      "category": "navigation",
+      "description": "Enter or sign in",
+      "aliases": []
+    },
+    {
+      "name": "logout",
+      "category": "navigation",
+      "description": "Exit or sign out",
+      "aliases": []
+    },
+    {
+      "name": "rotate-cw",
+      "category": "navigation",
+      "description": "Rotate clockwise",
+      "aliases": []
+    },
+    {
+      "name": "rotate-ccw",
+      "category": "navigation",
+      "description": "Rotate counterclockwise",
+      "aliases": []
+    },
+    {
+      "name": "zoom-in",
+      "category": "navigation",
+      "description": "Increase magnification",
+      "aliases": []
+    },
+    {
+      "name": "zoom-out",
+      "category": "navigation",
+      "description": "Decrease magnification",
+      "aliases": []
+    },
+    {
+      "name": "panel-left",
+      "category": "navigation",
+      "description": "Toggle the left panel",
+      "aliases": []
+    },
+    {
+      "name": "panel-right",
+      "category": "navigation",
+      "description": "Toggle the right panel",
+      "aliases": []
+    },
+    {
+      "name": "undo",
+      "category": "action",
+      "description": "Undo the previous action",
+      "aliases": []
+    },
+    {
+      "name": "redo",
+      "category": "action",
+      "description": "Redo the previous action",
+      "aliases": []
+    },
+    {
+      "name": "cut",
+      "category": "action",
+      "description": "Cut selected content",
+      "aliases": []
+    },
+    {
+      "name": "paste",
+      "category": "action",
+      "description": "Paste clipboard content",
+      "aliases": []
+    },
+    {
+      "name": "attach",
+      "category": "action",
+      "description": "Attach a file",
+      "aliases": [
+        "paperclip"
+      ]
+    },
+    {
+      "name": "bookmark",
+      "category": "action",
+      "description": "Bookmark content",
+      "aliases": []
+    },
+    {
+      "name": "heart",
+      "category": "action",
+      "description": "Favorite or save for later",
+      "aliases": [
+        "favorite"
+      ]
+    },
+    {
+      "name": "format-bold",
+      "category": "action",
+      "description": "Apply bold text style",
+      "aliases": []
+    },
+    {
+      "name": "format-italic",
+      "category": "action",
+      "description": "Apply italic text style",
+      "aliases": []
+    },
+    {
+      "name": "align-left",
+      "category": "action",
+      "description": "Align content left",
+      "aliases": []
+    },
+    {
+      "name": "align-center",
+      "category": "action",
+      "description": "Align content center",
+      "aliases": []
+    },
+    {
+      "name": "align-right",
+      "category": "action",
+      "description": "Align content right",
+      "aliases": []
+    },
+    {
+      "name": "indent",
+      "category": "action",
+      "description": "Increase indentation",
+      "aliases": []
+    },
+    {
+      "name": "outdent",
+      "category": "action",
+      "description": "Decrease indentation",
+      "aliases": []
+    },
+    {
+      "name": "cloud-download",
+      "category": "action",
+      "description": "Download from cloud storage",
+      "aliases": []
+    },
+    {
+      "name": "cloud-upload",
+      "category": "action",
+      "description": "Upload to cloud storage",
+      "aliases": []
+    },
+    {
+      "name": "pending",
+      "category": "status",
+      "description": "Pending or waiting state",
+      "aliases": []
+    },
+    {
+      "name": "queued",
+      "category": "status",
+      "description": "Queued work item",
+      "aliases": []
+    },
+    {
+      "name": "verified",
+      "category": "status",
+      "description": "Verified identity or result",
+      "aliases": []
+    },
+    {
+      "name": "degraded",
+      "category": "status",
+      "description": "Degraded operational state",
+      "aliases": []
+    },
+    {
+      "name": "critical",
+      "category": "status",
+      "description": "Critical fault state",
+      "aliases": []
+    },
+    {
+      "name": "neutral",
+      "category": "status",
+      "description": "Neutral or unchanged state",
+      "aliases": []
+    },
+    {
+      "name": "cloud",
+      "category": "data",
+      "description": "Cloud resource",
+      "aliases": []
+    },
+    {
+      "name": "cloud-off",
+      "category": "data",
+      "description": "Unavailable cloud resource",
+      "aliases": []
+    },
+    {
+      "name": "image",
+      "category": "data",
+      "description": "Image asset",
+      "aliases": []
+    },
+    {
+      "name": "video",
+      "category": "data",
+      "description": "Video asset",
+      "aliases": []
+    },
+    {
+      "name": "dashboard",
+      "category": "data",
+      "description": "Dashboard layout",
+      "aliases": []
+    },
+    {
+      "name": "timeline",
+      "category": "data",
+      "description": "Timeline or event sequence",
+      "aliases": []
+    },
+    {
+      "name": "analytics",
+      "category": "data",
+      "description": "Analytics or trends",
+      "aliases": []
+    },
+    {
+      "name": "columns",
+      "category": "data",
+      "description": "Column layout",
+      "aliases": []
+    },
+    {
+      "name": "rows",
+      "category": "data",
+      "description": "Row layout",
+      "aliases": []
+    },
+    {
+      "name": "at-sign",
+      "category": "communication",
+      "description": "Mention or email address",
+      "aliases": []
+    },
+    {
+      "name": "reply",
+      "category": "communication",
+      "description": "Reply to a message",
+      "aliases": []
+    },
+    {
+      "name": "forward",
+      "category": "communication",
+      "description": "Forward a message",
+      "aliases": []
+    },
+    {
+      "name": "headset",
+      "category": "communication",
+      "description": "Support or headset audio",
+      "aliases": []
+    },
+    {
+      "name": "video-camera",
+      "category": "communication",
+      "description": "Video call or camera",
+      "aliases": []
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+name: Design proposal
+description: Propose an improvement to the system
+title: "[Proposal] "
+labels: ["design"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: User problem
+      description: Describe the real user need before proposing an artifact.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed change
+    validations:
+      required: true
+  - type: textarea
+    id: validation
+    attributes:
+      label: Validation
+      description: Explain responsive, accessibility, and stack-neutral considerations.
+    validations:
+      required: true

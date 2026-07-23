@@ -1,0 +1,40 @@
+{
+  "name": "Orbital Archive No. 01 Asset Pack",
+  "version": "1.5.0",
+  "license": "MIT",
+  "marks": [
+    {
+      "name": "LSM Roundel",
+      "path": "/assets/marks/lsm-roundel.svg",
+      "viewBox": "0 0 160 160"
+    },
+    {
+      "name": "LSM Wordmark",
+      "path": "/assets/marks/lsm-wordmark.svg",
+      "viewBox": "0 0 760 160"
+    }
+  ],
+  "patterns": [
+    {
+      "name": "Orbital Grid",
+      "path": "/assets/patterns/orbital-grid.svg"
+    },
+    {
+      "name": "Signal Bars",
+      "path": "/assets/patterns/signal-bars.svg"
+    },
+    {
+      "name": "Trajectory Field",
+      "path": "/assets/patterns/trajectory-field.svg"
+    },
+    {
+      "name": "Orbital Architecture",
+      "path": "/assets/patterns/orbital-architecture.svg"
+    }
+  ],
+  "icons": {
+    "manifest": "/icons/manifest.json",
+    "sprite": "/icons/lsm-icons.svg",
+    "count": 161
+  }
+}

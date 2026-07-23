@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" role="img">
+  <title>Outgoing items</title>
+  <path d="M4 4h16l2 12v4H2v-4L4 4Z" />
+  <path d="M2 16h6l2 2h4l2-2h6" />
+  <line x1="12" y1="14" x2="12" y2="7" />
+  <polyline points="9 10 12 7 15 10" />
+</svg>

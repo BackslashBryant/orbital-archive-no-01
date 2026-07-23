@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Orbital Archive No. 01 · Sidebar Application</title>
+  <link rel="stylesheet" href="example.css">
+</head>
+<body>
+  <div class="app">
+    <nav class="side" aria-label="Primary">
+      <a class="brand" href="index.html">OA / Control</a>
+      <a aria-current="page" href="#overview">Overview</a>
+      <a href="#queue">Queue</a>
+      <a href="dashboard.html">Reports</a>
+      <a href="top-navigation.html">People</a>
+      <a href="../index.html#governance">Settings</a>
+    </nav>
+    <main id="overview" class="main">
+      <div class="pagehead">
+        <div><p class="eyebrow">Depth 1 · Mission</p><h2>Active queue</h2></div>
+        <a class="button" href="staged-flow.html">New item</a>
+      </div>
+      <section id="queue" class="panel">
+        <table class="table">
+          <thead><tr><th>Item</th><th>Owner</th><th>Status</th></tr></thead>
+          <tbody>
+            <tr><td>Relay review</td><td>A. Rivera</td><td>Ready</td></tr>
+            <tr><td>Archive sync</td><td>M. Chen</td><td>In progress</td></tr>
+            <tr><td>Policy check</td><td>T. Singh</td><td>Waiting</td></tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

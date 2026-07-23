@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" role="img" aria-labelledby="title desc">
+  <title id="title">Lunar Signal Modernism roundel</title>
+  <desc id="desc">A geometric orbital mark with a central lunar body and relay node.</desc>
+  <rect width="160" height="160" fill="#11181E"/>
+  <g fill="none" stroke="#E7E1D5" stroke-width="2">
+    <circle cx="80" cy="80" r="54" opacity=".45"/>
+    <ellipse cx="80" cy="80" rx="60" ry="27" transform="rotate(-28 80 80)"/>
+    <circle cx="80" cy="80" r="14" stroke="#54BCD9"/>
+    <path d="M80 12v28M80 120v28M12 80h28M120 80h28" opacity=".45"/>
+  </g>
+  <circle cx="80" cy="80" r="4" fill="#E7E1D5"/>
+  <circle cx="132" cy="50" r="5" fill="#CBAE67"/>
+</svg>

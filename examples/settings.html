@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Orbital Archive No. 01 · Settings</title>
+  <link rel="stylesheet" href="example.css">
+</head>
+<body>
+  <header class="topnav">
+    <a class="brand" href="index.html">Control</a>
+    <a href="dashboard.html">Overview</a>
+    <a aria-current="page" href="#preferences">Settings</a>
+    <a href="deep-systems.html">Advanced</a>
+  </header>
+  <main id="preferences" class="main">
+    <div class="pagehead"><div><p class="eyebrow">Depth 1 · Workspace</p><h2>Preferences</h2><p>Explain impact where a choice is made.</p></div><a class="button" href="#saved">Save changes</a></div>
+    <div class="settings-layout">
+      <section class="panel">
+        <span class="label">Notifications</span>
+        <div class="setting-row"><div><strong>Mission updates</strong><p>Receive changes to projects you follow.</p></div><input type="checkbox" checked aria-label="Mission updates"></div>
+        <div class="setting-row"><div><strong>Weekly digest</strong><p>A compact summary delivered every Friday.</p></div><input type="checkbox" aria-label="Weekly digest"></div>
+        <span class="label" style="display:block;margin-top:24px">Display</span>
+        <div class="field"><label for="density">Information density</label><select id="density"><option>Comfortable</option><option>Compact</option></select></div>
+      </section>
+      <aside id="saved" class="panel surface-blueprint"><span class="label">Current scope</span><h2 style="font-size:30px;margin-top:12px">Team Alpha</h2><p>These settings apply to this workspace only.</p><a class="button secondary" href="deep-systems.html">Advanced systems</a></aside>
+    </div>
+  </main>
+</body>
+</html>

@@ -1,0 +1,978 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="dark">
+<title>Orbital Archive No. 01 · Standalone Theme Guide</title>
+<style>
+:root {
+  --orbit: #11181E;
+  --graphite: #253139;
+  --slate: #2D3A42;
+  --alloy: #37464F;
+  --grid: #56656E;
+  --dust: #98A4AC;
+  --bone: #E7E1D5;
+  --relay: #54BCD9;
+  --gold: #CBAE67;
+  --orange: #E66A2C;
+  --signal: #7EB79E;
+  --rust: #C97A60;
+  --fault: #EA7468;
+  --display: "Arial Narrow", "Roboto Condensed", sans-serif;
+  --sans: Inter, ui-sans-serif, system-ui, sans-serif;
+  --mono: "IBM Plex Mono", "SFMono-Regular", Consolas, monospace;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; background: var(--graphite); }
+body { position:relative; margin: 0; color: var(--bone); background: var(--graphite); font-family: var(--sans); font-size: 15px; line-height: 1.55; }
+body::before { content:"";position:fixed;inset:0;z-index:1000;pointer-events:none;opacity:.1;background:repeating-linear-gradient(0deg,transparent 0 3px,color-mix(in srgb,var(--bone),transparent 92%) 4px),radial-gradient(circle at 20% 10%,color-mix(in srgb,var(--bone),transparent 86%) 0 1px,transparent 1.5px);background-size:auto,7px 7px;mix-blend-mode:soft-light }
+a { color: inherit; }
+button, input, select { font: inherit; }
+::selection { color: var(--orbit); background: var(--relay); }
+.skip { position: fixed; z-index: 1000; left: 12px; top: -80px; padding: 10px 14px; color: var(--orbit); background: var(--relay); }
+.skip:focus { top: 12px; }
+.frame { position: fixed; inset: 14px; z-index: 300; pointer-events: none; border: 1px solid color-mix(in srgb, var(--grid), transparent 45%); }
+.frame::before, .frame::after { content: "+"; position: absolute; color: var(--dust); font: 18px var(--mono); }
+.frame::before { left: -8px; top: -15px; }.frame::after { right: -8px; bottom: -15px; }
+.topbar { position: sticky; top: 0; z-index: 200; display: flex; align-items: center; gap: 20px; padding: 12px clamp(18px,4vw,54px); border-bottom: 1px solid var(--grid); background: color-mix(in srgb, var(--orbit), transparent 8%); backdrop-filter: blur(18px); }
+.brand { display: flex; align-items: center; gap: 10px; min-width: max-content; font: 700 16px/1 var(--display); text-transform: uppercase; letter-spacing: .12em; }
+.brand svg { color: var(--relay); }
+.topbar nav { display: flex; gap: 4px; margin-left: auto; overflow-x: auto; }
+.topbar nav a { min-width: max-content; padding: 9px 10px; color: var(--dust); text-decoration: none; font: 10px var(--mono); text-transform: uppercase; letter-spacing: .08em; }
+.topbar nav a:hover, .topbar nav a:focus-visible { color: var(--bone); background: var(--slate); outline: none; }
+.hero { position:relative;isolation:isolate;min-height:78vh;display:grid;align-content:space-between;gap:40px;padding:clamp(44px,7vw,108px) clamp(20px,5vw,72px) 52px;overflow:hidden;background:var(--orbit);background-image:linear-gradient(color-mix(in srgb,var(--relay),transparent 94%) 1px,transparent 1px),linear-gradient(90deg,color-mix(in srgb,var(--relay),transparent 94%) 1px,transparent 1px);background-size:24px 24px;border-bottom:1px solid var(--grid) }
+.hero::before { content:"";position:absolute;z-index:-2;width:min(100vw,1180px);aspect-ratio:1;right:-22%;bottom:-92%;border:1px solid color-mix(in srgb,var(--relay),transparent 38%);border-radius:50%;box-shadow:0 0 0 80px color-mix(in srgb,var(--grid),transparent 78%),0 0 0 205px color-mix(in srgb,var(--gold),transparent 88%),0 0 0 360px color-mix(in srgb,var(--grid),transparent 90%) }
+.hero::after { content:"";position:absolute;z-index:-1;left:7%;right:-8%;bottom:23%;height:1px;background:linear-gradient(90deg,var(--orange),var(--gold) 28%,var(--relay) 62%,transparent);transform:rotate(-6deg);transform-origin:left;box-shadow:0 0 46px color-mix(in srgb,var(--orange),transparent 60%) }
+.hero-grid { display: grid; gap: 28px; grid-template-columns: minmax(0,1.45fr) minmax(260px,.55fr); align-items: end; }
+.eyebrow { color: var(--relay); font: 11px var(--mono); text-transform: uppercase; letter-spacing: .28em; }
+h1 { max-width: 1050px; margin: 14px 0 0; font: 700 clamp(60px,8.6vw,132px)/.8 var(--display); letter-spacing: -.035em; text-transform: uppercase; text-wrap:balance }
+h1 .signal-word { color:var(--orange);text-shadow:0 0 52px color-mix(in srgb,var(--orange),transparent 76%) }
+.lede { max-width: 560px; margin: 0; color: var(--dust); font-size: 16px; }
+.meta { display: grid; gap: 10px; align-self: end; padding: 18px; border: 1px solid color-mix(in srgb,var(--gold),transparent 40%); font: 10px var(--mono); text-transform: uppercase; letter-spacing: .08em; }
+.meta div { display: flex; justify-content: space-between; gap: 20px; }.meta span { color: var(--dust); }.meta strong { color: var(--gold); font-weight: 500; }
+.motto { display: flex; flex-wrap: wrap; gap: 10px 34px; padding-top: 16px; border-top: 1px solid var(--grid); color: var(--dust); font: 11px var(--mono); text-transform: uppercase; letter-spacing: .08em; }.motto strong { color: var(--gold); }
+main { max-width: 1540px; margin: auto; padding: 0 clamp(20px,5vw,72px) 90px; }
+section { scroll-margin-top: 80px; padding: 68px 0; border-bottom: 1px solid var(--grid); }
+.section-head { display: grid; grid-template-columns: 52px minmax(0,1fr); gap: 12px; align-items: baseline; margin-bottom: 28px; }
+.section-head .number { color: var(--gold); font: 10px var(--mono); }
+h2 { margin: 0; font: 700 clamp(32px,4vw,58px)/.95 var(--display); text-transform: uppercase; letter-spacing: .02em; }
+.section-head p { grid-column: 2; max-width: 760px; margin: 5px 0 0; color: var(--dust); }
+.grid { display: grid; gap: 1px; padding: 1px; background: var(--grid); }
+.principles { grid-template-columns: repeat(4,1fr); }.principle { min-height: 180px; padding: 24px; background: var(--slate); }.principle b { display:block; color:var(--relay); font:10px var(--mono); }.principle h3 { margin: 50px 0 6px; font: 700 28px var(--display); text-transform: uppercase; }.principle p { margin: 0; color: var(--dust); font-size: 13px; }
+.palette { grid-template-columns: repeat(4,1fr); }.swatch-card { background: var(--slate); }.swatch { height: 104px; background: var(--swatch); }.swatch-copy { display:flex; justify-content:space-between; gap:12px; padding:14px; }.swatch-copy strong { display:block; font:700 18px var(--display); text-transform:uppercase; }.swatch-copy span { display:block; margin-top:4px; color:var(--dust); font-size:11px; }.swatch-copy code { color:var(--dust); font:10px var(--mono); }
+.severity { display:grid; grid-template-columns:repeat(4,1fr); gap:10px; margin-top:20px; }.severity div { padding:15px; color:var(--orbit); font:700 12px var(--sans); text-transform:uppercase; letter-spacing:.06em; }.info{background:var(--relay)}.success{background:var(--signal)}.warning{background:var(--rust)}.error{background:var(--fault)}
+.type-grid { display:grid; grid-template-columns:1.2fr 1fr .9fr; gap:1px; padding:1px; background:var(--grid); }.type-card { min-height:320px; padding:24px; background:var(--slate); }.type-card .label { color:var(--relay); font:10px var(--mono); text-transform:uppercase; letter-spacing:.12em; }.display-sample{margin:45px 0 18px;font:700 clamp(52px,7vw,92px)/.83 var(--display);text-transform:uppercase}.interface-sample{margin:50px 0 12px;font-size:28px}.mono-sample{margin-top:45px;white-space:pre-wrap;color:var(--relay);font:13px/1.7 var(--mono)}
+.depths { grid-template-columns:repeat(3,1fr); }.depth { min-height:250px;padding:24px;background:var(--slate); }.depth .ring{display:grid;place-items:center;width:66px;height:66px;border:1px solid var(--relay);border-radius:50%;color:var(--relay);font:20px var(--mono)}.depth h3{margin:35px 0 6px;font:700 28px var(--display);text-transform:uppercase}.depth p{color:var(--dust)}
+.anatomy { grid-template-columns:1fr 2fr 1fr; }.anatomy article{min-height:235px;padding:24px;background:var(--slate)}.anatomy b{color:var(--relay);font:10px var(--mono);letter-spacing:.1em}.anatomy h3{margin:34px 0 8px;font:700 28px var(--display);text-transform:uppercase}.anatomy p{margin:0;color:var(--dust);font-size:13px}.layout-rules{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;padding:1px;margin-top:18px;background:var(--grid)}.layout-rules div{padding:18px;background:var(--slate);color:var(--dust);font-size:13px}.layout-rules strong{display:block;margin-bottom:5px;color:var(--bone);font:700 17px var(--display);text-transform:uppercase}
+.examples{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}.example{overflow:hidden;border:1px solid var(--grid);border-top:2px solid var(--relay);background:var(--orbit);box-shadow:0 20px 48px color-mix(in srgb,var(--orbit),transparent 55%)}.example:nth-child(3n+2){border-top-color:var(--gold)}.example:nth-child(3n){border-top-color:var(--signal)}.example-copy{display:grid;grid-template-columns:1fr auto;gap:8px;padding:16px;border-bottom:1px solid var(--grid);background:linear-gradient(120deg,color-mix(in srgb,var(--relay),transparent 92%),transparent 55%)}.example:nth-child(3n+2) .example-copy{background:linear-gradient(120deg,color-mix(in srgb,var(--gold),transparent 92%),transparent 55%)}.example-copy h3{margin:0;font:700 22px var(--display);text-transform:uppercase}.example-copy p{grid-column:1/-1;margin:0;color:var(--dust);font-size:12px}.example-copy code{color:var(--relay);font:10px var(--mono)}.mock{min-height:280px;padding:14px;background:radial-gradient(circle at 85% 10%,color-mix(in srgb,var(--relay),transparent 88%),transparent 16rem),var(--graphite)}.mockbar{display:flex;align-items:center;gap:12px;min-height:38px;padding:8px 10px;border:1px solid color-mix(in srgb,var(--relay),transparent 55%);background:var(--slate);font:9px var(--mono);text-transform:uppercase}.mockbar strong{margin-right:auto;color:var(--bone)}.mockbar span{color:var(--dust)}.mockbar .active{color:var(--relay);box-shadow:inset 0 -2px var(--relay)}.mockhero{position:relative;isolation:isolate;overflow:hidden;display:grid;grid-template-columns:1.4fr .6fr;gap:12px;min-height:210px;padding:28px 18px;align-items:end;background:linear-gradient(135deg,var(--orbit),var(--slate))}.mockhero::before{content:"";position:absolute;z-index:-1;width:440px;height:440px;right:-180px;bottom:-320px;border:1px solid var(--relay);border-radius:50%;box-shadow:0 0 0 54px color-mix(in srgb,var(--grid),transparent 70%),0 0 0 120px color-mix(in srgb,var(--gold),transparent 82%)}.mockhero h4{margin:0;font:700 clamp(32px,5vw,56px)/.85 var(--display);text-transform:uppercase}.mockhero p{max-width:330px;color:var(--dust);font-size:11px}.mockcta{display:inline-flex;padding:9px 12px;background:linear-gradient(135deg,var(--relay),color-mix(in srgb,var(--relay),var(--bone) 14%));box-shadow:0 8px 22px color-mix(in srgb,var(--relay),transparent 82%);color:var(--orbit);font:700 9px var(--mono);text-transform:uppercase}.mockcta.editorial{background:linear-gradient(135deg,var(--orange),color-mix(in srgb,var(--orange),var(--gold) 24%));box-shadow:0 8px 22px color-mix(in srgb,var(--orange),transparent 84%)}.side-shell{display:grid;grid-template-columns:120px 1fr;min-height:250px}.mockside{padding:12px;border-right:1px solid color-mix(in srgb,var(--relay),transparent 50%);background:linear-gradient(180deg,var(--orbit),color-mix(in srgb,var(--orbit),var(--relay) 7%))}.mockside strong{display:block;margin-bottom:20px;font:700 13px var(--display);text-transform:uppercase}.mockside span{display:block;padding:7px 6px;color:var(--dust);font:9px var(--mono)}.mockside .active{color:var(--relay);border-left:2px solid var(--relay);background:color-mix(in srgb,var(--relay),transparent 90%)}.mockmain{padding:14px}.mocktitle{display:flex;justify-content:space-between;gap:10px;margin-bottom:12px}.mocktitle h4{margin:0;font:700 23px var(--display);text-transform:uppercase}.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.metric{padding:12px;border:1px solid var(--grid);border-top-color:var(--relay);background:linear-gradient(145deg,var(--slate),color-mix(in srgb,var(--slate),var(--relay) 5%))}.metric:nth-child(2){border-top-color:var(--gold)}.metric:nth-child(3){border-top-color:var(--signal)}.metric b{display:block;color:var(--relay);font:700 24px var(--display)}.metric:nth-child(2) b{color:var(--gold)}.metric:nth-child(3) b{color:var(--signal)}.metric span{color:var(--dust);font:8px var(--mono);text-transform:uppercase}.workgrid{display:grid;grid-template-columns:2fr 1fr;gap:8px;margin-top:8px}.panel{position:relative;isolation:isolate;overflow:hidden;min-height:92px;padding:12px;border:1px solid var(--grid);border-top-color:color-mix(in srgb,var(--relay),transparent 30%);background:linear-gradient(145deg,var(--slate),color-mix(in srgb,var(--slate),var(--relay) 4%))}.panel::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;opacity:.14;background:repeating-linear-gradient(0deg,transparent 0 4px,color-mix(in srgb,var(--bone),transparent 96%) 5px),radial-gradient(circle,color-mix(in srgb,var(--bone),transparent 91%) 0 1px,transparent 1.4px);background-size:auto,9px 9px;mix-blend-mode:soft-light}.panel b{font:700 12px var(--display);text-transform:uppercase}.panel p{margin:8px 0 0;color:var(--dust);font-size:9px}.steps{display:flex;gap:4px;margin-bottom:14px}.step{flex:1;padding:7px;border-bottom:2px solid var(--grid);color:var(--dust);font:8px var(--mono)}.step.active{border-color:var(--relay);color:var(--relay);background:linear-gradient(0deg,color-mix(in srgb,var(--relay),transparent 88%),transparent)}.formlines{display:grid;gap:9px}.formline{height:34px;border:1px solid var(--grid);background:linear-gradient(90deg,var(--alloy),color-mix(in srgb,var(--alloy),var(--relay) 5%))}.mobile-wrap{display:grid;place-items:center;min-height:300px}.phone{width:190px;min-height:310px;overflow:hidden;border:1px solid color-mix(in srgb,var(--relay),transparent 35%);border-radius:18px;background:linear-gradient(160deg,var(--orbit),color-mix(in srgb,var(--orbit),var(--relay) 8%));box-shadow:0 24px 60px color-mix(in srgb,var(--orbit),transparent 25%),0 0 0 5px color-mix(in srgb,var(--relay),transparent 94%)}.phone-top{display:flex;justify-content:space-between;padding:12px;border-bottom:1px solid color-mix(in srgb,var(--relay),transparent 55%);font:8px var(--mono)}.phone-body{padding:14px}.phone-body h4{margin:8px 0 5px;font:700 28px/.9 var(--display);text-transform:uppercase}.phone-body p{color:var(--dust);font-size:9px}.phone-card{margin-top:12px;padding:12px;border:1px solid var(--grid);border-left:3px solid var(--gold);background:var(--slate)}.deep-grid{display:grid;grid-template-columns:1fr 1.5fr;gap:8px}.log{min-height:190px;padding:12px;border:1px solid color-mix(in srgb,var(--signal),transparent 50%);background:radial-gradient(circle at 80% 20%,color-mix(in srgb,var(--signal),transparent 90%),transparent 12rem),var(--orbit);color:var(--signal);font:9px/1.7 var(--mono)}.return-link{display:inline-block;margin-bottom:10px;color:var(--relay);font:9px var(--mono);text-transform:uppercase}
+.controls { display:grid;grid-template-columns:repeat(4,1fr);gap:12px }.control-card{padding:18px;background:var(--slate);border:1px solid var(--grid)}.control-card label{display:block;margin-bottom:10px;color:var(--dust);font:10px var(--mono);text-transform:uppercase}.btn,.field,.select{min-height:44px;width:100%;border:1px solid var(--grid);border-radius:3px}.btn{cursor:pointer;background:var(--relay);color:var(--orbit);border-color:var(--relay);font-weight:700;text-transform:uppercase;letter-spacing:.06em}.btn.secondary{background:transparent;color:var(--bone);border-color:var(--grid)}.btn.danger{background:var(--fault);color:var(--orbit);border-color:var(--fault)}.field,.select{padding:0 12px;background:var(--alloy);color:var(--bone)}.status-row{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}.chip,.pill{display:inline-flex;align-items:center;min-height:26px;padding:4px 8px;border:1px solid var(--grid);border-radius:999px;font:9px var(--mono);text-transform:uppercase}.chip::before{content:"";width:6px;height:6px;margin-right:6px;border-radius:50%;background:currentColor}.chip.ok{color:var(--signal)}.chip.warn{color:var(--rust)}.chip.bad{color:var(--fault)}
+.asset-grid { display:grid;grid-template-columns:.8fr 1.2fr;gap:20px }.schematic{min-height:430px;position:relative;display:grid;place-items:center;overflow:hidden;background:var(--orbit);border:1px solid var(--grid)}.schematic::before,.schematic::after{content:"";position:absolute;border:1px solid var(--grid);border-radius:50%}.schematic::before{width:310px;height:310px}.schematic::after{width:190px;height:190px}.schematic svg{width:86px;height:86px;color:var(--relay)}.asset-notes{display:grid;gap:12px}.note{padding:18px;background:var(--slate);border-left:3px solid var(--gold)}.note strong{font:700 20px var(--display);text-transform:uppercase}.note p{margin:5px 0 0;color:var(--dust);font-size:13px}
+.icon-tools { position:sticky;top:64px;z-index:100;display:grid;grid-template-columns:1fr 220px auto;gap:10px;padding:12px;margin-bottom:14px;background:color-mix(in srgb,var(--graphite),transparent 5%);border:1px solid var(--grid);backdrop-filter:blur(12px)}.icon-tools input,.icon-tools select{min-height:42px;padding:0 12px;color:var(--bone);background:var(--alloy);border:1px solid var(--grid);border-radius:3px}.icon-count{align-self:center;color:var(--dust);font:10px var(--mono);text-transform:uppercase;white-space:nowrap}.icons { grid-template-columns:repeat(8,1fr); }.icon-card{min-height:145px;padding:14px;background:var(--slate)}.icon-card[hidden]{display:none}.icon-graphic{display:grid;place-items:center;min-height:58px;color:var(--bone)}.icon-card code{display:block;color:var(--relay);font:10px var(--mono)}.icon-card span{display:block;margin-top:5px;color:var(--dust);font-size:10px;line-height:1.35}
+.table-wrap{overflow:auto;border:1px solid var(--grid)}table{width:100%;border-collapse:collapse;background:var(--slate);font-size:12px}th,td{padding:12px;text-align:left;border-bottom:1px solid var(--grid);vertical-align:top}th{color:var(--bone)}td{color:var(--dust)}td code{color:var(--relay);font:10px var(--mono)}.pill{min-height:22px;margin:2px 2px 2px 0;color:var(--dust)}
+footer{display:flex;justify-content:space-between;gap:20px;padding:30px clamp(20px,5vw,72px);color:var(--dust);background:var(--orbit);font:9px var(--mono);text-transform:uppercase;letter-spacing:.08em}
+:focus-visible{outline:2px solid var(--relay);outline-offset:3px}
+@media(max-width:1100px){.icons{grid-template-columns:repeat(6,1fr)}.palette{grid-template-columns:repeat(3,1fr)}.controls{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:800px){.topbar{flex-wrap:wrap;gap:6px}.topbar nav{width:100%;margin-left:0}.hero-grid,.asset-grid,.type-grid{grid-template-columns:1fr}.principles,.depths,.anatomy,.palette,.examples{grid-template-columns:repeat(2,1fr)}.icons{grid-template-columns:repeat(4,1fr)}.icon-tools{grid-template-columns:1fr 1fr}.icon-count{grid-column:1/-1}}
+@media(max-width:520px){html,body{max-width:100%;overflow-x:hidden}.principles,.depths,.anatomy,.palette,.severity,.controls,.examples{grid-template-columns:1fr}.section-head{grid-template-columns:32px minmax(0,1fr);gap:8px}.section-head h2{font-size:27px}.icons{grid-template-columns:repeat(2,1fr)}.hero{padding-top:55px}h1{font-size:58px}.frame{inset:6px}.metrics{grid-template-columns:1fr}.workgrid,.deep-grid,.mockhero{grid-template-columns:1fr}.type-card{min-width:0;overflow:hidden}.display-sample{font-size:clamp(44px,15vw,62px)}.icon-tools>*{min-width:0}footer{flex-direction:column}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a><div class="frame" aria-hidden="true"></div>
+<header class="topbar"><a class="brand" href="#identity"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="2 12 6 12 8 5 12 19 15 10 17 14 22 14"></polyline></svg> Orbital Archive / 01</a><nav aria-label="Section navigation"><a href="#identity">Overview</a><a href="#foundations">Foundations</a><a href="#depth-model">Depth</a><a href="#page-anatomy">Layout</a><a href="#implementations">Examples</a><a href="#components">Components</a><a href="#iconography">Icons</a><a href="#governance">Governance</a></nav></header>
+<section class="hero" id="identity">
+  <div class="hero-grid"><div><p class="eyebrow">Lunar Signal Modernism / Theme 01</p><h1>Orbital Archive<br><span class="signal-word">No. 01</span></h1></div><div class="meta"><div><span>Archive ref</span><strong>OA-1.5.0</strong></div><div><span>Native icons</span><strong>161</strong></div><div><span>Components</span><strong>49</strong></div><div><span>Status</span><strong>Nominal</strong></div></div></div>
+  <p class="lede">The first Lunar Signal Modernism theme: cinematic at entry, calm in operation, and exact at systems depth. Photo-free aerospace atmosphere is built from orbital geometry, controlled color, typography, and archival texture.</p>
+  <div class="motto"><strong>Calm</strong><span>Exact</span><span>Concise</span><span>Forward-looking</span><span>Every element must earn its position.</span></div>
+</section>
+<main id="main">
+<section id="principles"><div class="section-head"><span class="number">01</span><h2>Design principles</h2><p>Function before ornament. Signal over noise. Accent with intent. Structure creates calm.</p></div><div class="grid principles"><article class="principle"><b>P.01</b><h3>Clarity</h3><p>Make orientation, state, and next action legible before expression.</p></article><article class="principle"><b>P.02</b><h3>Precision</h3><p>Use exact labels, stable alignment, and deliberate state language.</p></article><article class="principle"><b>P.03</b><h3>Restraint</h3><p>Accent only where it carries hierarchy or meaning.</p></article><article class="principle"><b>P.04</b><h3>Optimism</h3><p>Technical systems should feel capable and understandable.</p></article></div></section>
+<section id="foundations"><div class="section-head"><span class="number">02</span><h2>Color & severity</h2><p>Calm Graphite is the operational default. Ignition Orange is a controlled editorial signal—not a status color. Fault Red remains reserved for error, critical, and destructive state.</p></div><div class="grid palette">
+  <article class="swatch-card">
+    <div class="swatch" style="--swatch:#11181E"></div>
+    <div class="swatch-copy"><div><strong>orbit</strong><span>Deep Orbit — deepest editorial surface</span></div><code>#11181E</code></div>
+  </article>
+  <article class="swatch-card">
+    <div class="swatch" style="--swatch:#253139"></div>
+    <div class="swatch-copy"><div><strong>graphite</strong><span>Calm Graphite — default operational background</span></div><code>#253139</code></div>
+  </article>
+  <article class="swatch-card">
+    <div class="swatch" style="--swatch:#2D3A42"></div>
+    <div class="swatch-copy"><div><strong>slate</strong><span>Lunar Slate — raised surface</span></div><code>#2D3A42</code></div>
+  </article>
+  <article class="swatch-card">
+    <div class="swatch" style="--swatch:#37464F"></div>
+    <div class="swatch-copy"><div><strong>alloy</strong><span>Elevated Alloy — controls and popovers</span></div><code>#37464F</code></div>
+  </article>
+  <article class="swatch-card">
+    <div class="swatch" style="--swatch:#56656E"></div>
+    <div class="swatch-copy"><div><strong>gridline</strong><span>Grid Line — borders and schematics</span></div><code>#56656E</code></div>
+  </article>
+  <article class="swatch-card">
+    <div class="swatch" style="--swatch:#98A4AC"></div>
+    <div class="swatch-copy"><div><strong>dust</strong><span>Lunar Dust — muted content</span></div><code>#98A4AC</code></div>
+  </article>
+  <article class="swatch-card">
+    <div class="swatch" style="--swatch:#E7E1D5"></div>
+    <div class="swatch-copy"><div><strong>bone</strong><span>Archive Bone — primary content</span></div><code>#E7E1D5</code></div>
+  </article>
+  <article class="swatch-card">
+    <div class="swatch" style="--swatch:#54BCD9"></div>
+    <div class="swatch-copy"><div><strong>relay</strong><span>Relay Blue — active and system state</span></div><code>#54BCD9</code></div>
+  </article>
+  <article class="swatch-card">
+    <div class="swatch" style="--swatch:#CBAE67"></div>
+    <div class="swatch-copy"><div><strong>gold</strong><span>Mission Gold — priority and editorial hierarchy</span></div><code>#CBAE67</code></div>
+  </article>
+  <article class="swatch-card">
+    <div class="swatch" style="--swatch:#E66A2C"></div>
+    <div class="swatch-copy"><div><strong>orange</strong><span>Ignition Orange — controlled editorial signal and primary emphasis</span></div><code>#E66A2C</code></div>
+  </article>
+  <article class="swatch-card">
+    <div class="swatch" style="--swatch:#7EB79E"></div>
+    <div class="swatch-copy"><div><strong>signal</strong><span>Signal Green — nominal and success state</span></div><code>#7EB79E</code></div>
+  </article>
+  <article class="swatch-card">
+    <div class="swatch" style="--swatch:#C97A60"></div>
+    <div class="swatch-copy"><div><strong>rust</strong><span>Alert Rust — warning and degraded state</span></div><code>#C97A60</code></div>
+  </article>
+  <article class="swatch-card">
+    <div class="swatch" style="--swatch:#EA7468"></div>
+    <div class="swatch-copy"><div><strong>fault</strong><span>Fault Red — error, critical, and destructive state</span></div><code>#EA7468</code></div>
+  </article></div><div class="severity"><div class="info">Info · Relay Blue</div><div class="success">Success · Signal Green</div><div class="warning">Warning · Alert Rust</div><div class="error">Error · Fault Red</div></div></section>
+<section id="typography"><div class="section-head"><span class="number">03</span><h2>Typography</h2><p>Display creates identity. Interface carries work. Monospace communicates machine state.</p></div><div class="type-grid"><article class="type-card"><span class="label">Display · Barlow Condensed</span><div class="display-sample">Aerospace<br>Signal</div></article><article class="type-card"><span class="label">Interface · Inter</span><div class="interface-sample">Mission Control Interface</div><p>Readable hierarchy for labels, forms, navigation, descriptions, and data interpretation.</p></article><article class="type-card"><span class="label">Telemetry · IBM Plex Mono</span><pre class="mono-sample">UPLINK› 14:32:18 UTC
+CALLSIGN: LUNA-01
+STATUS: TRAJECTORY NOMINAL
+FAULT: NONE</pre></article></div></section>
+<section id="depth-model"><div class="section-head"><span class="number">04</span><h2>Orbital depth architecture</h2><p>Complexity rises only when the task requires it. Every deeper context retains a visible way back.</p></div><div class="grid depths"><article class="depth"><div class="ring">0</div><h3>Signal</h3><p>Orientation, essential state, and one primary action.</p></article><article class="depth"><div class="ring">1</div><h3>Mission</h3><p>Forms, filters, progress, and moderate task data.</p></article><article class="depth"><div class="ring">2</div><h3>Systems</h3><p>Advanced settings, diagnostics, logs, and dense telemetry.</p></article></div></section>
+<section id="page-anatomy"><div class="section-head"><span class="number">05</span><h2>Page anatomy</h2><p>Use the same calm sequence in every stack: context, task, primary work surface, supporting context, then deliberate systems detail.</p></div><div class="grid anatomy"><article><b>01 / CONTEXT</b><h3>Locate</h3><p>Mission or scope, current state, and only controls that affect the current view.</p></article><article><b>02 / PRIMARY SURFACE</b><h3>Work</h3><p>The form, queue, record, or focused dashboard. It carries the visual weight and the one clear next action.</p></article><article><b>03 / SUPPORT</b><h3>Confirm</h3><p>Compact status, help, and related context. Stack it after the work surface on narrow screens.</p></article></div><div class="layout-rules"><div><strong>Wide screens</strong>Give the primary work surface roughly two-thirds of the width. Use the remaining third only for supporting context that improves the active decision.</div><div><strong>Small screens</strong>Keep labels visible and stack supporting context after work. Defer low-frequency settings and raw telemetry behind deliberate disclosure.</div><div><strong>Orbital architecture</strong>Use large arcs, horizon curves, trajectory lines, registration marks, and subtle texture to frame the composition. Do not use aerospace photography.</div><div><strong>Expression by depth</strong>Signal may be cinematic. Mission remains restrained. Systems can become denser and schematic only after deliberate entry.</div></div></section>
+<section id="implementations"><div class="section-head"><span class="number">06</span><h2>Implementation examples</h2><p>Twelve copyable, stack-neutral references cover landing, portfolio, top-nav, sidebar, dashboard, data admin, catalog, knowledge base, settings, staged flow, mobile, and deep systems. The seven specimens below explain the core hierarchy; open <code>examples/index.html</code> for every complete responsive page.</p></div><div class="examples">
+<article class="example"><div class="example-copy"><h3>Editorial landing page</h3><code>DEPTH 0</code><p>One promise, one supporting sentence, one primary action. Atmosphere stays behind the message.</p></div><div class="mock"><div class="mockbar"><strong>LSM / Archive</strong><span>About</span><span>Work</span><span class="active">Enter</span></div><div class="mockhero"><div><h4>Signal<br>without noise.</h4><p>A calm, exact introduction that earns the next click.</p><span class="mockcta editorial">Explore system</span></div><div class="panel"><b>Current state</b><p>Operational · Updated 14:32 UTC</p></div></div></div></article>
+<article class="example"><div class="example-copy"><h3>Top navigation</h3><code>RESPONSIVE</code><p>Brand left, primary destinations centered or right, one emphasized action. Horizontal scroll on compact screens.</p></div><div class="mock"><div class="mockbar"><strong>Lunar Signal</strong><span class="active">Overview</span><span>Projects</span><span>Library</span><span>Settings</span></div><div class="mockmain"><div class="mocktitle"><h4>Overview</h4><span class="chip ok">Nominal</span></div><div class="metrics"><div class="metric"><b>12</b><span>Active</span></div><div class="metric"><b>04</b><span>Waiting</span></div><div class="metric"><b>98%</b><span>Healthy</span></div></div><div class="workgrid"><div class="panel"><b>Primary work</b><p>Place the active queue, record, or project here.</p></div><div class="panel"><b>Support</b><p>Keep secondary context compact.</p></div></div></div></div></article>
+<article class="example"><div class="example-copy"><h3>Sidebar application shell</h3><code>DEPTH 1</code><p>Use for repeated operational work. Keep sections short, labels explicit, and the active location unmistakable.</p></div><div class="mock side-shell"><aside class="mockside"><strong>Control</strong><span class="active">Overview</span><span>Queue</span><span>Reports</span><span>People</span><span>Settings</span></aside><div class="mockmain"><div class="mocktitle"><h4>Active queue</h4><span class="mockcta">New item</span></div><div class="panel"><b>Work surface</b><p>Filters and bulk actions belong directly above the records they affect.</p></div><div class="panel"><b>Selection detail</b><p>Open supporting detail without losing the queue context.</p></div></div></div></article>
+<article class="example"><div class="example-copy"><h3>Dashboard / work surface</h3><code>DEPTH 1</code><p>Metrics orient; they do not replace the work. Put the actionable surface immediately below them.</p></div><div class="mock"><div class="mocktitle"><h4>Operations</h4><span class="chip warn">2 require review</span></div><div class="metrics"><div class="metric"><b>84</b><span>Total</span></div><div class="metric"><b>11</b><span>In progress</span></div><div class="metric"><b>02</b><span>Blocked</span></div></div><div class="workgrid"><div class="panel"><b>Priority queue</b><p>Show the next meaningful work, not every available statistic.</p></div><div class="panel"><b>Recent change</b><p>Supporting context remains secondary.</p></div></div></div></article>
+<article class="example"><div class="example-copy"><h3>Staged task flow</h3><code>DEPTH 1</code><p>Use steps only when order matters. Show progress, preserve entered data, and keep one primary next action.</p></div><div class="mock"><div class="steps"><div class="step">01 Context</div><div class="step active">02 Configure</div><div class="step">03 Review</div></div><div class="mocktitle"><h4>Configure request</h4><span>Step 2 of 3</span></div><div class="formlines"><div class="formline"></div><div class="formline"></div><div class="formline"></div></div><div style="display:flex;gap:8px;margin-top:12px"><span class="mockcta">Continue</span><span class="mockcta" style="background:transparent;color:var(--bone);border:1px solid var(--grid)">Back</span></div></div></article>
+<article class="example"><div class="example-copy"><h3>Mobile composition</h3><code>NARROW</code><p>Preserve labels. Stack primary work before support. Use bottom or top navigation only for a small set of frequent destinations.</p></div><div class="mock mobile-wrap"><div class="phone"><div class="phone-top"><strong>LSM</strong><span>Menu</span></div><div class="phone-body"><span class="eyebrow">Current scope</span><h4>Today’s<br>work</h4><p>One clear orientation sentence and one obvious next action.</p><span class="mockcta">Continue</span><div class="phone-card"><b>3 items waiting</b><p>Secondary context follows the primary action.</p></div></div></div></div></article>
+<article class="example"><div class="example-copy"><h3>Deep systems view</h3><code>DEPTH 2</code><p>Dense diagnostics require deliberate entry, visible scope, plain-language status, and an obvious route back.</p></div><div class="mock"><a class="return-link" href="#implementations">← Return to operations</a><div class="deep-grid"><div><div class="panel"><b>System scope</b><p>Relay 07 · Production · Read-only inspection</p></div><div class="panel"><b>Health</b><p><span class="chip ok">Nominal</span></p></div></div><pre class="log">14:32:18  CHECK   CONFIG OK
+14:32:19  SYNC    42 RECORDS
+14:32:20  VERIFY  NO FAULTS
+14:32:21  READY   AWAITING INPUT</pre></div></div></article>
+</div></section>
+<section id="components"><div class="section-head"><span class="number">05</span><h2>Components & states</h2><p>49 governed React contracts cover core frontend actions, forms, navigation, feedback, overlays, data display, and layout.</p></div><div class="controls"><div class="control-card"><label>Primary</label><button class="btn">Initiate</button></div><div class="control-card"><label>Secondary</label><button class="btn secondary">Hold</button></div><div class="control-card"><label>Destructive</label><button class="btn danger">Abort command</button></div><div class="control-card"><label>Text input</label><input class="field" value="LUNA-01" aria-label="Callsign"></div><div class="control-card"><label>Select</label><select class="select"><option>Relay R-7</option><option>Relay R-3</option></select></div><div class="control-card"><label>Status</label><div class="status-row"><span class="chip ok">Nominal</span><span class="chip warn">Degraded</span><span class="chip bad">Fault</span></div></div><div class="control-card"><label>Progress</label><div style="height:8px;margin-top:18px;background:var(--alloy)"><div style="width:72%;height:100%;background:var(--relay)"></div></div><p style="color:var(--dust);font:10px var(--mono)">72% COMPLETE</p></div><div class="control-card"><label>Toggle</label><div style="width:50px;height:28px;padding:3px;border-radius:20px;background:var(--relay)"><span style="display:block;width:22px;height:22px;margin-left:22px;border-radius:50%;background:var(--bone)"></span></div></div></div></section>
+<section id="assets"><div class="section-head"><span class="number">07</span><h2>Asset language</h2><p>Marks, technical patterns, typography, and restrained framing carry the aerospace identity. The icon set stays conventional and immediately legible.</p></div><div class="asset-grid"><div class="schematic"><svg width="86" height="86" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="8" height="8" rx="1"></rect><rect x="13" y="3" width="8" height="5" rx="1"></rect><rect x="13" y="10" width="8" height="11" rx="1"></rect><rect x="3" y="13" width="8" height="8" rx="1"></rect></svg></div><div class="asset-notes"><article class="note"><strong>24-pixel grid</strong><p>1.5-pixel default stroke, round caps and joins, monochrome currentColor.</p></article><article class="note"><strong>Optical sizes</strong><p>Review at 16, 20, 24, 32, and 48 pixels; interactive targets remain at least 44 pixels where practical.</p></article><article class="note"><strong>Delivery</strong><p>Individual SVGs, symbol sprite, and searchable JSON metadata—usable in any stack.</p></article><article class="note"><strong>Scope discipline</strong><p>Do not invent niche pictograms. Use text labels, established platform symbols, or a vetted icon library when a conventional native glyph is unavailable.</p></article></div></div></section>
+<section id="iconography"><div class="section-head"><span class="number">07</span><h2>Native icon catalog</h2><p>161 original assets across 5 categories. Search the full family directly in this standalone guide.</p></div><div class="icon-tools"><input id="icon-search" type="search" placeholder="Search icons" aria-label="Search icons"><select id="icon-category" aria-label="Filter icons"><option value="all">All categories</option><option value="navigation">navigation</option><option value="action">action</option><option value="status">status</option><option value="data">data</option><option value="communication">communication</option></select><span class="icon-count" id="icon-count">161 assets</span></div><div class="grid icons" id="icon-grid">
+  <article class="icon-card" data-name="arrow-up move or navigate upward navigation" data-category="navigation">
+    <div class="icon-graphic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="20" x2="12" y2="4"></line><polyline points="6 10 12 4 18 10"></polyline></svg></div>
+    <code>arrow-up</code>
+    <span>Move or navigate upward</span>
+  </article>
+  <article class="icon-card" data-name="arrow-down move or navigate downward navigation" data-category="navigation">
+    <div class="icon-graphic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="4" x2="12" y2="20"></line><polyline points="6 14 12 20 18 14"></polyline></svg></div>
+    <code>arrow-down</code>
+    <span>Move or navigate downward</span>
+  </article>
+  <article class="icon-card" data-name="arrow-left move or navigate left navigation" data-category="navigation">
+    <div class="icon-graphic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="20" y1="12" x2="4" y2="12"></line><polyline points="10 6 4 12 10 18"></polyline></svg></div>
+    <code>arrow-left</code>
+    <span>Move or navigate left</span>
+  </article>
+  <article class="icon-card" data-name="arrow-right move or navigate right navigation" data-category="navigation">
+    <div class="icon-graphic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="4" y1="12" x2="20" y2="12"></line><polyline points="14 6 20 12 14 18"></polyline></svg></div>
+    <code>arrow-right</code>
+    <span>Move or navigate right</span>
+  </article>
+  <article class="icon-card" data-name="chevron-up expand or move upward navigation" data-category="navigation">
+    <div class="icon-graphic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="5 15 12 8 19 15"></polyline></svg></div>
+    <code>chevron-up</code>
+    <span>Expand or move upward</span>
+  </article>
+  <article class="icon-card" data-name="chevron-down expand or move downward navigation" data-category="navigation">
+    <div class="icon-graphic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="5 9 12 16 19 9"></polyline></svg></div>
+    <code>chevron-down</code>
+    <span>Expand or move downward</span>
+  </article>
+  <article class="icon-card" data-name="chevron-left navigate to the previous item navigation" data-category="navigation">
+    <div class="icon-graphic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 5 8 12 15 19"></polyline></svg></div>
+    <code>chevron-left</code>
+    <span>Navigate to the previous item</span>
+  </article>
+  <article class="icon-card" data-name="chevron-right navigate to the next item navigation" data-category="navigation">
+    <div class="icon-graphic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 5 16 12 9 19"></polyline></svg></div>
+    <code>chevron-right</code>
+    <span>Navigate to the next item</span>
+  </article>
+  <article class="icon-card" data-name="home home destination navigation" data-category="navigation">
+    <div class="icon-graphic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 11 9-8 9 8"></path><path d="M5 10v10h14V10"></path><rect x="9" y="14" width="6" height="6"></rect></svg></div>
+    <code>home</code>
+    <span>Home destination</span>
+  </article>
+  <article class="icon-card" data-name="return return to a shallower context navigation" data-category="navigation">
+    <div class="icon-graphic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 7 4 12 9 17"></polyline><path d="M4 12h10a6 6 0 0 1 6 6v2"></path></svg></div>
+    <code>return</code>
+    <span>Return to a shallower context</span>
+  </article>
+  <article class="icon-card" data-name="external-link open an external destination navigation" data-category="navigation">
+    <div class="icon-graphic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h6v6"></path><line x1="20" y1="4" x2="11" y2="13"></line><path d="M18 13v6a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h6"></path></svg></div>
+    <code>external-link</code>
+    <span>Open an external destination</span>
+  </article>
+  <article class="icon-card" data-name="expand expand view navigation" data-category="navigation">
+    <div class="icon-graphic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 3 3 3 3 9"></polyline><line x1="3" y1="3" x2="10" y2="10"></line><polyline points="15 21 21 21 21 15"></polyline><line x1="21" y1="21" x2="14" y2="14"></line></svg></div>
+    <code>expand</code>
+    <span>Expand view</span>
+  </article>
+  <article class="icon-card" data-name="collapse collapse view navigation" data-category="navigation">
+    <div class="icon-graphic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="3 9 9 9 9 3"></polyline><line x1="9" y1="9" x2="3" y2="3"></line><polyline points="21 15 15 15 15 21"></polyline><line x1="15" y1="15" x2="21" y2="21"></line></svg></div>
+    <code>collapse</code>
+    <span>Collapse view</span>
+  </article>
+  <article class="icon-card" data-name="maximize maximize panel navigation" data-category="navigation">
+    <div class="icon-graphic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="8 3 3 3 3 8"></polyline><polyline points="16 3 21 3 21 8"></polyline><polyline points="3 16 3 21 8 21"></polyline><polyline points="21 16 21 21 16 21"></polyline></svg></div>
+    <code>maximize</code>
+    <span>Maximize panel</span>
+  </article>
+  <article class="icon-card" data-name="minimize minimize panel navigation" data-category="navigation">
+    <div class="icon-graphic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="3 8 8 8 8 3"></polyline><polyline points="21 8 16 8 16 3"></polyline><polyline points="3 16 8 16 8 21"></polyline><polyline points="21 16 16 16 16 21"></polyline></svg></div>
+    <code>minimize</code>
+    <span>Minimize panel</span>
+  </article>
+  <article class="icon-card" data-name="menu open navigation menu navigation" data-category="navigation">
+    <div class="icon-graphic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="4" y1="7" x2="20" y2="7"></line><line x1="4" y1="12" x2="20" y2="12"></line><line x1="4" y1="17" x2="20" y2="17"></line></svg></div>
+    <code>menu</code>
+    <span>Open navigation menu</span>
+  </article>
+  <article class="icon-card" data-name="close close or dismiss navigation" data-category="navigation">
+    <div class="icon-graphic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="5" x2="19" y2="19"></line><line x1="19" y1="5" x2="5" y2="19"></line></svg></div>
+    <code>close</code>
+    <span>Close or dismiss</span>
+  </article>
+  <article class="icon-card" data-name="more-horizontal more actions navigation" data-category="navigation">
+    <div class="icon-graphic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="5" cy="12" r="1"></circle><circle cx="12" cy="12" r="1"></circle><circle cx="19" cy="12" r="1"></circle></svg></div>
+    <code>more-horizontal</code>
+    <span>More actions</span>
+  </article>
+  <article class="icon-card" data-name="more-vertical more actions navigation" data-category="navigation">
+    <div class="icon-graphic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="5" r="1"></circle><circle cx="12" cy="12" r="1"></circle><circle cx="12" cy="19" r="1"></circle></svg></div>
+    <code>more-vertical</code>
+    <span>More actions</span>
+  </article>
+  <article class="icon-card" data-name="corner-up-left turn or reply left navigation" data-category="navigation">
+    <div class="icon-graphic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 7 4 12 9 17"></polyline><path d="M4 12h9a7 7 0 0 1 7 7"></path></svg></div>
+    <code>corner-up-left</code>
+    <span>Turn or reply left</span>
+  </article>
+  <article class="icon-card" data-name="corner-up-right turn or forward right navigation" data-category="navigation">
+    <div class="icon-graphic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 7 20 12 15 17"></polyline><path d="M20 12h-9a7 7 0 0 0-7 7"></path></svg></div>
+    <code>corner-up-right</code>
+    <span>Turn or forward right</span>
+  </article>
+  <article class="icon-card" data-name="move move in any direction navigation" data-category="navigation">
+    <div class="icon-graphic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="2" x2="12" y2="22"></line><polyline points="8 6 12 2 16 6"></polyline><polyline points="8 18 12 22 16 18"></polyline><line x1="2" y1="12" x2="22" y2="12"></line><polyline points="6 8 2 12 6 16"></polyline><polyline points="18 8 22 12 18 16"></polyline></svg></div>
+    <code>move</code>
+    <span>Move in any direction</span>
+  </article>
+  <article class="icon-card" data-name="navigation directional navigation pointer navigation" data-category="navigation">
+    <div class="icon-graphic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="4 3 21 11 14 14 11 21"></polygon></svg></div>
+    <code>navigation</code>
+    <span>Directional navigation pointer</span>
+  </article>
+  <article class="icon-card" data-name="route route between points navigation" data-category="navigation">
+    <div class="icon-graphic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="5" cy="18" r="2"></circle><circle cx="19" cy="6" r="2"></circle><path d="M7 18c5 0 1-9 7-9h3"></path></svg></div>
+    <code>route</code>
+    <span>Route between points</span>
+  </article>
+  <article class="icon-card" data-name="add add an item action" data-category="action">
+    <div class="icon-graphic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="4" x2="12" y2="20"></line><line x1="4" y1="12" x2="20" y2="12"></line></svg></div>
+    <code>add</code>
+    <span>Add an item</span>
+  </article>
+  <article class="icon-card" data-name="remove remove an item action" data-category="action">
+    <div class="icon-graphic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="4" y1="12" x2="20" y2="12"></line></svg></div>
+    <code>remove</code>
+    <span>Remove an item</span>
+  </article>
+  <article class="icon-card" data-name="edit edit content action" data-category="action">
+    <div class="icon-graphic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m4 16-1 5 5-1L19 9l-4-4L4 16Z"></path><line x1="13.5" y1="6.5" x2="17.5" y2="10.5"></line></svg></div>
+    <code>edit</code>
+    <span>Edit content</span>
+  </article>
+  <article class="icon-card" data-name="copy copy content action" data-category="action">
+    <div class="icon-graphic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="2"></rect><path d="M16 8V5a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h3"></path></svg></div>
+    <code>copy</code>
+    <span>Copy content</span>
+  </article>
+  <article class="icon-card" data-name="check confirm or complete action" data-category="action">
+    <div class="icon-graphic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="4 12 9 17 20 6"></polyline></svg></div>
+    <code>check</code>
+    <span>Confirm or complete</span>
+  </article>
+  <article class="icon-card" data-name="search search content action" data-category="action">
+    <div class="icon-graphic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"></circle><line x1="15.5" y1="15.5" x2="21" y2="21"></line></svg></div>
+    <code>search</code>
+    <span>Search content</span>
+  </article>
+  <article class="icon-card" data-name="filter filter results action" data-category="action">
+    <div class="icon-graphic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 5h18l-7 8v6l-4 2v-8L3 5Z"></path></svg></div>
+    <code>filter</code>
+    <span>Filter results</span>
+  </article>
+  <article class="icon-card" data-name="download download an asset action" data-category="action">
+    <div class="icon-graphic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="3" x2="12" y2="15"></line><polyline points="7 10 12 15 17 10"></polyline><path d="M4 19h16"></path></svg></div>
+    <code>download</code>
+    <span>Download an asset</span>
+  </article>
+  <article class="icon-card" data-name="upload upload an asset action" data-category="action">
+    <div class="icon-graphic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="15" x2="12" y2="3"></line><polyline points="7 8 12 3 17 8"></polyline><path d="M4 19h16"></path></svg></div>
+    <code>upload</code>
+    <span>Upload an asset</span>
+  </article>
+  <article class="icon-card" data-name="refresh refresh content action" data-category="action">
+    <div class="icon-graphic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 7v5h-5"></path><path d="M4 17v-5h5"></path><path d="M6.1 8a7 7 0 0 1 11.7-2L20 8"></path><path d="M17.9 16a7 7 0 0 1-11.7 2L4 16"></path></svg></div>
+    <code>refresh</code>
+    <span>Refresh content</span>
+  </article>
+  <article class="icon-card" data-name="sync synchronize state action" data-category="action">
+    <div class="icon-graphic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10l-3-3"></path><polyline points="17 7 14 10"></polyline><path d="M17 17H7l3 3"></path><polyline points="7 17 10 14"></polyline></svg></div>
+    <code>sync</code>
+    <span>Synchronize state</span>
+  </article>
+  <article class="icon-card" data-name="play start playback or process action" data-category="action">
+    <div class="icon-graphic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="7 4 20 12 7 20"></polygon></svg></div>
+    <code>play</code>
+    <span>Start playback or process</span>
+  </article>
+  <article class="icon-card" data-name="pause pause playback or process action" data-category="action">
+    <div class="icon-graphic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="4" width="4" height="16" rx="1"></rect><rect x="14" y="4" width="4" height="16" rx="1"></rect></svg></div>
+    <code>pause</code>
+    <span>Pause playback or process</span>
+  </article>
+  <article class="icon-card" data-name="stop stop playback or process action" data-category="action">
+    <div class="icon-graphic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="5" width="14" height="14" rx="1"></rect></svg></div>
+    <code>stop</code>
+    <span>Stop playback or process</span>
+  </article>
+  <article class="icon-card" data-name="power power control action" data-category="action">
+    <div class="icon-graphic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="2.5" x2="12" y2="12"></line><path d="M7 5.5a8 8 0 1 0 10 0"></path></svg></div>
+    <code>power</code>
+    <span>Power control</span>
+  </article>
+  <article class="icon-card" data-name="settings system settings action" data-category="action">
+    <div class="icon-graphic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.9l.1.1-2.8 2.8-.1-.1a1.7 1.7 0 0 0-1.9-.3 1.7 1.7 0 0 0-1 1.6v.2h-4V21a1.7 1.7 0 0 0-1-1.6 1.7 1.7 0 0 0-1.9.3l-.1.1L4.2 17l.1-.1a1.7 1.7 0 0 0 .3-1.9A1.7 1.7 0 0 0 3 14h-.2v-4H3a1.7 1.7 0 0 0 1.6-1 1.7 1.7 0 0 0-.3-1.9L4.2 7 7 4.2l.1.1a1.7 1.7 0 0 0 1.9.3A1.7 1.7 0 0 0 10 3v-.2h4V3a1.7 1.7 0 0 0 1 1.6 1.7 1.7 0 0 0 1.9-.3l.1-.1L19.8 7l-.1.1a1.7 1.7 0 0 0-.3 1.9A1.7 1.7 0 0 0 21 10h.2v4H21a1.7 1.7 0 0 0-1.6 1Z"></path></svg></div>
+    <code>settings</code>
+    <span>System settings</span>
+  </article>
+  <article class="icon-card" data-name="lock locked state action" data-category="action">
+    <div class="icon-graphic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="10" width="14" height="11" rx="2"></rect><path d="M8 10V7a4 4 0 0 1 8 0v3"></path><circle cx="12" cy="15" r="1"></circle></svg></div>
+    <code>lock</code>
+    <span>Locked state</span>
+  </article>
+  <article class="icon-card" data-name="unlock unlocked state action" data-category="action">
+    <div class="icon-graphic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="10" width="14" height="11" rx="2"></rect><path d="M8 10V7a4 4 0 0 1 7-2.6"></path><circle cx="12" cy="15" r="1"></circle></svg></div>
+    <code>unlock</code>
+    <span>Unlocked state</span>
+  </article>
+  <article class="icon-card" data-name="eye show or view content action" data-category="action">
+    <div class="icon-graphic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 12s3.5-6 9.5-6 9.5 6 9.5 6-3.5 6-9.5 6-9.5-6-9.5-6Z"></path><circle cx="12" cy="12" r="2.5"></circle></svg></div>
+    <code>eye</code>
+    <span>Show or view content</span>
+  </article>
+  <article class="icon-card" data-name="eye-off hide content action" data-category="action">
+    <div class="icon-graphic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4l16 16"></path><path d="M9.5 6.3A10.3 10.3 0 0 1 12 6c6 0 9.5 6 9.5 6a17 17 0 0 1-2.2 2.9"></path><path d="M6.2 7.3C3.8 9 2.5 12 2.5 12s3.5 6 9.5 6a10 10 0 0 0 3-.5"></path><path d="M10 10a2.8 2.8 0 0 0 4 4"></path></svg></div>
+    <code>eye-off</code>
+    <span>Hide content</span>
+  </article>
+  <article class="icon-card" data-name="pin pin an item action" data-category="action">
+    <div class="icon-graphic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 3h6l-1 5 3 3v2H7v-2l3-3-1-5Z"></path><line x1="12" y1="13" x2="12" y2="22"></line></svg></div>
+    <code>pin</code>
+    <span>Pin an item</span>
+  </article>
+  <article class="icon-card" data-name="archive archive content action" data-category="action">
+    <div class="icon-graphic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="4" rx="1"></rect><path d="M5 9v11h14V9"></path><line x1="9" y1="13" x2="15" y2="13"></line></svg></div>
+    <code>archive</code>
+    <span>Archive content</span>
+  </article>
+  <article class="icon-card" data-name="trash delete content action" data-category="action">
+    <div class="icon-graphic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h16"></path><path d="M9 7V4h6v3"></path><path d="m6 7 1 14h10l1-14"></path><line x1="10" y1="11" x2="10.5" y2="17"></line><line x1="14" y1="11" x2="13.5" y2="17"></line></svg></div>
+    <code>trash</code>
+    <span>Delete content</span>
+  </article>
+  <article class="icon-card" data-name="save save content action" data-category="action">
+    <div class="icon-graphic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 3h13l3 3v15H4V3Z"></path><rect x="7" y="3" width="8" height="6" rx="1"></rect><rect x="7" y="14" width="10" height="7" rx="1"></rect></svg></div>
+    <code>save</code>
+    <span>Save content</span>
+  </article>
+  <article class="icon-card" data-name="print print content action" data-category="action">
+    <div class="icon-graphic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="3" width="12" height="6" rx="1"></rect><rect x="6" y="15" width="12" height="6" rx="1"></rect><path d="M6 17H4a2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2h-2"></path><circle cx="18" cy="12" r="0.8"></circle></svg></div>
+    <code>print</code>
+    <span>Print content</span>
+  </article>
+  <article class="icon-card" data-name="share share content action" data-category="action">
+    <div class="icon-graphic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="2"></circle><circle cx="6" cy="12" r="2"></circle><circle cx="18" cy="19" r="2"></circle><line x1="7.8" y1="11" x2="16.2" y2="6"></line><line x1="7.8" y1="13" x2="16.2" y2="18"></line></svg></div>
+    <code>share</code>
+    <span>Share content</span>
+  </article>
+  <article class="icon-card" data-name="link link content action" data-category="action">
+    <div class="icon-graphic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a4 4 0 0 0 5.7 0l3.3-3.3A4 4 0 0 0 13.3 4L11.5 5.8"></path><path d="M14 11a4 4 0 0 0-5.7 0L5 14.3A4 4 0 0 0 10.7 20l1.8-1.8"></path></svg></div>
+    <code>link</code>
+    <span>Link content</span>
+  </article>
+  <article class="icon-card" data-name="unlink remove a link action" data-category="action">
+    <div class="icon-graphic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 15 5 19"></path><path d="m3 3 18 18"></path><path d="M14 11a4 4 0 0 0-1.2-.8"></path><path d="M16 7l3-3"></path><path d="M6.5 10.5 5 12a4 4 0 0 0 5.7 5.7l1.3-1.3"></path><path d="m13.5 6.5.8-.8A4 4 0 0 1 20 11.3L18.5 13"></path></svg></div>
+    <code>unlink</code>
+    <span>Remove a link</span>
+  </article>
+  <article class="icon-card" data-name="scan scan or acquire target action" data-category="action">
+    <div class="icon-graphic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="3 8 3 3 8 3"></polyline><polyline points="16 3 21 3 21 8"></polyline><polyline points="21 16 21 21 16 21"></polyline><polyline points="8 21 3 21 3 16"></polyline><line x1="7" y1="12" x2="17" y2="12"></line></svg></div>
+    <code>scan</code>
+    <span>Scan or acquire target</span>
+  </article>
+  <article class="icon-card" data-name="crop crop or frame content action" data-category="action">
+    <div class="icon-graphic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 2v14a2 2 0 0 0 2 2h14"></path><path d="M2 6h14a2 2 0 0 1 2 2v14"></path></svg></div>
+    <code>crop</code>
+    <span>Crop or frame content</span>
+  </article>
+  <article class="icon-card" data-name="sort sort a collection action" data-category="action">
+    <div class="icon-graphic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="8" y1="5" x2="8" y2="19"></line><polyline points="4 9 8 5 12 9"></polyline><line x1="16" y1="19" x2="16" y2="5"></line><polyline points="12 15 16 19 20 15"></polyline></svg></div>
+    <code>sort</code>
+    <span>Sort a collection</span>
+  </article>
+  <article class="icon-card" data-name="info informational status status" data-category="status">
+    <div class="icon-graphic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><line x1="12" y1="11" x2="12" y2="17"></line><circle cx="12" cy="7.5" r="0.8"></circle></svg></div>
+    <code>info</code>
+    <span>Informational status</span>
+  </article>
+  <article class="icon-card" data-name="help help or unknown status status" data-category="status">
+    <div class="icon-graphic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M9.5 9a2.7 2.7 0 1 1 4.2 2.2c-1.1.7-1.7 1.2-1.7 2.8"></path><circle cx="12" cy="17.5" r="0.8"></circle></svg></div>
+    <code>help</code>
+    <span>Help or unknown status</span>
+  </article>
+  <article class="icon-card" data-name="alert warning status status" data-category="status">
+    <div class="icon-graphic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="12 3 22 20 2 20"></polygon><line x1="12" y1="9" x2="12" y2="14"></line><circle cx="12" cy="17" r="0.8"></circle></svg></div>
+    <code>alert</code>
+    <span>Warning status</span>
+  </article>
+  <article class="icon-card" data-name="error error or fault status status" data-category="status">
+    <div class="icon-graphic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><line x1="8.5" y1="8.5" x2="15.5" y2="15.5"></line><line x1="15.5" y1="8.5" x2="8.5" y2="15.5"></line></svg></div>
+    <code>error</code>
+    <span>Error or fault status</span>
+  </article>
+  <article class="icon-card" data-name="warning degraded or warning status status" data-category="status">
+    <div class="icon-graphic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="12 3 22 20 2 20"></polygon><line x1="12" y1="8" x2="12" y2="14.5"></line><circle cx="12" cy="17.5" r="0.8"></circle></svg></div>
+    <code>warning</code>
+    <span>Degraded or warning status</span>
+  </article>
+  <article class="icon-card" data-name="success success or nominal status status" data-category="status">
+    <div class="icon-graphic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><polyline points="7.5 12 10.5 15 16.5 9"></polyline></svg></div>
+    <code>success</code>
+    <span>Success or nominal status</span>
+  </article>
+  <article class="icon-card" data-name="prohibited prohibited action status" data-category="status">
+    <div class="icon-graphic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><line x1="5.6" y1="5.6" x2="18.4" y2="18.4"></line></svg></div>
+    <code>prohibited</code>
+    <span>Prohibited action</span>
+  </article>
+  <article class="icon-card" data-name="offline offline or disconnected state status" data-category="status">
+    <div class="icon-graphic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4l16 16"></path><path d="M4 10a12 12 0 0 1 4.5-2.7"></path><path d="M12.4 6a12 12 0 0 1 7.6 4"></path><path d="M7 13a7.5 7.5 0 0 1 4-2"></path><path d="M15 11.7a7.5 7.5 0 0 1 2 1.3"></path><path d="M10 16a3 3 0 0 1 4 0"></path><circle cx="12" cy="19" r="1"></circle></svg></div>
+    <code>offline</code>
+    <span>Offline or disconnected state</span>
+  </article>
+  <article class="icon-card" data-name="shield protection or security status" data-category="status">
+    <div class="icon-graphic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 20 6v6c0 5-3.4 8-8 10-4.6-2-8-5-8-10V6l8-3Z"></path></svg></div>
+    <code>shield</code>
+    <span>Protection or security</span>
+  </article>
+  <article class="icon-card" data-name="shield-check verified protection status" data-category="status">
+    <div class="icon-graphic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 20 6v6c0 5-3.4 8-8 10-4.6-2-8-5-8-10V6l8-3Z"></path><polyline points="8 12 11 15 16 9"></polyline></svg></div>
+    <code>shield-check</code>
+    <span>Verified protection</span>
+  </article>
+  <article class="icon-card" data-name="shield-alert security alert status" data-category="status">
+    <div class="icon-graphic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 20 6v6c0 5-3.4 8-8 10-4.6-2-8-5-8-10V6l8-3Z"></path><line x1="12" y1="8" x2="12" y2="13"></line><circle cx="12" cy="16" r="0.8"></circle></svg></div>
+    <code>shield-alert</code>
+    <span>Security alert</span>
+  </article>
+  <article class="icon-card" data-name="bell notification status" data-category="status">
+    <div class="icon-graphic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9a6 6 0 0 1 12 0v5l2 3H4l2-3V9Z"></path><path d="M10 20h4"></path></svg></div>
+    <code>bell</code>
+    <span>Notification</span>
+  </article>
+  <article class="icon-card" data-name="bell-off notifications disabled status" data-category="status">
+    <div class="icon-graphic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4l16 16"></path><path d="M6 10v4l-2 3h13"></path><path d="M18 14V9a6 6 0 0 0-9.4-5"></path><path d="M10 20h4"></path></svg></div>
+    <code>bell-off</code>
+    <span>Notifications disabled</span>
+  </article>
+  <article class="icon-card" data-name="flag flag or priority marker status" data-category="status">
+    <div class="icon-graphic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="3" x2="5" y2="22"></line><path d="M5 4h12l-2 4 2 4H5"></path></svg></div>
+    <code>flag</code>
+    <span>Flag or priority marker</span>
+  </article>
+  <article class="icon-card" data-name="spark new or enhanced state status" data-category="status">
+    <div class="icon-graphic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 2 1.7 6.3L20 10l-6.3 1.7L12 18l-1.7-6.3L4 10l6.3-1.7L12 2Z"></path><path d="m19 16 .7 2.3L22 19l-2.3.7L19 22l-.7-2.3L16 19l2.3-.7L19 16Z"></path></svg></div>
+    <code>spark</code>
+    <span>New or enhanced state</span>
+  </article>
+  <article class="icon-card" data-name="activity system activity status" data-category="status">
+    <div class="icon-graphic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="2 12 6 12 8 5 12 19 15 10 17 14 22 14"></polyline></svg></div>
+    <code>activity</code>
+    <span>System activity</span>
+  </article>
+  <article class="icon-card" data-name="file file asset data" data-category="data">
+    <div class="icon-graphic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h8l4 4v14H6V3Z"></path><polyline points="14 3 14 7 18 7"></polyline></svg></div>
+    <code>file</code>
+    <span>File asset</span>
+  </article>
+  <article class="icon-card" data-name="file-text text document data" data-category="data">
+    <div class="icon-graphic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h8l4 4v14H6V3Z"></path><polyline points="14 3 14 7 18 7"></polyline><line x1="9" y1="12" x2="15" y2="12"></line><line x1="9" y1="16" x2="15" y2="16"></line></svg></div>
+    <code>file-text</code>
+    <span>Text document</span>
+  </article>
+  <article class="icon-card" data-name="folder folder data" data-category="data">
+    <div class="icon-graphic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 6h7l2 2h9v11H3V6Z"></path></svg></div>
+    <code>folder</code>
+    <span>Folder</span>
+  </article>
+  <article class="icon-card" data-name="folder-open open folder data" data-category="data">
+    <div class="icon-graphic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8V6h7l2 2h8l1 4"></path><path d="m3 10 2 10h14l2-10H3Z"></path></svg></div>
+    <code>folder-open</code>
+    <span>Open folder</span>
+  </article>
+  <article class="icon-card" data-name="clipboard clipboard data" data-category="data">
+    <div class="icon-graphic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="5" width="14" height="17" rx="2"></rect><rect x="9" y="2" width="6" height="5" rx="1"></rect><line x1="9" y1="12" x2="15" y2="12"></line><line x1="9" y1="16" x2="15" y2="16"></line></svg></div>
+    <code>clipboard</code>
+    <span>Clipboard</span>
+  </article>
+  <article class="icon-card" data-name="database database data" data-category="data">
+    <div class="icon-graphic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="12" cy="5" rx="8" ry="3"></ellipse><path d="M4 5v6c0 1.7 3.6 3 8 3s8-1.3 8-3V5"></path><path d="M4 11v6c0 1.7 3.6 3 8 3s8-1.3 8-3v-6"></path></svg></div>
+    <code>database</code>
+    <span>Database</span>
+  </article>
+  <article class="icon-card" data-name="server server resource data" data-category="data">
+    <div class="icon-graphic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="7" rx="1"></rect><rect x="3" y="13" width="18" height="7" rx="1"></rect><circle cx="7" cy="7.5" r="1"></circle><circle cx="7" cy="16.5" r="1"></circle><line x1="11" y1="7.5" x2="18" y2="7.5"></line><line x1="11" y1="16.5" x2="18" y2="16.5"></line></svg></div>
+    <code>server</code>
+    <span>Server resource</span>
+  </article>
+  <article class="icon-card" data-name="terminal command terminal data" data-category="data">
+    <div class="icon-graphic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"></rect><polyline points="7 9 10 12 7 15"></polyline><line x1="13" y1="15" x2="17" y2="15"></line></svg></div>
+    <code>terminal</code>
+    <span>Command terminal</span>
+  </article>
+  <article class="icon-card" data-name="code source code data" data-category="data">
+    <div class="icon-graphic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 5 3 12 9 19"></polyline><polyline points="15 5 21 12 15 19"></polyline><line x1="13" y1="3" x2="11" y2="21"></line></svg></div>
+    <code>code</code>
+    <span>Source code</span>
+  </article>
+  <article class="icon-card" data-name="table data table data" data-category="data">
+    <div class="icon-graphic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="1"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="4" x2="9" y2="20"></line><line x1="15" y1="4" x2="15" y2="20"></line></svg></div>
+    <code>table</code>
+    <span>Data table</span>
+  </article>
+  <article class="icon-card" data-name="chart-line line chart data" data-category="data">
+    <div class="icon-graphic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="4" y1="20" x2="4" y2="4"></line><line x1="4" y1="20" x2="21" y2="20"></line><polyline points="6 16 10 11 14 14 20 6"></polyline></svg></div>
+    <code>chart-line</code>
+    <span>Line chart</span>
+  </article>
+  <article class="icon-card" data-name="chart-bar bar chart data" data-category="data">
+    <div class="icon-graphic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="3" y1="21" x2="21" y2="21"></line><rect x="5" y="12" width="3" height="7"></rect><rect x="11" y="8" width="3" height="11"></rect><rect x="17" y="4" width="3" height="15"></rect></svg></div>
+    <code>chart-bar</code>
+    <span>Bar chart</span>
+  </article>
+  <article class="icon-card" data-name="chart-pie pie chart data" data-category="data">
+    <div class="icon-graphic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v9h9A9 9 0 0 0 12 3Z"></path><path d="M9 4.2a9 9 0 1 0 10.8 10.8H9V4.2Z"></path></svg></div>
+    <code>chart-pie</code>
+    <span>Pie chart</span>
+  </article>
+  <article class="icon-card" data-name="grid grid view data" data-category="data">
+    <div class="icon-graphic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"></rect><rect x="14" y="3" width="7" height="7" rx="1"></rect><rect x="3" y="14" width="7" height="7" rx="1"></rect><rect x="14" y="14" width="7" height="7" rx="1"></rect></svg></div>
+    <code>grid</code>
+    <span>Grid view</span>
+  </article>
+  <article class="icon-card" data-name="list list view data" data-category="data">
+    <div class="icon-graphic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="4" cy="6" r="0.8"></circle><circle cx="4" cy="12" r="0.8"></circle><circle cx="4" cy="18" r="0.8"></circle><line x1="8" y1="6" x2="21" y2="6"></line><line x1="8" y1="12" x2="21" y2="12"></line><line x1="8" y1="18" x2="21" y2="18"></line></svg></div>
+    <code>list</code>
+    <span>List view</span>
+  </article>
+  <article class="icon-card" data-name="layers layer stack data" data-category="data">
+    <div class="icon-graphic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="12 3 21 8 12 13 3 8"></polygon><polyline points="3 12 12 17 21 12"></polyline><polyline points="3 16 12 21 21 16"></polyline></svg></div>
+    <code>layers</code>
+    <span>Layer stack</span>
+  </article>
+  <article class="icon-card" data-name="package package or module data" data-category="data">
+    <div class="icon-graphic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="12 3 21 8 12 13 3 8"></polygon><polyline points="3 8 3 17 12 22 21 17 21 8"></polyline><line x1="12" y1="13" x2="12" y2="22"></line></svg></div>
+    <code>package</code>
+    <span>Package or module</span>
+  </article>
+  <article class="icon-card" data-name="inbox incoming items data" data-category="data">
+    <div class="icon-graphic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16l2 12v4H2v-4L4 4Z"></path><path d="M2 16h6l2 2h4l2-2h6"></path></svg></div>
+    <code>inbox</code>
+    <span>Incoming items</span>
+  </article>
+  <article class="icon-card" data-name="outbox outgoing items data" data-category="data">
+    <div class="icon-graphic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16l2 12v4H2v-4L4 4Z"></path><path d="M2 16h6l2 2h4l2-2h6"></path><line x1="12" y1="14" x2="12" y2="7"></line><polyline points="9 10 12 7 15 10"></polyline></svg></div>
+    <code>outbox</code>
+    <span>Outgoing items</span>
+  </article>
+  <article class="icon-card" data-name="hard-drive storage device data" data-category="data">
+    <div class="icon-graphic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h14l3 12H2L5 4Z"></path><rect x="2" y="16" width="20" height="5" rx="1"></rect><circle cx="18" cy="18.5" r="0.8"></circle><circle cx="14" cy="18.5" r="0.8"></circle></svg></div>
+    <code>hard-drive</code>
+    <span>Storage device</span>
+  </article>
+  <article class="icon-card" data-name="cpu processor or compute data" data-category="data">
+    <div class="icon-graphic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="7" width="10" height="10" rx="1"></rect><rect x="10" y="10" width="4" height="4"></rect><line x1="9" y1="2" x2="9" y2="7"></line><line x1="15" y1="2" x2="15" y2="7"></line><line x1="9" y1="17" x2="9" y2="22"></line><line x1="15" y1="17" x2="15" y2="22"></line><line x1="2" y1="9" x2="7" y2="9"></line><line x1="2" y1="15" x2="7" y2="15"></line><line x1="17" y1="9" x2="22" y2="9"></line><line x1="17" y1="15" x2="22" y2="15"></line></svg></div>
+    <code>cpu</code>
+    <span>Processor or compute</span>
+  </article>
+  <article class="icon-card" data-name="network connected network data" data-category="data">
+    <div class="icon-graphic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="3" width="6" height="5" rx="1"></rect><rect x="3" y="16" width="6" height="5" rx="1"></rect><rect x="15" y="16" width="6" height="5" rx="1"></rect><line x1="12" y1="8" x2="12" y2="12"></line><line x1="6" y1="12" x2="18" y2="12"></line><line x1="6" y1="12" x2="6" y2="16"></line><line x1="18" y1="12" x2="18" y2="16"></line></svg></div>
+    <code>network</code>
+    <span>Connected network</span>
+  </article>
+  <article class="icon-card" data-name="key access key or credential data" data-category="data">
+    <div class="icon-graphic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="15" r="4"></circle><path d="m11 12 9-9"></path><line x1="16" y1="7" x2="19" y2="10"></line><line x1="18" y1="5" x2="21" y2="8"></line></svg></div>
+    <code>key</code>
+    <span>Access key or credential</span>
+  </article>
+  <article class="icon-card" data-name="hash identifier or number data" data-category="data">
+    <div class="icon-graphic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="9" y1="3" x2="7" y2="21"></line><line x1="17" y1="3" x2="15" y2="21"></line><line x1="4" y1="9" x2="20" y2="9"></line><line x1="3" y1="15" x2="19" y2="15"></line></svg></div>
+    <code>hash</code>
+    <span>Identifier or number</span>
+  </article>
+  <article class="icon-card" data-name="sliders adjust parameters data" data-category="data">
+    <div class="icon-graphic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="4" y1="6" x2="20" y2="6"></line><circle cx="9" cy="6" r="2"></circle><line x1="4" y1="12" x2="20" y2="12"></line><circle cx="15" cy="12" r="2"></circle><line x1="4" y1="18" x2="20" y2="18"></line><circle cx="11" cy="18" r="2"></circle></svg></div>
+    <code>sliders</code>
+    <span>Adjust parameters</span>
+  </article>
+  <article class="icon-card" data-name="brackets structured data data" data-category="data">
+    <div class="icon-graphic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 4 5 4 5 20 9 20"></polyline><polyline points="15 4 19 4 19 20 15 20"></polyline></svg></div>
+    <code>brackets</code>
+    <span>Structured data</span>
+  </article>
+  <article class="icon-card" data-name="binary binary data data" data-category="data">
+    <div class="icon-graphic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 7a2 2 0 0 1 4 0v4a2 2 0 0 1-4 0V7Z"></path><line x1="14" y1="5" x2="14" y2="13"></line><line x1="12" y1="13" x2="16" y2="13"></line><line x1="6" y1="17" x2="6" y2="21"></line><line x1="4" y1="21" x2="8" y2="21"></line><path d="M15 17a2 2 0 0 1 4 0v2a2 2 0 0 1-4 0v-2Z"></path></svg></div>
+    <code>binary</code>
+    <span>Binary data</span>
+  </article>
+  <article class="icon-card" data-name="user user account communication" data-category="communication">
+    <div class="icon-graphic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"></circle><path d="M4 21a8 8 0 0 1 16 0"></path></svg></div>
+    <code>user</code>
+    <span>User account</span>
+  </article>
+  <article class="icon-card" data-name="users user group communication" data-category="communication">
+    <div class="icon-graphic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.5"></circle><path d="M2.5 20a6.5 6.5 0 0 1 13 0"></path><path d="M16 5.5a3 3 0 0 1 0 5.8"></path><path d="M17 14a6 6 0 0 1 4.5 6"></path></svg></div>
+    <code>users</code>
+    <span>User group</span>
+  </article>
+  <article class="icon-card" data-name="message message communication" data-category="communication">
+    <div class="icon-graphic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16v13H9l-5 4V4Z"></path></svg></div>
+    <code>message</code>
+    <span>Message</span>
+  </article>
+  <article class="icon-card" data-name="messages message thread communication" data-category="communication">
+    <div class="icon-graphic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 3h14v11H8l-4 3V3Z"></path><path d="M8 17h8l4 3V8"></path></svg></div>
+    <code>messages</code>
+    <span>Message thread</span>
+  </article>
+  <article class="icon-card" data-name="mail email communication" data-category="communication">
+    <div class="icon-graphic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"></rect><polyline points="3 7 12 13 21 7"></polyline></svg></div>
+    <code>mail</code>
+    <span>Email</span>
+  </article>
+  <article class="icon-card" data-name="send send message communication" data-category="communication">
+    <div class="icon-graphic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="3 4 22 12 3 20 7 12"></polygon><line x1="7" y1="12" x2="17" y2="12"></line></svg></div>
+    <code>send</code>
+    <span>Send message</span>
+  </article>
+  <article class="icon-card" data-name="calendar calendar date communication" data-category="communication">
+    <div class="icon-graphic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"></rect><line x1="7" y1="3" x2="7" y2="7"></line><line x1="17" y1="3" x2="17" y2="7"></line><line x1="3" y1="10" x2="21" y2="10"></line><line x1="8" y1="14" x2="8" y2="17"></line><line x1="12" y1="14" x2="12" y2="17"></line><line x1="16" y1="14" x2="16" y2="17"></line></svg></div>
+    <code>calendar</code>
+    <span>Calendar date</span>
+  </article>
+  <article class="icon-card" data-name="clock time communication" data-category="communication">
+    <div class="icon-graphic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><polyline points="12 7 12 12 16 14"></polyline></svg></div>
+    <code>clock</code>
+    <span>Time</span>
+  </article>
+  <article class="icon-card" data-name="timer countdown timer communication" data-category="communication">
+    <div class="icon-graphic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="13" r="8"></circle><line x1="12" y1="13" x2="16" y2="9"></line><line x1="9" y1="2" x2="15" y2="2"></line><line x1="12" y1="2" x2="12" y2="5"></line><line x1="18" y1="6" x2="20" y2="4"></line></svg></div>
+    <code>timer</code>
+    <span>Countdown timer</span>
+  </article>
+  <article class="icon-card" data-name="history history or recent activity communication" data-category="communication">
+    <div class="icon-graphic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6v5h5"></path><path d="M5.5 17A8 8 0 1 0 4 11"></path><polyline points="12 8 12 12 15 14"></polyline></svg></div>
+    <code>history</code>
+    <span>History or recent activity</span>
+  </article>
+  <article class="icon-card" data-name="phone phone contact communication" data-category="communication">
+    <div class="icon-graphic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3 4 5c-1 8 7 16 15 15l2-3-5-3-2 2c-3-1-5-3-6-6l2-2-3-5Z"></path></svg></div>
+    <code>phone</code>
+    <span>Phone contact</span>
+  </article>
+  <article class="icon-card" data-name="radio radio communications communication" data-category="communication">
+    <div class="icon-graphic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="7" width="16" height="13" rx="2"></rect><line x1="8" y1="7" x2="16" y2="3"></line><circle cx="14.5" cy="13.5" r="3"></circle><line x1="7" y1="12" x2="9" y2="12"></line><line x1="7" y1="16" x2="9" y2="16"></line></svg></div>
+    <code>radio</code>
+    <span>Radio communications</span>
+  </article>
+  <article class="icon-card" data-name="microphone voice input communication" data-category="communication">
+    <div class="icon-graphic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="3" width="6" height="12" rx="3"></rect><path d="M5 12a7 7 0 0 0 14 0"></path><line x1="12" y1="19" x2="12" y2="22"></line><line x1="8" y1="22" x2="16" y2="22"></line></svg></div>
+    <code>microphone</code>
+    <span>Voice input</span>
+  </article>
+  <article class="icon-card" data-name="volume audio volume communication" data-category="communication">
+    <div class="icon-graphic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="3 10 7 10 12 5 12 19 7 14 3 14"></polygon><path d="M16 9a4 4 0 0 1 0 6"></path><path d="M18.5 6.5a8 8 0 0 1 0 11"></path></svg></div>
+    <code>volume</code>
+    <span>Audio volume</span>
+  </article>
+  <article class="icon-card" data-name="mute audio muted communication" data-category="communication">
+    <div class="icon-graphic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="3 10 7 10 12 5 12 19 7 14 3 14"></polygon><line x1="16" y1="9" x2="21" y2="14"></line><line x1="21" y1="9" x2="16" y2="14"></line></svg></div>
+    <code>mute</code>
+    <span>Audio muted</span>
+  </article>
+  <article class="icon-card" data-name="first-page navigate to the first page navigation" data-category="navigation">
+    <div class="icon-graphic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="4" x2="5" y2="20"></line><polyline points="18 5 11 12 18 19"></polyline></svg></div>
+    <code>first-page</code>
+    <span>Navigate to the first page</span>
+  </article>
+  <article class="icon-card" data-name="last-page navigate to the last page navigation" data-category="navigation">
+    <div class="icon-graphic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="19" y1="4" x2="19" y2="20"></line><polyline points="6 5 13 12 6 19"></polyline></svg></div>
+    <code>last-page</code>
+    <span>Navigate to the last page</span>
+  </article>
+  <article class="icon-card" data-name="skip-back skip to the previous item navigation" data-category="navigation">
+    <div class="icon-graphic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="5" x2="5" y2="19"></line><polygon points="19 5 9 12 19 19"></polygon></svg></div>
+    <code>skip-back</code>
+    <span>Skip to the previous item</span>
+  </article>
+  <article class="icon-card" data-name="skip-forward skip to the next item navigation" data-category="navigation">
+    <div class="icon-graphic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="19" y1="5" x2="19" y2="19"></line><polygon points="5 5 15 12 5 19"></polygon></svg></div>
+    <code>skip-forward</code>
+    <span>Skip to the next item</span>
+  </article>
+  <article class="icon-card" data-name="login enter or sign in navigation" data-category="navigation">
+    <div class="icon-graphic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 4h7v16h-7"></path><line x1="3" y1="12" x2="15" y2="12"></line><polyline points="10 7 15 12 10 17"></polyline></svg></div>
+    <code>login</code>
+    <span>Enter or sign in</span>
+  </article>
+  <article class="icon-card" data-name="logout exit or sign out navigation" data-category="navigation">
+    <div class="icon-graphic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 4H4v16h7"></path><line x1="9" y1="12" x2="21" y2="12"></line><polyline points="16 7 21 12 16 17"></polyline></svg></div>
+    <code>logout</code>
+    <span>Exit or sign out</span>
+  </article>
+  <article class="icon-card" data-name="rotate-cw rotate clockwise navigation" data-category="navigation">
+    <div class="icon-graphic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 7v5h-5"></path><path d="M19 12a7 7 0 1 1-2-5"></path><polyline points="16 3 20 7 16 11"></polyline></svg></div>
+    <code>rotate-cw</code>
+    <span>Rotate clockwise</span>
+  </article>
+  <article class="icon-card" data-name="rotate-ccw rotate counterclockwise navigation" data-category="navigation">
+    <div class="icon-graphic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7v5h5"></path><path d="M5 12a7 7 0 1 0 2-5"></path><polyline points="8 3 4 7 8 11"></polyline></svg></div>
+    <code>rotate-ccw</code>
+    <span>Rotate counterclockwise</span>
+  </article>
+  <article class="icon-card" data-name="zoom-in increase magnification navigation" data-category="navigation">
+    <div class="icon-graphic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"></circle><line x1="15.5" y1="15.5" x2="21" y2="21"></line><line x1="10.5" y1="7.5" x2="10.5" y2="13.5"></line><line x1="7.5" y1="10.5" x2="13.5" y2="10.5"></line></svg></div>
+    <code>zoom-in</code>
+    <span>Increase magnification</span>
+  </article>
+  <article class="icon-card" data-name="zoom-out decrease magnification navigation" data-category="navigation">
+    <div class="icon-graphic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"></circle><line x1="15.5" y1="15.5" x2="21" y2="21"></line><line x1="7.5" y1="10.5" x2="13.5" y2="10.5"></line></svg></div>
+    <code>zoom-out</code>
+    <span>Decrease magnification</span>
+  </article>
+  <article class="icon-card" data-name="panel-left toggle the left panel navigation" data-category="navigation">
+    <div class="icon-graphic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"></rect><line x1="9" y1="4" x2="9" y2="20"></line><polyline points="7 9 4 12 7 15"></polyline></svg></div>
+    <code>panel-left</code>
+    <span>Toggle the left panel</span>
+  </article>
+  <article class="icon-card" data-name="panel-right toggle the right panel navigation" data-category="navigation">
+    <div class="icon-graphic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"></rect><line x1="15" y1="4" x2="15" y2="20"></line><polyline points="17 9 20 12 17 15"></polyline></svg></div>
+    <code>panel-right</code>
+    <span>Toggle the right panel</span>
+  </article>
+  <article class="icon-card" data-name="undo undo the previous action action" data-category="action">
+    <div class="icon-graphic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 7 4 12 9 17"></polyline><path d="M4 12h9a7 7 0 0 1 7 7"></path></svg></div>
+    <code>undo</code>
+    <span>Undo the previous action</span>
+  </article>
+  <article class="icon-card" data-name="redo redo the previous action action" data-category="action">
+    <div class="icon-graphic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 7 20 12 15 17"></polyline><path d="M20 12h-9a7 7 0 0 0-7 7"></path></svg></div>
+    <code>redo</code>
+    <span>Redo the previous action</span>
+  </article>
+  <article class="icon-card" data-name="cut cut selected content action" data-category="action">
+    <div class="icon-graphic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="18" r="3"></circle><circle cx="18" cy="18" r="3"></circle><line x1="8.5" y1="16.5" x2="19" y2="4"></line><line x1="5" y1="4" x2="15.5" y2="16.5"></line></svg></div>
+    <code>cut</code>
+    <span>Cut selected content</span>
+  </article>
+  <article class="icon-card" data-name="paste paste clipboard content action" data-category="action">
+    <div class="icon-graphic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="5" width="14" height="16" rx="2"></rect><rect x="9" y="2" width="6" height="5" rx="1"></rect><path d="M4 8v11a2 2 0 0 0 2 2"></path></svg></div>
+    <code>paste</code>
+    <span>Paste clipboard content</span>
+  </article>
+  <article class="icon-card" data-name="attach attach a file action paperclip" data-category="action">
+    <div class="icon-graphic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m8 12 6.7-6.7a3.5 3.5 0 0 1 5 5L10 20a5 5 0 0 1-7-7l9-9"></path><path d="m7 15 8-8"></path></svg></div>
+    <code>attach</code>
+    <span>Attach a file</span>
+  </article>
+  <article class="icon-card" data-name="bookmark bookmark content action" data-category="action">
+    <div class="icon-graphic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h12v18l-6-4-6 4V3Z"></path></svg></div>
+    <code>bookmark</code>
+    <span>Bookmark content</span>
+  </article>
+  <article class="icon-card" data-name="heart favorite or save for later action favorite" data-category="action">
+    <div class="icon-graphic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21 4.5 13.5A5.3 5.3 0 0 1 12 6a5.3 5.3 0 0 1 7.5 7.5L12 21Z"></path></svg></div>
+    <code>heart</code>
+    <span>Favorite or save for later</span>
+  </article>
+  <article class="icon-card" data-name="format-bold apply bold text style action" data-category="action">
+    <div class="icon-graphic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 4h5a4 4 0 0 1 0 8H8V4Z"></path><path d="M8 12h6a4 4 0 0 1 0 8H8v-8Z"></path></svg></div>
+    <code>format-bold</code>
+    <span>Apply bold text style</span>
+  </article>
+  <article class="icon-card" data-name="format-italic apply italic text style action" data-category="action">
+    <div class="icon-graphic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="10" y1="4" x2="18" y2="4"></line><line x1="6" y1="20" x2="14" y2="20"></line><line x1="14" y1="4" x2="10" y2="20"></line></svg></div>
+    <code>format-italic</code>
+    <span>Apply italic text style</span>
+  </article>
+  <article class="icon-card" data-name="align-left align content left action" data-category="action">
+    <div class="icon-graphic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="4" y1="6" x2="20" y2="6"></line><line x1="4" y1="10" x2="15" y2="10"></line><line x1="4" y1="14" x2="20" y2="14"></line><line x1="4" y1="18" x2="13" y2="18"></line></svg></div>
+    <code>align-left</code>
+    <span>Align content left</span>
+  </article>
+  <article class="icon-card" data-name="align-center align content center action" data-category="action">
+    <div class="icon-graphic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="4" y1="6" x2="20" y2="6"></line><line x1="7" y1="10" x2="17" y2="10"></line><line x1="4" y1="14" x2="20" y2="14"></line><line x1="8" y1="18" x2="16" y2="18"></line></svg></div>
+    <code>align-center</code>
+    <span>Align content center</span>
+  </article>
+  <article class="icon-card" data-name="align-right align content right action" data-category="action">
+    <div class="icon-graphic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="4" y1="6" x2="20" y2="6"></line><line x1="9" y1="10" x2="20" y2="10"></line><line x1="4" y1="14" x2="20" y2="14"></line><line x1="11" y1="18" x2="20" y2="18"></line></svg></div>
+    <code>align-right</code>
+    <span>Align content right</span>
+  </article>
+  <article class="icon-card" data-name="indent increase indentation action" data-category="action">
+    <div class="icon-graphic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="10" y1="6" x2="21" y2="6"></line><line x1="10" y1="10" x2="18" y2="10"></line><line x1="10" y1="14" x2="21" y2="14"></line><line x1="10" y1="18" x2="17" y2="18"></line><polyline points="3 8 7 12 3 16"></polyline></svg></div>
+    <code>indent</code>
+    <span>Increase indentation</span>
+  </article>
+  <article class="icon-card" data-name="outdent decrease indentation action" data-category="action">
+    <div class="icon-graphic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="10" y1="6" x2="21" y2="6"></line><line x1="10" y1="10" x2="18" y2="10"></line><line x1="10" y1="14" x2="21" y2="14"></line><line x1="10" y1="18" x2="17" y2="18"></line><polyline points="7 8 3 12 7 16"></polyline></svg></div>
+    <code>outdent</code>
+    <span>Decrease indentation</span>
+  </article>
+  <article class="icon-card" data-name="cloud-download download from cloud storage action" data-category="action">
+    <div class="icon-graphic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 18H6a4 4 0 0 1-.7-7.9A7 7 0 0 1 19 9a4.5 4.5 0 0 1-1 9h-1"></path><line x1="12" y1="11" x2="12" y2="21"></line><polyline points="8 17 12 21 16 17"></polyline></svg></div>
+    <code>cloud-download</code>
+    <span>Download from cloud storage</span>
+  </article>
+  <article class="icon-card" data-name="cloud-upload upload to cloud storage action" data-category="action">
+    <div class="icon-graphic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 18H6a4 4 0 0 1-.7-7.9A7 7 0 0 1 19 9a4.5 4.5 0 0 1-1 9h-1"></path><line x1="12" y1="21" x2="12" y2="11"></line><polyline points="8 15 12 11 16 15"></polyline></svg></div>
+    <code>cloud-upload</code>
+    <span>Upload to cloud storage</span>
+  </article>
+  <article class="icon-card" data-name="pending pending or waiting state status" data-category="status">
+    <div class="icon-graphic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><polyline points="12 7 12 12 16 14"></polyline><path d="M5.5 5.5 3 3"></path><path d="M18.5 5.5 21 3"></path></svg></div>
+    <code>pending</code>
+    <span>Pending or waiting state</span>
+  </article>
+  <article class="icon-card" data-name="queued queued work item status" data-category="status">
+    <div class="icon-graphic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="5" width="14" height="14" rx="2"></rect><line x1="8" y1="9" x2="16" y2="9"></line><line x1="8" y1="13" x2="16" y2="13"></line><line x1="8" y1="17" x2="13" y2="17"></line><circle cx="19" cy="5" r="2"></circle></svg></div>
+    <code>queued</code>
+    <span>Queued work item</span>
+  </article>
+  <article class="icon-card" data-name="verified verified identity or result status" data-category="status">
+    <div class="icon-graphic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="12 2.5 15 5 19 5 19 9 21.5 12 19 15 19 19 15 19 12 21.5 9 19 5 19 5 15 2.5 12 5 9 5 5 9 5"></polygon><polyline points="8 12 11 15 16 9"></polyline></svg></div>
+    <code>verified</code>
+    <span>Verified identity or result</span>
+  </article>
+  <article class="icon-card" data-name="degraded degraded operational state status" data-category="status">
+    <div class="icon-graphic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M7 15a6 6 0 0 1 10 0"></path><line x1="8" y1="9" x2="8" y2="9.1"></line><line x1="16" y1="9" x2="16" y2="9.1"></line></svg></div>
+    <code>degraded</code>
+    <span>Degraded operational state</span>
+  </article>
+  <article class="icon-card" data-name="critical critical fault state status" data-category="status">
+    <div class="icon-graphic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="12 2 22 20 2 20"></polygon><line x1="12" y1="7" x2="12" y2="14"></line><line x1="9" y1="17" x2="15" y2="17"></line></svg></div>
+    <code>critical</code>
+    <span>Critical fault state</span>
+  </article>
+  <article class="icon-card" data-name="neutral neutral or unchanged state status" data-category="status">
+    <div class="icon-graphic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><line x1="8" y1="12" x2="16" y2="12"></line></svg></div>
+    <code>neutral</code>
+    <span>Neutral or unchanged state</span>
+  </article>
+  <article class="icon-card" data-name="cloud cloud resource data" data-category="data">
+    <div class="icon-graphic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 19H6a4 4 0 0 1-.7-7.9A7 7 0 0 1 19 10a4.5 4.5 0 0 1-1 9H7Z"></path></svg></div>
+    <code>cloud</code>
+    <span>Cloud resource</span>
+  </article>
+  <article class="icon-card" data-name="cloud-off unavailable cloud resource data" data-category="data">
+    <div class="icon-graphic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4l16 16"></path><path d="M7 19H6a4 4 0 0 1-.7-7.9A7 7 0 0 1 8 6.5"></path><path d="M12 5a7 7 0 0 1 7 5 4.5 4.5 0 0 1 1.3 7.8"></path></svg></div>
+    <code>cloud-off</code>
+    <span>Unavailable cloud resource</span>
+  </article>
+  <article class="icon-card" data-name="image image asset data" data-category="data">
+    <div class="icon-graphic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"></rect><circle cx="8" cy="9" r="1.5"></circle><polyline points="4 17 9 12 13 16 16 13 20 17"></polyline></svg></div>
+    <code>image</code>
+    <span>Image asset</span>
+  </article>
+  <article class="icon-card" data-name="video video asset data" data-category="data">
+    <div class="icon-graphic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="14" height="14" rx="2"></rect><polygon points="17 10 22 7 22 17 17 14"></polygon></svg></div>
+    <code>video</code>
+    <span>Video asset</span>
+  </article>
+  <article class="icon-card" data-name="dashboard dashboard layout data" data-category="data">
+    <div class="icon-graphic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="8" height="8" rx="1"></rect><rect x="13" y="3" width="8" height="5" rx="1"></rect><rect x="13" y="10" width="8" height="11" rx="1"></rect><rect x="3" y="13" width="8" height="8" rx="1"></rect></svg></div>
+    <code>dashboard</code>
+    <span>Dashboard layout</span>
+  </article>
+  <article class="icon-card" data-name="timeline timeline or event sequence data" data-category="data">
+    <div class="icon-graphic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="4" x2="5" y2="20"></line><circle cx="5" cy="7" r="1.5"></circle><circle cx="5" cy="13" r="1.5"></circle><circle cx="5" cy="19" r="1.5"></circle><line x1="8" y1="7" x2="20" y2="7"></line><line x1="8" y1="13" x2="16" y2="13"></line><line x1="8" y1="19" x2="18" y2="19"></line></svg></div>
+    <code>timeline</code>
+    <span>Timeline or event sequence</span>
+  </article>
+  <article class="icon-card" data-name="analytics analytics or trends data" data-category="data">
+    <div class="icon-graphic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="4" y1="20" x2="4" y2="4"></line><line x1="4" y1="20" x2="21" y2="20"></line><polyline points="6 16 10 12 13 14 19 7"></polyline><circle cx="10" cy="12" r="1"></circle><circle cx="13" cy="14" r="1"></circle><circle cx="19" cy="7" r="1"></circle></svg></div>
+    <code>analytics</code>
+    <span>Analytics or trends</span>
+  </article>
+  <article class="icon-card" data-name="columns column layout data" data-category="data">
+    <div class="icon-graphic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="1"></rect><line x1="9" y1="4" x2="9" y2="20"></line><line x1="15" y1="4" x2="15" y2="20"></line></svg></div>
+    <code>columns</code>
+    <span>Column layout</span>
+  </article>
+  <article class="icon-card" data-name="rows row layout data" data-category="data">
+    <div class="icon-graphic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="1"></rect><line x1="3" y1="9.3" x2="21" y2="9.3"></line><line x1="3" y1="14.7" x2="21" y2="14.7"></line></svg></div>
+    <code>rows</code>
+    <span>Row layout</span>
+  </article>
+  <article class="icon-card" data-name="at-sign mention or email address communication" data-category="communication">
+    <div class="icon-graphic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M16 15V9h-3a3 3 0 1 0 3 3"></path><path d="M16 15c2 0 4-1.6 4-4a8 8 0 1 0-3 6.2"></path></svg></div>
+    <code>at-sign</code>
+    <span>Mention or email address</span>
+  </article>
+  <article class="icon-card" data-name="reply reply to a message communication" data-category="communication">
+    <div class="icon-graphic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 7 4 12 9 17"></polyline><path d="M4 12h8a8 8 0 0 1 8 8"></path></svg></div>
+    <code>reply</code>
+    <span>Reply to a message</span>
+  </article>
+  <article class="icon-card" data-name="forward forward a message communication" data-category="communication">
+    <div class="icon-graphic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 7 20 12 15 17"></polyline><path d="M20 12h-8a8 8 0 0 0-8 8"></path></svg></div>
+    <code>forward</code>
+    <span>Forward a message</span>
+  </article>
+  <article class="icon-card" data-name="headset support or headset audio communication" data-category="communication">
+    <div class="icon-graphic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 13v-2a8 8 0 0 1 16 0v2"></path><rect x="3" y="12" width="4" height="7" rx="2"></rect><rect x="17" y="12" width="4" height="7" rx="2"></rect><path d="M17 19c0 2-2 3-5 3"></path></svg></div>
+    <code>headset</code>
+    <span>Support or headset audio</span>
+  </article>
+  <article class="icon-card" data-name="video-camera video call or camera communication" data-category="communication">
+    <div class="icon-graphic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="13" height="12" rx="2"></rect><polygon points="16 10 21 7 21 17 16 14"></polygon></svg></div>
+    <code>video-camera</code>
+    <span>Video call or camera</span>
+  </article></div></section>
+<section id="governance"><div class="section-head"><span class="number">08</span><h2>Component contract manifest</h2><p>State coverage, allowed depth, and source location are machine-readable and validated.</p></div><div class="table-wrap"><table><thead><tr><th>Component</th><th>States</th><th>Depth</th><th>Source</th></tr></thead><tbody><tr><th>Button</th><td><span class="pill">default</span> <span class="pill">hover</span> <span class="pill">active</span> <span class="pill">focus</span> <span class="pill">disabled</span> <span class="pill">loading</span></td><td><code>0 / 1 / 2</code></td><td><code>components/lsm/button.tsx</code></td></tr><tr><th>IconButton</th><td><span class="pill">default</span> <span class="pill">hover</span> <span class="pill">active</span> <span class="pill">focus</span> <span class="pill">disabled</span></td><td><code>0 / 1 / 2</code></td><td><code>components/lsm/icon-button.tsx</code></td></tr><tr><th>ButtonGroup</th><td><span class="pill">horizontal</span> <span class="pill">vertical</span> <span class="pill">responsive</span> <span class="pill">disabled</span></td><td><code>0 / 1 / 2</code></td><td><code>components/lsm/button-group.tsx</code></td></tr><tr><th>Card</th><td><span class="pill">default</span> <span class="pill">elevated</span> <span class="pill">interactive</span> <span class="pill">disabled</span></td><td><code>0 / 1 / 2</code></td><td><code>components/lsm/card.tsx</code></td></tr><tr><th>Badge</th><td><span class="pill">neutral</span> <span class="pill">info</span> <span class="pill">success</span> <span class="pill">warning</span> <span class="pill">error</span> <span class="pill">priority</span></td><td><code>0 / 1 / 2</code></td><td><code>components/lsm/badge.tsx</code></td></tr><tr><th>StatusChip</th><td><span class="pill">neutral</span> <span class="pill">info</span> <span class="pill">success</span> <span class="pill">warning</span> <span class="pill">error</span> <span class="pill">standby</span></td><td><code>0 / 1 / 2</code></td><td><code>components/lsm/status-chip.tsx</code></td></tr><tr><th>Alert</th><td><span class="pill">neutral</span> <span class="pill">info</span> <span class="pill">success</span> <span class="pill">warning</span> <span class="pill">error</span></td><td><code>0 / 1 / 2</code></td><td><code>components/lsm/alert.tsx</code></td></tr><tr><th>Avatar</th><td><span class="pill">image</span> <span class="pill">fallback</span> <span class="pill">online</span> <span class="pill">offline</span> <span class="pill">busy</span></td><td><code>1 / 2</code></td><td><code>components/lsm/avatar.tsx</code></td></tr><tr><th>EmptyState</th><td><span class="pill">default</span> <span class="pill">compact</span> <span class="pill">action</span></td><td><code>0 / 1 / 2</code></td><td><code>components/lsm/empty-state.tsx</code></td></tr><tr><th>Separator</th><td><span class="pill">horizontal</span> <span class="pill">vertical</span> <span class="pill">decorative</span> <span class="pill">semantic</span></td><td><code>0 / 1 / 2</code></td><td><code>components/lsm/separator.tsx</code></td></tr><tr><th>Skeleton</th><td><span class="pill">loading</span> <span class="pill">reduced-motion</span></td><td><code>1 / 2</code></td><td><code>components/lsm/skeleton.tsx</code></td></tr><tr><th>Spinner</th><td><span class="pill">active</span> <span class="pill">reduced-motion</span></td><td><code>0 / 1 / 2</code></td><td><code>components/lsm/spinner.tsx</code></td></tr><tr><th>Input</th><td><span class="pill">default</span> <span class="pill">hover</span> <span class="pill">focus</span> <span class="pill">filled</span> <span class="pill">invalid</span> <span class="pill">disabled</span> <span class="pill">readonly</span></td><td><code>1 / 2</code></td><td><code>components/lsm/input.tsx</code></td></tr><tr><th>Textarea</th><td><span class="pill">default</span> <span class="pill">hover</span> <span class="pill">focus</span> <span class="pill">filled</span> <span class="pill">invalid</span> <span class="pill">disabled</span> <span class="pill">readonly</span></td><td><code>1 / 2</code></td><td><code>components/lsm/input.tsx</code></td></tr><tr><th>SearchInput</th><td><span class="pill">default</span> <span class="pill">focus</span> <span class="pill">filled</span> <span class="pill">disabled</span></td><td><code>1 / 2</code></td><td><code>components/lsm/input.tsx</code></td></tr><tr><th>Select</th><td><span class="pill">default</span> <span class="pill">hover</span> <span class="pill">focus</span> <span class="pill">selected</span> <span class="pill">invalid</span> <span class="pill">disabled</span></td><td><code>1 / 2</code></td><td><code>components/lsm/select.tsx</code></td></tr><tr><th>Checkbox</th><td><span class="pill">unchecked</span> <span class="pill">checked</span> <span class="pill">indeterminate</span> <span class="pill">focus</span> <span class="pill">disabled</span> <span class="pill">invalid</span></td><td><code>1 / 2</code></td><td><code>components/lsm/checkbox.tsx</code></td></tr><tr><th>RadioGroup</th><td><span class="pill">unchecked</span> <span class="pill">checked</span> <span class="pill">focus</span> <span class="pill">disabled</span> <span class="pill">invalid</span></td><td><code>1 / 2</code></td><td><code>components/lsm/radio-group.tsx</code></td></tr><tr><th>Toggle</th><td><span class="pill">off</span> <span class="pill">on</span> <span class="pill">hover</span> <span class="pill">focus</span> <span class="pill">disabled</span></td><td><code>1 / 2</code></td><td><code>components/lsm/toggle.tsx</code></td></tr><tr><th>Slider</th><td><span class="pill">default</span> <span class="pill">hover</span> <span class="pill">focus</span> <span class="pill">disabled</span> <span class="pill">value</span></td><td><code>1 / 2</code></td><td><code>components/lsm/slider.tsx</code></td></tr><tr><th>Combobox</th><td><span class="pill">default</span> <span class="pill">focus</span> <span class="pill">expanded</span> <span class="pill">selected</span> <span class="pill">invalid</span> <span class="pill">disabled</span></td><td><code>1 / 2</code></td><td><code>components/lsm/combobox.tsx</code></td></tr><tr><th>FileInput</th><td><span class="pill">empty</span> <span class="pill">selected</span> <span class="pill">invalid</span> <span class="pill">disabled</span> <span class="pill">drag-ready</span></td><td><code>1 / 2</code></td><td><code>components/lsm/file-input.tsx</code></td></tr><tr><th>CharacterCount</th><td><span class="pill">empty</span> <span class="pill">typing</span> <span class="pill">nearing-limit</span> <span class="pill">over-limit</span> <span class="pill">disabled</span></td><td><code>1 / 2</code></td><td><code>components/lsm/character-count.tsx</code></td></tr><tr><th>Tabs</th><td><span class="pill">default</span> <span class="pill">hover</span> <span class="pill">focus</span> <span class="pill">selected</span> <span class="pill">disabled</span> <span class="pill">horizontal</span> <span class="pill">vertical</span></td><td><code>0 / 1 / 2</code></td><td><code>components/lsm/tabs.tsx</code></td></tr><tr><th>Accordion</th><td><span class="pill">collapsed</span> <span class="pill">expanded</span> <span class="pill">hover</span> <span class="pill">focus</span> <span class="pill">disabled</span></td><td><code>0 / 1 / 2</code></td><td><code>components/lsm/accordion.tsx</code></td></tr><tr><th>Tooltip</th><td><span class="pill">closed</span> <span class="pill">hover</span> <span class="pill">focus</span> <span class="pill">open</span> <span class="pill">escaped</span></td><td><code>1 / 2</code></td><td><code>components/lsm/tooltip.tsx</code></td></tr><tr><th>Dialog</th><td><span class="pill">closed</span> <span class="pill">open</span> <span class="pill">focus-trapped</span> <span class="pill">dismissing</span></td><td><code>1 / 2</code></td><td><code>components/lsm/dialog.tsx</code></td></tr><tr><th>Drawer</th><td><span class="pill">closed</span> <span class="pill">open</span> <span class="pill">focus-trapped</span> <span class="pill">dismissing</span> <span class="pill">left</span> <span class="pill">right</span></td><td><code>1 / 2</code></td><td><code>components/lsm/drawer.tsx</code></td></tr><tr><th>Progress</th><td><span class="pill">determinate</span> <span class="pill">indeterminate</span> <span class="pill">complete</span> <span class="pill">error</span></td><td><code>0 / 1 / 2</code></td><td><code>components/lsm/progress.tsx</code></td></tr><tr><th>Meter</th><td><span class="pill">low</span> <span class="pill">optimum</span> <span class="pill">high</span> <span class="pill">critical</span></td><td><code>1 / 2</code></td><td><code>components/lsm/meter.tsx</code></td></tr><tr><th>DataTable</th><td><span class="pill">populated</span> <span class="pill">empty</span> <span class="pill">loading</span> <span class="pill">overflow</span> <span class="pill">selected</span></td><td><code>1 / 2</code></td><td><code>components/lsm/data-table.tsx</code></td></tr><tr><th>Breadcrumb</th><td><span class="pill">default</span> <span class="pill">current</span> <span class="pill">collapsed</span> <span class="pill">overflow</span></td><td><code>0 / 1 / 2</code></td><td><code>components/lsm/breadcrumb.tsx</code></td></tr><tr><th>Navigation</th><td><span class="pill">default</span> <span class="pill">hover</span> <span class="pill">active</span> <span class="pill">focus</span> <span class="pill">compact</span> <span class="pill">expanded</span></td><td><code>0 / 1 / 2</code></td><td><code>components/lsm/navigation.tsx</code></td></tr><tr><th>Pagination</th><td><span class="pill">first</span> <span class="pill">middle</span> <span class="pill">last</span> <span class="pill">current</span> <span class="pill">disabled</span> <span class="pill">compact</span></td><td><code>1 / 2</code></td><td><code>components/lsm/pagination.tsx</code></td></tr><tr><th>StepIndicator</th><td><span class="pill">complete</span> <span class="pill">current</span> <span class="pill">upcoming</span> <span class="pill">error</span> <span class="pill">vertical</span> <span class="pill">horizontal</span></td><td><code>1 / 2</code></td><td><code>components/lsm/step-indicator.tsx</code></td></tr><tr><th>Toolbar</th><td><span class="pill">horizontal</span> <span class="pill">vertical</span> <span class="pill">focus</span> <span class="pill">disabled</span> <span class="pill">overflow</span></td><td><code>1 / 2</code></td><td><code>components/lsm/toolbar.tsx</code></td></tr><tr><th>CodeSnippet</th><td><span class="pill">default</span> <span class="pill">copied</span> <span class="pill">multiline</span> <span class="pill">overflow</span></td><td><code>0 / 1 / 2</code></td><td><code>components/lsm/code-snippet.tsx</code></td></tr><tr><th>Banner</th><td><span class="pill">info</span> <span class="pill">success</span> <span class="pill">warning</span> <span class="pill">error</span> <span class="pill">dismissible</span></td><td><code>0 / 1 / 2</code></td><td><code>components/lsm/banner.tsx</code></td></tr><tr><th>ToastProvider</th><td><span class="pill">queued</span> <span class="pill">visible</span> <span class="pill">dismissing</span> <span class="pill">info</span> <span class="pill">success</span> <span class="pill">warning</span> <span class="pill">error</span></td><td><code>1 / 2</code></td><td><code>components/lsm/toast.tsx</code></td></tr><tr><th>Menu</th><td><span class="pill">closed</span> <span class="pill">open</span> <span class="pill">hover</span> <span class="pill">focus</span> <span class="pill">disabled</span> <span class="pill">destructive</span></td><td><code>1 / 2</code></td><td><code>components/lsm/menu.tsx</code></td></tr><tr><th>Disclosure</th><td><span class="pill">closed</span> <span class="pill">open</span> <span class="pill">hover</span> <span class="pill">focus</span> <span class="pill">disabled</span></td><td><code>0 / 1 / 2</code></td><td><code>components/lsm/disclosure.tsx</code></td></tr><tr><th>Tag</th><td><span class="pill">static</span> <span class="pill">interactive</span> <span class="pill">removable</span> <span class="pill">selected</span> <span class="pill">disabled</span></td><td><code>1 / 2</code></td><td><code>components/lsm/tag.tsx</code></td></tr><tr><th>SummaryBox</th><td><span class="pill">default</span> <span class="pill">priority</span> <span class="pill">info</span></td><td><code>0 / 1 / 2</code></td><td><code>components/lsm/summary-box.tsx</code></td></tr><tr><th>DepthBoundary</th><td><span class="pill">signal</span> <span class="pill">mission</span> <span class="pill">systems</span> <span class="pill">editorial</span> <span class="pill">operational</span></td><td><code>0 / 1 / 2</code></td><td><code>components/lsm/depth-boundary.tsx</code></td></tr><tr><th>Container</th><td><span class="pill">responsive</span> <span class="pill">constrained</span> <span class="pill">full-bleed</span></td><td><code>0 / 1 / 2</code></td><td><code>components/lsm/layout.tsx</code></td></tr><tr><th>Stack</th><td><span class="pill">vertical</span> <span class="pill">responsive</span></td><td><code>0 / 1 / 2</code></td><td><code>components/lsm/layout.tsx</code></td></tr><tr><th>Cluster</th><td><span class="pill">wrapped</span> <span class="pill">aligned</span> <span class="pill">distributed</span></td><td><code>0 / 1 / 2</code></td><td><code>components/lsm/layout.tsx</code></td></tr><tr><th>AutoGrid</th><td><span class="pill">responsive</span> <span class="pill">dense</span> <span class="pill">auto-fit</span></td><td><code>0 / 1 / 2</code></td><td><code>components/lsm/layout.tsx</code></td></tr><tr><th>DescriptionList</th><td><span class="pill">stacked</span> <span class="pill">inline</span> <span class="pill">compact</span></td><td><code>0 / 1 / 2</code></td><td><code>components/lsm/description-list.tsx</code></td></tr></tbody></table></div></section>
+</main>
+<footer><span>Orbital Archive No. 01 · 1.5.0</span><span>49 components · 161 icons · 9 governed routes</span><span>Lunar Signal Modernism · Theme 01</span></footer>
+<script>
+const search=document.getElementById('icon-search');const category=document.getElementById('icon-category');const cards=[...document.querySelectorAll('.icon-card')];const count=document.getElementById('icon-count');function filterIcons(){const q=search.value.trim().toLowerCase();const c=category.value;let visible=0;cards.forEach(card=>{const show=(!q||card.dataset.name.includes(q))&&(c==='all'||card.dataset.category===c);card.hidden=!show;if(show)visible++});count.textContent=visible+' of 161 assets'}search.addEventListener('input',filterIcons);category.addEventListener('change',filterIcons);
+</script>
+</body>
+</html>
