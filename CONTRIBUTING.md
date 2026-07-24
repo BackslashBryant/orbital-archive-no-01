@@ -1,16 +1,22 @@
 # Contributing
 
-Contributions should improve clarity, portability, accessibility, or documented coverage.
+Contributions should improve clarity, portability, accessibility, maintainability, or documented application coverage.
 
 ## Before opening a change
 
-1. Open `style-guide.html` and confirm the proposal fits the visual language.
-2. Read `docs/layout-ux.md` for page and interaction rules.
-3. Keep assets stack-neutral unless a platform-specific example is clearly labeled.
-4. Do not add bespoke icons for niche concepts. Prefer labels, established platform symbols, or a vetted external library.
-5. Test every changed icon at 16, 20, 24, 32, and 48 pixels.
-6. Verify every link and responsive example.
+1. Read [`AGENTS.md`](AGENTS.md), then open [`index.html`](index.html).
+2. Review [`docs/AEROSPACE-GRAMMAR.md`](docs/AEROSPACE-GRAMMAR.md) and [`docs/LAYOUT-UX.md`](docs/LAYOUT-UX.md).
+3. Keep assets and examples stack-neutral unless a platform-specific adapter is clearly labeled.
+4. Do not add niche pictograms for concepts that are clearer as labels or established platform icons.
+5. Test changed icons at 16, 20, 24, 32, and 48 pixels.
+6. Test changed examples at wide and narrow viewports.
+7. Run the public validation gate:
+
+```bash
+node scripts/build-icon-sprite.mjs
+node scripts/validate.mjs
+```
 
 ## Pull requests
 
-Describe the user problem, the intended outcome, affected files, accessibility considerations, and how the change was verified. Keep unrelated changes separate.
+Describe the user problem, intended outcome, affected files, accessibility considerations, and verification performed. Keep unrelated changes separate and record user-visible changes in [`CHANGELOG.md`](CHANGELOG.md).

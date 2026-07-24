@@ -1,38 +1,35 @@
-# Orbital Archive No. 01
+# Orbital Archive No. 01 Style Guide
 
-**Theme 01 · Lunar Signal Modernism · Version 1.5.0**
+**Theme 01 · Lunar Signal Modernism · Version 1.7.0**
 
 ## Identity
 
-Orbital Archive No. 01 is the first theme built on Lunar Signal Modernism. It combines NASA mission-era documentation, 1970s space optimism, Swiss typography, engineering schematics, restrained cinematic science fiction, and museum-poster composition.
+Orbital Archive No. 01 combines mission-era documentation, space-age optimism, Swiss typographic discipline, engineering schematics, restrained cinematic science fiction, and practical product UX.
 
-The system must feel calm, precise, intelligent, archival, engineered, and quietly futuristic.
-
-## Operating rule
+The system should feel calm, precise, intelligent, archival, engineered, and quietly futuristic.
 
 > Present dramatically. Operate calmly. Scale completely.
 
-- **Editorial Signal Mode:** landing pages, visual specimens, archival moments
-- **Operational Calm Mode:** products, dashboards, forms, and mobile UX
-
-Editorial surfaces carry the atmosphere. Operational surfaces carry the work. Deep Systems surfaces may become denser and more schematic after deliberate entry.
+- **Editorial Signal mode:** landing pages, portfolios, announcements, visual specimens, and archival presentation.
+- **Operational Mission mode:** applications, dashboards, forms, documentation, administration, workflows, and mobile UX.
+- **Technical Systems mode:** diagnostics, advanced settings, raw data, and logs after deliberate entry.
 
 ## Principles
 
-1. **Clarity — function before ornament.** The next action and current state must be legible before identity is expressed.
-2. **Precision — signal over noise.** Use exact labels, stable alignment, and deliberate state language.
+1. **Clarity — function before ornament.** Orientation, state, and next action are legible before identity is expressed.
+2. **Precision — signal over noise.** Exact labels, stable alignment, and deliberate state language.
 3. **Restraint — accent with intent.** Color and framing identify meaning rather than fill space.
-4. **Optimism — structure creates calm.** Technical systems should feel capable and understandable.
+4. **Optimism — structure creates calm.** Technical systems feel capable and understandable.
 
 ## Color
 
 | Token | Value | Use |
-|---|---:|---|
-| Deep Orbit | `#11181E` | Deepest editorial surface |
+| --- | ---: | --- |
+| Deep Orbit | `#11181E` | Deepest editorial and systems surface |
 | Calm Graphite | `#253139` | Default operational background |
 | Lunar Slate | `#2D3A42` | Cards and raised surfaces |
 | Elevated Alloy | `#37464F` | Inputs, controls, and popovers |
-| Grid Line | `#56656E` | Borders, dividers, schematics |
+| Grid Line | `#56656E` | Borders, dividers, and schematics |
 | Lunar Dust | `#98A4AC` | Muted content |
 | Archive Bone | `#E7E1D5` | Primary content |
 | Relay Blue | `#54BCD9` | Active, selected, system, informational |
@@ -42,29 +39,29 @@ Editorial surfaces carry the atmosphere. Operational surfaces carry the work. De
 | Alert Rust | `#C97A60` | Warning, degraded, attention |
 | Fault Red | `#EA7468` | Error, critical, destructive |
 
-Fault Red provides 4.56:1 contrast as text on Calm Graphite and 6.13:1 with Deep Orbit content on a filled Fault Red control.
-
 Rules:
 
 - Do not use pure black or pure white application screens.
 - Do not introduce purple, pink, or magenta.
 - Operational backgrounds remain gray-blue and mid-tone.
-- Ignition Orange is not a warning or error color. Reserve it for editorial calls to action and rare high-energy moments. Operational primary actions use Relay Blue.
-- Color never carries state without text, shape, or icon support.
-- Warning and error are distinct states. Do not use Alert Rust for destructive actions.
+- Operational primary actions use Relay Blue. Ignition Orange is not a status color.
+- Warning and error remain distinct.
+- Color always has text, shape, position, or icon support.
 
 ## Typography
 
-- **Display:** Barlow Condensed
-- **Interface:** Inter
-- **Telemetry:** IBM Plex Mono
+The token package defines these families with practical fallbacks:
 
-Large display typography is reserved for editorial mode. Product UI uses interface sizes and readable line lengths. Telemetry typography is used for timestamps, identifiers, coordinates, code, and machine state.
+- **Display:** Barlow Condensed → Arial Narrow → sans-serif
+- **Interface:** Inter → system UI → sans-serif
+- **Telemetry:** IBM Plex Mono → UI monospace → monospace
 
-## Layout
+Use large condensed display type for Signal surfaces and section-scale editorial moments. Mission UI uses readable interface sizes and line lengths. Monospace labels identify timestamps, coordinates, IDs, code, compact metadata, and machine state.
+
+## Layout system
 
 - 12-column grid
-- 4-point base unit
+- 4-pixel base unit
 - 16-pixel default gutter
 - 48-pixel wide-screen outer margin
 - 320–1440 pixel content-width scale
@@ -73,68 +70,95 @@ Large display typography is reserved for editorial mode. Product UI uses interfa
 - Preferred icon-control target: 44 pixels
 - Technical rules and borders use Grid Line at restrained opacity
 
-### Page and UX composition
+Build pages shallow to deep:
 
-Build pages shallow to deep: **context → task → primary work surface → supporting context → deliberate systems detail**.
+**context → task → primary work surface → supporting context → deliberate systems detail**
 
-- Start with the user’s orientation: current mission/scope, state, and one obvious next action.
-- Let the active task dominate the viewport. On wide screens, give primary work roughly two-thirds of the width and reserve the remaining third for compact support material.
-- Keep advanced configuration, raw telemetry, and exhaustive logs behind deliberate disclosure or a Systems route.
-- Maintain one clear reading axis, stable title placement, visible current scope, and a return path from every deeper context.
-- On mobile, preserve action labels and stack supporting context after the work surface. Do not make users decode icon-only navigation.
-- Use orbital lines and horizon curves as composition architecture, not illustration. They may establish scale, frame content, or connect regions.
-- Expand the aerospace drafting language with datum crosshairs, plotted vectors, leader lines, measurement ticks, calibration rails, coordinate labels, and blueprint construction geometry. These marks should clarify alignment, sequence, scale, or relationship rather than imitate a cockpit.
-- Use subtle paper grain, blueprint grids, scanlines, and registration marks at low contrast.
-- Do not use aerospace photography. Evoke planets, horizons, and trajectories through geometry, negative space, and controlled light.
-- Let expression vary by depth: cinematic at Signal, restrained at Mission, technical and schematic at Systems.
+The first viewport must answer:
 
-The first viewport must answer: **Where am I? What state is this in? What can I do next?**
+1. Where am I?
+2. What state is this in?
+3. What can I do next?
+
+## Aerospace grammar
+
+The identity is broader than orbital rings:
+
+- horizon and orbital arcs establish scale and frame regions;
+- trajectories and plotted vectors express progression or relationship;
+- datum crosshairs and registration marks establish origin and alignment;
+- leader lines attach labels to real content;
+- measurement ticks and calibration rails organize sequence and comparison;
+- coordinate labels identify actual context;
+- blueprint construction geometry reveals structure;
+- restrained grain, scanlines, film noise, vignette, and paper texture give surfaces material character.
+
+Geometry belongs in safe corridors. It never crosses running text, controls, data cells, or primary actions. See [`AEROSPACE-GRAMMAR.md`](AEROSPACE-GRAMMAR.md) for density rules and application recipes.
+
+Do not use aerospace photography. Evoke horizons, planets, trajectories, and depth through geometry, negative space, typography, and controlled light.
+
+## Orbital Depth Architecture
+
+### Depth 0 — Signal
+
+Use for orientation, essential state, identity, and one primary invitation. Expression may be cinematic, but copy remains concise.
+
+### Depth 1 — Mission
+
+Use for active tasks: forms, filters, progress, moderate data, documentation, queues, and workflow. Atmosphere remains in framing and low-contrast diagrams.
+
+### Depth 2 — Systems
+
+Use for advanced settings, diagnostics, telemetry, and logs after deliberate entry. Keep scope and a return path visible.
+
+## Component behavior
+
+The 49 stack-neutral contracts live in [`../components/contracts.json`](../components/contracts.json).
+
+- Use native semantics first.
+- Preserve every declared state that applies to an implementation.
+- Require keyboard operation and visible focus.
+- Associate labels, descriptions, errors, and controls programmatically.
+- Allow horizontal table scrolling on narrow screens.
+- Keep established keyboard behavior for tabs, menus, dialogs, and disclosures.
+- Respect reduced-motion preferences.
+- Support warning and error with text or iconography in addition to color.
+
+Example using semantic CSS variables:
+
+```css
+.action-primary {
+  color: var(--color-content-inverse);
+  background: var(--color-action-primary);
+  border: 1px solid var(--color-border-active);
+}
+
+.status-error {
+  color: var(--color-status-error);
+}
+```
+
+Exact exported names vary by target; use [`../tokens/tokens.json`](../tokens/tokens.json) as the source and select the matching file under [`../tokens/dist/`](../tokens/dist/).
 
 ## Iconography
 
-- 161 reviewed icons across navigation, action, status, data, and communication categories
+- 161 reviewed icons across navigation, action, status, data, and communication
 - 24 × 24 artboard
 - 1.5-pixel default stroke
 - Rounded caps and joins
 - Monochrome `currentColor` by default
 - Review at 16, 20, 24, 32, and 48 pixels
 - Pair unfamiliar symbols with labels
-- Aerospace identity comes from layout, typography, framing, marks, and restrained patterns—not invented niche pictograms.
-- When the native catalog does not cover a concept, use a text label or a vetted platform/library icon.
 - Hide decorative icons from assistive technology
-- Give meaningful icons and icon-only controls a programmatic name
-- Use `IconAdapter` with Lucide when broad general product vocabulary is needed
+- Programmatically name meaningful icons and icon-only controls
 
-## Orbital Depth Architecture
-
-### Depth 0 — Signal
-
-Use for orientation, essential state, and one primary action. Do not show dense data or advanced settings.
-
-### Depth 1 — Mission
-
-Use for the active task: forms, filters, progress, and moderate task-scoped data.
-
-### Depth 2 — Systems
-
-Use for advanced settings, diagnostics, telemetry, and logs after deliberate entry. Always show a return path to the mission context.
-
-## Component behavior
-
-- Native semantics first
-- Keyboard operation and visible focus required
-- Disabled, invalid, loading, selected, expanded, and active states declared where applicable
-- Tables scroll horizontally on narrow screens
-- Tabs and menus retain established keyboard behavior
-- Dialogs use modal focus behavior and Escape dismissal
-- Reduced-motion preferences suppress nonessential animation
-- Error and warning feedback includes text or icon support in addition to color
+Aerospace identity comes from layout, typography, framing, marks, and patterns—not invented niche pictograms.
 
 ## Voice and microcopy
 
 Voice is calm, exact, concise, and forward-looking.
 
-Preferred examples:
+Preferred:
 
 - Signal acquired.
 - Trajectory nominal.
@@ -144,31 +168,18 @@ Preferred examples:
 - Command fault. Review the checksum.
 - Every element must earn its position.
 
-Avoid jokes, theatrical military language, vague success messages, and decorative technical jargon.
-
-## Implementation
-
-Use semantic tokens and exports from `components/lsm`. Do not hardcode visual values in product source.
-
-```tsx
-import { Button, StatusChip } from '@/components/lsm'
-import { ErrorIcon } from '@/components/lsm/icons'
-
-<StatusChip status="error"><ErrorIcon size={13} /> Command fault</StatusChip>
-<Button variant="destructive">Abort command</Button>
-```
-
-See `AGENTS.md` for binding contribution and agent rules.
+Avoid jokes in critical flows, theatrical military language, vague success messages, fake telemetry, and decorative technical jargon.
 
 ## Application atlas
 
-The stack-neutral `examples/` directory includes twelve complete responsive references:
+The stack-neutral [`../examples/`](../examples/index.html) directory includes 13 complete responsive references:
 
-- Editorial landing and portfolio
-- Top navigation and sidebar application shells
-- Dashboard and data-administration surfaces
-- Resource catalog and knowledge base
-- Settings and staged workflows
-- Mobile composition and deep systems
+- editorial landing and portfolio;
+- top navigation and sidebar application shells;
+- dashboard and data administration;
+- resource catalog and knowledge base;
+- settings, staged workflow, and mission timeline;
+- mobile composition;
+- deep systems diagnostics.
 
-Each example uses plain HTML and CSS. Copy the information hierarchy and responsive sequence into any web, native, desktop, or embedded stack.
+Each example uses plain HTML and shared CSS. Reuse the information hierarchy, depth, responsive sequence, and geometry discipline in any web, native, desktop, embedded, presentation, or server-rendered stack.

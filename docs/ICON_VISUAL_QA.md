@@ -1,34 +1,32 @@
 # Icon Visual QA
 
-**Review date:** 2026-07-23  
-**Scope:** All 161 production Lunar Signal icons across Navigation, Action, Status, Data, and Communication categories.  
-**Sizes reviewed:** 16, 20, 24, 32, and 48 px.
+Review every changed native icon at **16, 20, 24, 32, and 48 pixels** on both dark and light neutral surfaces.
 
-## Review criteria
+## Pass criteria
 
-Each glyph was checked for:
+- Recognizable without reading the filename
+- Distinct from adjacent concepts in the catalog
+- Stable optical weight at all approved sizes
+- No collapsed gaps, accidental tangencies, or muddy intersections at 16 pixels
+- Balanced within the 24-pixel artboard
+- Consistent 1.5-pixel stroke, round caps, and round joins unless a documented exception improves recognition
+- No unnecessary detail, color, or background
 
-- recognizable silhouette at 16 px;
-- consistent apparent stroke weight and optical center;
-- legible internal detail at compact sizes;
-- clear distinction from adjacent icons with similar semantics;
-- family consistency: 24 × 24 artboard, rounded joins/caps, monochrome `currentColor`, and restrained technical character.
+## Catalog checks
 
-## Results
+- Filename, manifest name, and sprite symbol ID agree.
+- Category and description are accurate.
+- Aliases improve search rather than duplicate the description.
+- The icon represents conventional product vocabulary.
+- A text label or vetted external icon would not be clearer.
 
-| Category | Reviewed | Result |
-| --- | ---: | --- |
-| Navigation | 36 | Approved. |
-| Action | 47 | Approved. |
-| Status | 22 | Approved. |
-| Data | 36 | Approved. |
-| Communication | 20 | Approved. |
-| **Total** | **161** | **Approved** |
+## Verification
 
-## Curation decision
+After review:
 
-The complete 55-icon bespoke mission/astronomy category was removed from the production package. Several symbols were inconsistent or only recognizable with their captions. The system now treats aerospace character as a composition, typography, mark, pattern, and tone concern rather than forcing it into specialized pictograms.
+```bash
+node scripts/build-icon-sprite.mjs
+node scripts/validate.mjs
+```
 
-## Repeatable review
-
-Run `node qa/render-icon-contact-sheets.mjs` to regenerate category sheets. The script renders every native icon at all five approved sizes from the source catalog; it is a review aid and does not modify production assets.
+The validator checks individual-file count, manifest count, category totals, symbol coverage, and name agreement. Visual recognition and optical balance still require human inspection.

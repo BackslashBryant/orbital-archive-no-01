@@ -1,50 +1,43 @@
-# Icon Authoring
+# Native Icon Authoring
 
-## Native family
+The native catalog contains conventional product icons. Aerospace identity comes from the surrounding design system, not from adding obscure theme-specific glyphs.
 
-The Lunar Signal icon family uses a 24 × 24 coordinate system, rounded caps and joins, `currentColor`, no baked-in fill color, and a 1.5-pixel default stroke. The family is thin, geometric, and engineered rather than decorative.
+## Before adding an icon
 
-## Source format
+1. Search `assets/icons/manifest.json` by name, description, and aliases.
+2. Prefer a text label or established platform/library icon when the concept is niche or ambiguous.
+3. Add a native icon only when it represents common product vocabulary and remains recognizable without a caption.
 
-Add icons to `assets/icons/catalog.mjs` with:
+## Geometry
 
-- stable kebab-case name,
-- one of the six supported categories,
-- concise accessible description,
-- optional search aliases,
-- geometry built from supported SVG primitives.
+- 24 × 24 artboard
+- 1.5-pixel default stroke
+- `currentColor`
+- round caps and joins
+- no baked-in background
+- simple geometry that survives 16 pixels
+- one `<title>` in the individual SVG
+- filename and manifest `name` use the same kebab-case identifier
 
-Then run:
+## Authoring flow
+
+1. Add `assets/icons/<name>.svg`.
+2. Add one metadata entry to `assets/icons/manifest.json` and update category totals and `count` if the catalog grows.
+3. Rebuild the sprite:
 
 ```bash
-pnpm icons
-pnpm icons:check
+node scripts/build-icon-sprite.mjs
 ```
 
-The generator creates individual SVG files, a symbol sprite, JSON metadata, the generic React `Icon` component, and named React exports.
+4. Review at 16, 20, 24, 32, and 48 pixels.
+5. Run:
 
-## Optical rules
+```bash
+node scripts/validate.mjs
+```
 
-- Design at 24 px first, then review at 16, 20, 24, 32, and 48 px.
-- Preserve a consistent visual center and apparent stroke weight.
-- Prefer a recognizable silhouette over internal detail.
-- Use a 44 px interactive target even when the glyph is smaller.
-- Keep icons monochrome unless semantic state requires color.
-- Pair unfamiliar icons with text labels.
-
-### Scope discipline
-
-The native catalog covers conventional product concepts only.
-
-- Do not invent a custom glyph for a niche object merely to increase coverage.
-- If a symbol needs its caption to be recognized, use the caption by itself or source a vetted platform/library icon.
-- Keep an even visual mass inside the 24-pixel artboard and avoid tiny acute corners, diagonal collisions, or narrow enclosed spaces.
-- Review the entire affected category beside its nearest neighbors at 16, 20, 24, 32, and 48 px after any change. A valid SVG is not automatically a finished icon.
+The sprite builder reads individual SVGs in manifest order and produces `assets/icons/lsm-icons.svg`. Do not hand-edit the sprite without also updating its source SVG.
 
 ## Accessibility
 
-Decorative icons must be hidden from assistive technology. Meaningful icons require a programmatic name. Icon-only controls use `IconButton`, which requires a label.
-
-## General-purpose coverage
-
-Use native icons for the conventional product concepts represented in the catalog. Use a vetted platform/library icon for missing concepts. Aerospace identity should come from the broader visual system rather than illustrative iconography.
+Individual files include a concise title for direct use. Decorative use should still be hidden from assistive technology. Meaningful icon-only controls require an accessible name from the host interface.

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="180" viewBox="0 0 1200 180" fill="none" role="img" aria-labelledby="title desc">
+  <title id="title">Calibration rail</title><desc id="desc">A reusable measurement rail with major and minor ticks, phase labels, and three semantic waypoints.</desc>
+  <rect width="1200" height="180" fill="#11181E"/>
+  <path d="M48 92H1152" stroke="#56656E"/>
+  <g stroke="#98A4AC" stroke-opacity=".76">
+    <path d="M48 74V110M96 82V102M144 82V102M192 82V102M240 74V110M288 82V102M336 82V102M384 82V102M432 74V110M480 82V102M528 82V102M576 82V102M624 74V110M672 82V102M720 82V102M768 82V102M816 74V110M864 82V102M912 82V102M960 82V102M1008 74V110M1056 82V102M1104 82V102M1152 74V110"/>
+  </g>
+  <path d="M48 92H432" stroke="#7EB79E" stroke-width="3"/><path d="M432 92H816" stroke="#54BCD9" stroke-width="3"/><path d="M816 92H1152" stroke="#CBAE67" stroke-width="3" stroke-dasharray="8 8"/>
+  <g fill="#11181E" stroke-width="2"><circle cx="240" cy="92" r="7" stroke="#7EB79E"/><circle cx="624" cy="92" r="7" stroke="#54BCD9"/><circle cx="1008" cy="92" r="7" stroke="#CBAE67"/></g>
+  <g fill="#98A4AC" font-family="ui-monospace, SFMono-Regular, Consolas, monospace" font-size="11" letter-spacing="1.4"><text x="48" y="42">SIGNAL</text><text x="432" y="42">MISSION</text><text x="816" y="42">SYSTEMS</text><text x="48" y="146">CALM / EXACT / CONCISE / FORWARD-LOOKING</text><text x="1084" y="146">OA-01</text></g>
+</svg>

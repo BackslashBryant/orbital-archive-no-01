@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" fill="none" role="img" aria-labelledby="title desc">
+  <title id="title">Flight plan field</title><desc id="desc">A plotted trajectory field with vectors, waypoints, labels, and a calibration rail.</desc>
+  <rect width="1200" height="720" fill="#11181E"/>
+  <g stroke="#54BCD9" stroke-opacity=".1"><path d="M0 72H1200M0 144H1200M0 216H1200M0 288H1200M0 360H1200M0 432H1200M0 504H1200M0 576H1200M0 648H1200"/><path d="M120 0V720M240 0V720M360 0V720M480 0V720M600 0V720M720 0V720M840 0V720M960 0V720M1080 0V720"/></g>
+  <g fill="none" stroke-linecap="round">
+    <path d="M64 604C232 450 334 462 456 330S724 168 1134 248" stroke="#54BCD9" stroke-width="2"/>
+    <path d="M64 604C280 560 554 470 746 314S976 192 1134 248" stroke="#CBAE67" stroke-width="1.5" stroke-dasharray="8 10"/>
+    <path d="M64 604L456 330L746 314L1134 248" stroke="#56656E" stroke-opacity=".7"/>
+    <path d="M456 330V152M444 152H468M746 314V112M734 112H758" stroke="#98A4AC" stroke-opacity=".58"/>
+    <path d="M64 650H1134" stroke="#56656E"/><path d="M64 640V660M104 644V656M144 644V656M184 644V656M224 640V660M264 644V656M304 644V656M344 644V656M384 640V660M424 644V656M464 644V656M504 644V656M544 640V660M584 644V656M624 644V656M664 644V656M704 640V660M744 644V656M784 644V656M824 644V656M864 640V660M904 644V656M944 644V656M984 644V656M1024 640V660M1064 644V656M1104 644V656" stroke="#98A4AC" stroke-opacity=".72"/>
+  </g>
+  <g fill="#11181E" stroke="#54BCD9" stroke-width="2"><circle cx="64" cy="604" r="7"/><circle cx="456" cy="330" r="7"/><circle cx="746" cy="314" r="7"/><circle cx="1134" cy="248" r="7"/></g>
+  <circle cx="904" cy="225" r="5" fill="#E66A2C"/>
+  <g fill="#98A4AC" font-family="ui-monospace, SFMono-Regular, Consolas, monospace" font-size="12" letter-spacing="1.4"><text x="76" y="588">ORIGIN / 00</text><text x="472" y="316">VECTOR / 04-A</text><text x="762" y="300">APOGEE / 28.572° N</text><text x="966" y="216">BURN WINDOW / T+04:18</text><text x="64" y="684">CALIBRATION RAIL / NOMINAL FLIGHT ENVELOPE</text></g>
+</svg>

@@ -1,6 +1,8 @@
 node_modules/
 .next/
 dist/
+!tokens/dist/
+!tokens/dist/**
 *.log
 .DS_Store
 Thumbs.db

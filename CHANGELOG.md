@@ -1,5 +1,22 @@
 # Changelog
 
+## 1.7.0 — 2026-07-24
+
+- Migrated the aerospace instrument grammar into the component library: cards now carry grain texture, corner registration ticks, a monospaced coordinate index, and a hairline relay top-datum instead of reading as flat boxes.
+- Expanded the components & states reference with segmented control, slider, tabs, and a telemetry readout for broader, consistent coverage across applied work.
+- Raised Lunar Dust (muted content and disabled foreground) to `#B3BBC2` so body copy meets WCAG AA on every surface — orbit, graphite, slate, and alloy — and propagated the value through every platform token export.
+- Restrained the destructive state from a solid red fill to an archival red outline, keeping Fault Red reserved and legible.
+- Added tasteful blueprint-and-grain surface texture to the color swatches so foundational surfaces are no longer dead-flat.
+
+## 1.6.0 — 2026-07-23
+
+- Removed the diagonal hero rule that crossed introductory copy and replaced it with a dedicated safe-corridor flight-plan field.
+- Rebuilt the application atlas as thirteen distinct responsive compositions and added a mission timeline for releases, launches, roadmaps, and sequenced work.
+- Expanded the reusable aerospace language with flight-plan, horizon-profile, and calibration-rail patterns plus explicit geometry-safe-corridor rules.
+- Strengthened paper grain, blueprint texture, scanlines, film noise, vignette, and panel-surface treatments while preserving content legibility.
+- Added 49 machine-readable stack-neutral component contracts and reconciled public documentation with the actual distributable package.
+- Added a zero-dependency icon sprite builder, stronger package validation, and a GitHub Pages deployment workflow.
+
 ## 1.5.0 — 2026-07-23
 
 - Reduced Ignition Orange to editorial calls to action and rare high-energy emphasis; operational primary actions now use Relay Blue.

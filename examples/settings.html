@@ -1,30 +1,13 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Orbital Archive No. 01 · Settings</title>
-  <link rel="stylesheet" href="example.css">
-</head>
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="dark"><title>Orbital Archive No. 01 · Settings</title><link rel="stylesheet" href="example.css"></head>
 <body>
-  <header class="topnav">
-    <a class="brand" href="index.html">Control</a>
-    <a href="dashboard.html">Overview</a>
-    <a aria-current="page" href="#preferences">Settings</a>
-    <a href="deep-systems.html">Advanced</a>
-  </header>
+  <header class="topnav"><a class="brand" href="index.html">Control</a><a href="dashboard.html">Overview</a><a aria-current="page" href="#preferences">Settings</a><a href="deep-systems.html">Advanced</a></header>
   <main id="preferences" class="main">
-    <div class="pagehead"><div><p class="eyebrow">Depth 1 · Workspace</p><h2>Preferences</h2><p>Explain impact where a choice is made.</p></div><a class="button" href="#saved">Save changes</a></div>
-    <div class="settings-layout">
-      <section class="panel">
-        <span class="label">Notifications</span>
-        <div class="setting-row"><div><strong>Mission updates</strong><p>Receive changes to projects you follow.</p></div><input type="checkbox" checked aria-label="Mission updates"></div>
-        <div class="setting-row"><div><strong>Weekly digest</strong><p>A compact summary delivered every Friday.</p></div><input type="checkbox" aria-label="Weekly digest"></div>
-        <span class="label" style="display:block;margin-top:24px">Display</span>
-        <div class="field"><label for="density">Information density</label><select id="density"><option>Comfortable</option><option>Compact</option></select></div>
-      </section>
-      <aside id="saved" class="panel surface-blueprint"><span class="label">Current scope</span><h2 style="font-size:30px;margin-top:12px">Team Alpha</h2><p>These settings apply to this workspace only.</p><a class="button secondary" href="deep-systems.html">Advanced systems</a></aside>
-    </div>
+    <div class="pagehead"><div><p class="eyebrow">Depth 1 / Workspace / Team Alpha</p><h1>Preferences</h1><p>Explain impact at the point of choice. Keep advanced systems one deliberate step away.</p></div><a class="button" href="#saved">Save changes</a></div>
+    <section class="grid settings-layout">
+      <article class="panel"><div class="setting-group"><span class="label">Notifications</span><div class="setting-row"><div><strong>Mission updates</strong><p>Receive changes to projects you follow.</p></div><input class="switch" type="checkbox" checked aria-label="Mission updates"></div><div class="setting-row"><div><strong>Weekly digest</strong><p>A compact summary delivered every Friday.</p></div><input class="switch" type="checkbox" aria-label="Weekly digest"></div><div class="setting-row"><div><strong>Fault escalation</strong><p>Notify workspace owners when a critical state persists.</p></div><input class="switch" type="checkbox" checked aria-label="Fault escalation"></div></div><div class="setting-group"><span class="label">Display</span><div class="field" style="margin-top:16px"><label for="density">Information density</label><select id="density"><option>Comfortable</option><option>Compact</option></select></div><div class="field" style="margin-top:16px"><label for="timezone">Time zone</label><select id="timezone"><option>UTC</option><option>Local time</option></select></div></div></article>
+      <aside class="work-stack"><article id="saved" class="panel instrument surface-blueprint"><span class="label">Current scope / Team Alpha</span><svg viewBox="0 0 360 260" aria-hidden="true"><g fill="none" stroke="#56656e"><circle cx="180" cy="130" r="88"/><circle cx="180" cy="130" r="58"/><path d="M180 20v220M70 130h220" opacity=".34"/><path d="M103 194C130 86 230 68 292 126" stroke="#54bcd9" stroke-width="2"/><path d="M112 208C162 142 232 132 286 158" stroke="#cbae67" stroke-dasharray="7 8"/><path d="M180 130l70-44" stroke="#e7e1d5"/><circle cx="250" cy="86" r="5" fill="#54bcd9" stroke="none"/></g></svg><div class="system-stat"><span>Mode</span><strong>Operational</strong></div><div class="system-stat"><span>Density</span><strong>Comfortable</strong></div><div class="system-stat"><span>Sync</span><strong>Nominal</strong></div></article><article class="panel surface-paper"><span class="label">Advanced systems</span><p style="margin-top:12px">Raw configuration and diagnostics remain behind a deliberate transition.</p><a class="button secondary" href="deep-systems.html">Open advanced</a></article></aside>
+    </section>
   </main>
-</body>
-</html>
+</body></html>

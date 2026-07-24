@@ -3,46 +3,49 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="color-scheme" content="dark">
   <title>Orbital Archive No. 01 · Landing Page</title>
   <link rel="stylesheet" href="example.css">
 </head>
-<body>
+<body class="mode-signal">
   <header class="topnav">
     <a class="brand" href="index.html">Orbital Archive / 01</a>
     <a aria-current="page" href="#overview">Overview</a>
     <a href="#architecture">Architecture</a>
+    <a href="mission-timeline.html">Timeline</a>
     <a class="button editorial" href="#start">Enter archive</a>
   </header>
   <main id="overview" class="wrap">
     <section class="hero">
-      <div>
-        <p class="eyebrow">Lunar Signal Modernism · Theme 01</p>
+      <div class="hero-copy">
+        <p class="eyebrow">Lunar Signal Modernism / Theme 01</p>
         <h1>Chart the<br><span class="signal-word">unknown.</span></h1>
-        <p>A cinematic, photo-free introduction built from trajectory, scale, precise typography, and one clear invitation.</p>
-        <div class="actions">
-          <a class="button editorial" href="#start">Enter archive</a>
-          <a class="button secondary" href="index.html">View patterns</a>
-        </div>
+        <p>A photo-free editorial entry built from orbital scale, plotted trajectories, precise typography, and one clear invitation.</p>
+        <div class="actions"><a class="button editorial" href="#start">Enter archive</a><a class="button secondary" href="index.html">View applications</a></div>
       </div>
-      <aside class="panel">
-        <span class="label">Archive reference</span>
-        <h2 style="margin-top:12px">OA–01</h2>
-        <p>Presentation: expressive<br>Operation: calm<br>Systems: precise</p>
+      <aside class="hero-meta">
+        <div><span>Archive ref</span><strong>OA–01</strong></div>
+        <div><span>Presentation</span><strong>Expressive</strong></div>
+        <div><span>Operation</span><strong>Calm</strong></div>
+        <div><span>Systems</span><strong>Precise</strong></div>
       </aside>
+      <svg class="hero-flightplan" viewBox="0 0 760 430" aria-hidden="true"><g fill="none" stroke-linecap="round"><path d="M32 392C182 144 422 58 752 146" stroke="#56656e" opacity=".62"/><path d="M80 420C252 238 482 186 746 232" stroke="#54bcd9" opacity=".8"/><path d="M180 440C340 326 536 294 728 318" stroke="#cbae67" stroke-dasharray="8 10" opacity=".74"/><path d="M476 306C572 260 650 248 734 252" stroke="#e66a2c" opacity=".66"/><circle cx="540" cy="214" r="7" stroke="#54bcd9"/><path d="M540 194v40M520 214h40" stroke="#98a4ac" opacity=".4"/></g><circle cx="540" cy="214" r="3" fill="#e7e1d5"/><circle cx="670" cy="258" r="5" fill="#e66a2c"/></svg>
     </section>
-    <section id="architecture" class="orbital-field" aria-label="Orbital architecture example">
-      <span class="trajectory"></span>
-      <div class="coordinates">APOGEE 04<br>28.572° N<br>80.649° W</div>
-      <div class="field-copy">
-        <p class="eyebrow">Geometry as architecture</p>
-        <h2>Orbit frames the signal.</h2>
-        <p>Curves establish scale and movement without becoming an illustration.</p>
-      </div>
+    <div class="calibration-rail"><span>Calm / exact / concise / forward-looking</span><span>Every element earns its position</span></div>
+    <section id="architecture" class="signal-board" aria-label="Trajectory and horizon architecture">
+      <svg viewBox="0 0 1400 520" preserveAspectRatio="none" aria-hidden="true">
+        <g fill="none" stroke="#56656e" opacity=".36"><path d="M0 80h1400M0 160h1400M0 240h1400M0 320h1400M0 400h1400"/><path d="M140 0v520M280 0v520M420 0v520M560 0v520M700 0v520M840 0v520M980 0v520M1120 0v520M1260 0v520"/></g>
+        <g fill="none" stroke-linecap="round"><path d="M-120 540C206 72 756 -2 1500 222" stroke="#56656e" opacity=".64"/><path d="M-40 560C300 216 790 154 1460 316" stroke="#54bcd9" stroke-width="2" opacity=".82"/><path d="M120 580C404 330 842 290 1410 390" stroke="#cbae67" stroke-dasharray="10 11" opacity=".78"/><path d="M418 528C650 372 1000 350 1390 426" stroke="#e66a2c" stroke-width="2" opacity=".65"/><path d="M1040 72h110M1095 18v108" stroke="#98a4ac" opacity=".44"/><circle cx="1095" cy="72" r="30" stroke="#98a4ac" opacity=".42"/></g>
+        <g fill="#11181e" stroke="#54bcd9"><circle cx="706" cy="258" r="6"/><circle cx="1098" cy="288" r="6"/></g><circle cx="1095" cy="72" r="4" fill="#cbae67"/><circle cx="1210" cy="390" r="5" fill="#e66a2c"/>
+        <g fill="#98a4ac" font-family="monospace" font-size="11"><text x="720" y="246">VECTOR 04–A</text><text x="1114" y="278">APOGEE</text><text x="1114" y="296">28.572° N</text></g>
+      </svg>
+      <div class="signal-board__coordinates">FLIGHT PLAN 01<br>REV B / NOMINAL<br>80.649° W</div>
+      <div class="signal-board__copy"><p class="eyebrow">Geometry as architecture</p><h2>Orbit frames the signal.</h2><p>Curves establish scale. Trajectory lines imply direction. Datum marks locate the moment. None of them sit between the reader and the message.</p></div>
     </section>
-    <section id="start" class="grid metrics" style="margin-block:12px 64px">
-      <article class="panel metric"><strong>01</strong><span>Clear promise</span></article>
-      <article class="panel metric"><strong>01</strong><span>Primary action</span></article>
-      <article class="panel metric"><strong>70/30</strong><span>Utility / character</span></article>
+    <section id="start" class="grid signal-cards">
+      <article class="panel surface-paper"><span class="micro">01 / Promise</span><strong>Orient immediately</strong><p>The first viewport names the place, state, and next action.</p></article>
+      <article class="panel surface-blueprint"><span class="micro">02 / Motion</span><strong>Plot with intent</strong><p>Use trajectories to connect real sequence, scale, or destination.</p></article>
+      <article class="panel surface-film"><span class="micro">03 / Restraint</span><strong>Operate quietly</strong><p>Expression recedes as the user moves into active work.</p></article>
     </section>
   </main>
 </body>

@@ -1,34 +1,13 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Orbital Archive No. 01 · Knowledge Base</title>
-  <link rel="stylesheet" href="example.css">
-</head>
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="dark"><title>Orbital Archive No. 01 · Knowledge Base</title><link rel="stylesheet" href="example.css"></head>
 <body>
-  <header class="topnav">
-    <a class="brand" href="index.html">Flight Manual</a>
-    <a aria-current="page" href="#article">Documentation</a>
-    <a href="catalog.html">Resources</a>
-    <a href="#support">Support</a>
-  </header>
-  <main class="main">
+  <header class="topnav"><a class="brand" href="index.html">Flight Manual</a><a aria-current="page" href="#article">Guides</a><a href="catalog.html">Reference</a><a href="dashboard.html">Operations</a></header>
+  <main id="article" class="main">
     <div class="doc-shell">
-      <nav class="doc-nav panel surface-blueprint" aria-label="Documentation">
-        <span class="label">In this manual</span>
-        <a href="#start">Getting started</a><a aria-current="page" href="#article">Composition</a><a href="#depth">Depth model</a><a href="#responsive">Responsive behavior</a>
-      </nav>
-      <article id="article" class="prose">
-        <p class="eyebrow">Guide 04 · Composition</p><h2>Build from signal to systems.</h2>
-        <p id="start">Every page begins by answering where the user is, what state the system is in, and what they can do next.</p>
-        <section class="panel surface-paper schematic-surface"><span class="label">Core rule</span><p>Let the primary task carry the visual weight. Technical atmosphere belongs behind information, never on top of it.</p><p class="leader-note">Information remains primary over construction detail.</p></section>
-        <h3 id="depth">Choose a depth</h3><p>Use Signal for orientation, Mission for active work, and Systems only for deliberately entered advanced detail.</p>
-        <h3 id="responsive">Preserve the sequence</h3><p>On narrow screens, keep context first, place the primary work next, and move supporting material after it.</p>
-        <div id="support" class="actions"><a class="button" href="staged-flow.html">Try the pattern</a><a class="button secondary" href="index.html">All examples</a></div>
-      </article>
-      <aside class="toc"><strong>ON THIS PAGE</strong><br>Choose a depth<br>Preserve the sequence<br><br><strong>STATUS</strong><br>Reviewed · v1.5</aside>
+      <nav class="doc-nav" aria-label="Documentation"><a href="#article">Introduction</a><a aria-current="page" href="#depth">Depth architecture</a><a href="#diagram">Schematic grammar</a><a href="#responsive">Responsive sequence</a><a href="#support">Support</a></nav>
+      <article class="prose"><p class="eyebrow">Guide 04 / Information architecture</p><h1>Build from signal to systems.</h1><p>Every page begins by answering where the user is, what state the system is in, and what action matters next.</p><div class="callout"><strong>Operating rule</strong><p style="margin:6px 0 0">Present dramatically. Operate calmly. Reveal technical depth only after intent.</p></div><h3 id="depth">Choose a depth</h3><p>Signal establishes identity and invitation. Mission supports the active task. Systems reveals diagnostics and low-frequency configuration with a visible route back.</p><figure id="diagram" class="panel article-diagram surface-blueprint"><svg viewBox="0 0 760 320" preserveAspectRatio="none" role="img" aria-labelledby="diagram-title diagram-desc"><title id="diagram-title">Horizon profile and depth sequence</title><desc id="diagram-desc">Three layered horizon curves connect Signal, Mission, and Systems depths.</desc><g fill="none" stroke="#56656e" opacity=".38"><path d="M0 64h760M0 128h760M0 192h760M0 256h760"/><path d="M76 0v320M152 0v320M228 0v320M304 0v320M380 0v320M456 0v320M532 0v320M608 0v320M684 0v320"/></g><g fill="none"><path d="M-80 332C112 60 440 28 840 146" stroke="#56656e"/><path d="M-20 344C176 158 472 124 812 204" stroke="#54bcd9" stroke-width="2"/><path d="M92 354C270 244 498 226 786 254" stroke="#cbae67" stroke-dasharray="8 9"/><path d="M160 270v-96h136M402 214v-86h118M600 224v-104h98" stroke="#98a4ac" opacity=".62"/></g><g fill="#11181e" stroke="#54bcd9"><circle cx="160" cy="270" r="6"/><circle cx="402" cy="214" r="6"/><circle cx="600" cy="224" r="6"/></g><g fill="#e7e1d5" font-family="monospace" font-size="12"><text x="176" y="168">0 / SIGNAL</text><text x="418" y="122">1 / MISSION</text><text x="616" y="114">2 / SYSTEMS</text></g></svg></figure><h3 id="responsive">Preserve the sequence</h3><p>On narrow screens, keep context first, place primary work next, and move supporting material after it. Schematic lines must never cross running copy or controls.</p><div id="support" class="actions"><a class="button" href="staged-flow.html">Try the pattern</a><a class="button secondary" href="index.html">All applications</a></div></article>
+      <aside class="toc"><strong>ON THIS PAGE</strong><br>Choose a depth<br>Schematic grammar<br>Preserve sequence<br><br><strong>STATUS</strong><br>Reviewed / v1.6<br><br><strong>ARCHIVE REF</strong><br>FM–04–B</aside>
     </div>
   </main>
-</body>
-</html>
+</body></html>

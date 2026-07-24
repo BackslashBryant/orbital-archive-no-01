@@ -1,40 +1,61 @@
 {
   "name": "Orbital Archive No. 01 Asset Pack",
-  "version": "1.5.0",
+  "version": "1.7.0",
   "license": "MIT",
   "marks": [
     {
       "name": "LSM Roundel",
-      "path": "/assets/marks/lsm-roundel.svg",
+      "path": "assets/marks/lsm-roundel.svg",
       "viewBox": "0 0 160 160"
     },
     {
       "name": "LSM Wordmark",
-      "path": "/assets/marks/lsm-wordmark.svg",
+      "path": "assets/marks/lsm-wordmark.svg",
       "viewBox": "0 0 760 160"
+    },
+    {
+      "name": "README Banner",
+      "path": "assets/marks/readme-banner.svg",
+      "viewBox": "0 0 1440 560"
     }
   ],
   "patterns": [
     {
       "name": "Orbital Grid",
-      "path": "/assets/patterns/orbital-grid.svg"
+      "path": "assets/patterns/orbital-grid.svg"
     },
     {
       "name": "Signal Bars",
-      "path": "/assets/patterns/signal-bars.svg"
+      "path": "assets/patterns/signal-bars.svg"
     },
     {
       "name": "Trajectory Field",
-      "path": "/assets/patterns/trajectory-field.svg"
+      "path": "assets/patterns/trajectory-field.svg"
     },
     {
       "name": "Orbital Architecture",
-      "path": "/assets/patterns/orbital-architecture.svg"
+      "path": "assets/patterns/orbital-architecture.svg"
+    },
+    {
+      "name": "Aerospace Schematic",
+      "path": "assets/patterns/aerospace-schematic.svg"
+    },
+    {
+      "name": "Flight Plan",
+      "path": "assets/patterns/flight-plan.svg"
+    },
+    {
+      "name": "Horizon Profile",
+      "path": "assets/patterns/horizon-profile.svg"
+    },
+    {
+      "name": "Calibration Rail",
+      "path": "assets/patterns/calibration-rail.svg"
     }
   ],
   "icons": {
-    "manifest": "/icons/manifest.json",
-    "sprite": "/icons/lsm-icons.svg",
+    "manifest": "assets/icons/manifest.json",
+    "sprite": "assets/icons/lsm-icons.svg",
     "count": 161
   }
 }

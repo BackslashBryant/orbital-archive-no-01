@@ -1,0 +1,859 @@
+{
+  "name": "Orbital Archive No. 01 Component Contracts",
+  "version": "1.7.0",
+  "count": 49,
+  "depths": {
+    "0": "signal",
+    "1": "mission",
+    "2": "systems"
+  },
+  "components": [
+    {
+      "id": "button",
+      "name": "Button",
+      "family": "actions",
+      "states": [
+        "default",
+        "hover",
+        "active",
+        "focus",
+        "disabled",
+        "loading"
+      ],
+      "allowedDepths": [
+        0,
+        1,
+        2
+      ],
+      "reference": "index.html#components"
+    },
+    {
+      "id": "icon-button",
+      "name": "IconButton",
+      "family": "actions",
+      "states": [
+        "default",
+        "hover",
+        "active",
+        "focus",
+        "disabled"
+      ],
+      "allowedDepths": [
+        0,
+        1,
+        2
+      ],
+      "reference": "index.html#components"
+    },
+    {
+      "id": "button-group",
+      "name": "ButtonGroup",
+      "family": "actions",
+      "states": [
+        "horizontal",
+        "vertical",
+        "responsive",
+        "disabled"
+      ],
+      "allowedDepths": [
+        0,
+        1,
+        2
+      ],
+      "reference": "index.html#components"
+    },
+    {
+      "id": "card",
+      "name": "Card",
+      "family": "feedback-and-surfaces",
+      "states": [
+        "default",
+        "elevated",
+        "interactive",
+        "disabled"
+      ],
+      "allowedDepths": [
+        0,
+        1,
+        2
+      ],
+      "reference": "index.html#components"
+    },
+    {
+      "id": "badge",
+      "name": "Badge",
+      "family": "feedback-and-surfaces",
+      "states": [
+        "neutral",
+        "info",
+        "success",
+        "warning",
+        "error",
+        "priority"
+      ],
+      "allowedDepths": [
+        0,
+        1,
+        2
+      ],
+      "reference": "index.html#components"
+    },
+    {
+      "id": "status-chip",
+      "name": "StatusChip",
+      "family": "feedback-and-surfaces",
+      "states": [
+        "neutral",
+        "info",
+        "success",
+        "warning",
+        "error",
+        "standby"
+      ],
+      "allowedDepths": [
+        0,
+        1,
+        2
+      ],
+      "reference": "index.html#components"
+    },
+    {
+      "id": "alert",
+      "name": "Alert",
+      "family": "feedback-and-surfaces",
+      "states": [
+        "neutral",
+        "info",
+        "success",
+        "warning",
+        "error"
+      ],
+      "allowedDepths": [
+        0,
+        1,
+        2
+      ],
+      "reference": "index.html#components"
+    },
+    {
+      "id": "avatar",
+      "name": "Avatar",
+      "family": "feedback-and-surfaces",
+      "states": [
+        "image",
+        "fallback",
+        "online",
+        "offline",
+        "busy"
+      ],
+      "allowedDepths": [
+        1,
+        2
+      ],
+      "reference": "index.html#components"
+    },
+    {
+      "id": "empty-state",
+      "name": "EmptyState",
+      "family": "feedback-and-surfaces",
+      "states": [
+        "default",
+        "compact",
+        "action"
+      ],
+      "allowedDepths": [
+        0,
+        1,
+        2
+      ],
+      "reference": "index.html#components"
+    },
+    {
+      "id": "separator",
+      "name": "Separator",
+      "family": "feedback-and-surfaces",
+      "states": [
+        "horizontal",
+        "vertical",
+        "decorative",
+        "semantic"
+      ],
+      "allowedDepths": [
+        0,
+        1,
+        2
+      ],
+      "reference": "index.html#components"
+    },
+    {
+      "id": "skeleton",
+      "name": "Skeleton",
+      "family": "feedback-and-surfaces",
+      "states": [
+        "loading",
+        "reduced-motion"
+      ],
+      "allowedDepths": [
+        1,
+        2
+      ],
+      "reference": "index.html#components"
+    },
+    {
+      "id": "spinner",
+      "name": "Spinner",
+      "family": "feedback-and-surfaces",
+      "states": [
+        "active",
+        "reduced-motion"
+      ],
+      "allowedDepths": [
+        0,
+        1,
+        2
+      ],
+      "reference": "index.html#components"
+    },
+    {
+      "id": "input",
+      "name": "Input",
+      "family": "forms",
+      "states": [
+        "default",
+        "hover",
+        "focus",
+        "filled",
+        "invalid",
+        "disabled",
+        "readonly"
+      ],
+      "allowedDepths": [
+        1,
+        2
+      ],
+      "reference": "index.html#components"
+    },
+    {
+      "id": "textarea",
+      "name": "Textarea",
+      "family": "forms",
+      "states": [
+        "default",
+        "hover",
+        "focus",
+        "filled",
+        "invalid",
+        "disabled",
+        "readonly"
+      ],
+      "allowedDepths": [
+        1,
+        2
+      ],
+      "reference": "index.html#components"
+    },
+    {
+      "id": "search-input",
+      "name": "SearchInput",
+      "family": "forms",
+      "states": [
+        "default",
+        "focus",
+        "filled",
+        "disabled"
+      ],
+      "allowedDepths": [
+        1,
+        2
+      ],
+      "reference": "index.html#components"
+    },
+    {
+      "id": "select",
+      "name": "Select",
+      "family": "forms",
+      "states": [
+        "default",
+        "hover",
+        "focus",
+        "selected",
+        "invalid",
+        "disabled"
+      ],
+      "allowedDepths": [
+        1,
+        2
+      ],
+      "reference": "index.html#components"
+    },
+    {
+      "id": "checkbox",
+      "name": "Checkbox",
+      "family": "forms",
+      "states": [
+        "unchecked",
+        "checked",
+        "indeterminate",
+        "focus",
+        "disabled",
+        "invalid"
+      ],
+      "allowedDepths": [
+        1,
+        2
+      ],
+      "reference": "index.html#components"
+    },
+    {
+      "id": "radio-group",
+      "name": "RadioGroup",
+      "family": "forms",
+      "states": [
+        "unchecked",
+        "checked",
+        "focus",
+        "disabled",
+        "invalid"
+      ],
+      "allowedDepths": [
+        1,
+        2
+      ],
+      "reference": "index.html#components"
+    },
+    {
+      "id": "toggle",
+      "name": "Toggle",
+      "family": "forms",
+      "states": [
+        "off",
+        "on",
+        "hover",
+        "focus",
+        "disabled"
+      ],
+      "allowedDepths": [
+        1,
+        2
+      ],
+      "reference": "index.html#components"
+    },
+    {
+      "id": "slider",
+      "name": "Slider",
+      "family": "forms",
+      "states": [
+        "default",
+        "hover",
+        "focus",
+        "disabled",
+        "value"
+      ],
+      "allowedDepths": [
+        1,
+        2
+      ],
+      "reference": "index.html#components"
+    },
+    {
+      "id": "combobox",
+      "name": "Combobox",
+      "family": "forms",
+      "states": [
+        "default",
+        "focus",
+        "expanded",
+        "selected",
+        "invalid",
+        "disabled"
+      ],
+      "allowedDepths": [
+        1,
+        2
+      ],
+      "reference": "index.html#components"
+    },
+    {
+      "id": "file-input",
+      "name": "FileInput",
+      "family": "forms",
+      "states": [
+        "empty",
+        "selected",
+        "invalid",
+        "disabled",
+        "drag-ready"
+      ],
+      "allowedDepths": [
+        1,
+        2
+      ],
+      "reference": "index.html#components"
+    },
+    {
+      "id": "character-count",
+      "name": "CharacterCount",
+      "family": "forms",
+      "states": [
+        "empty",
+        "typing",
+        "nearing-limit",
+        "over-limit",
+        "disabled"
+      ],
+      "allowedDepths": [
+        1,
+        2
+      ],
+      "reference": "index.html#components"
+    },
+    {
+      "id": "tabs",
+      "name": "Tabs",
+      "family": "navigation-and-overlays",
+      "states": [
+        "default",
+        "hover",
+        "focus",
+        "selected",
+        "disabled",
+        "horizontal",
+        "vertical"
+      ],
+      "allowedDepths": [
+        0,
+        1,
+        2
+      ],
+      "reference": "index.html#components"
+    },
+    {
+      "id": "accordion",
+      "name": "Accordion",
+      "family": "navigation-and-overlays",
+      "states": [
+        "collapsed",
+        "expanded",
+        "hover",
+        "focus",
+        "disabled"
+      ],
+      "allowedDepths": [
+        0,
+        1,
+        2
+      ],
+      "reference": "index.html#components"
+    },
+    {
+      "id": "tooltip",
+      "name": "Tooltip",
+      "family": "navigation-and-overlays",
+      "states": [
+        "closed",
+        "hover",
+        "focus",
+        "open",
+        "escaped"
+      ],
+      "allowedDepths": [
+        1,
+        2
+      ],
+      "reference": "index.html#components"
+    },
+    {
+      "id": "dialog",
+      "name": "Dialog",
+      "family": "navigation-and-overlays",
+      "states": [
+        "closed",
+        "open",
+        "focus-trapped",
+        "dismissing"
+      ],
+      "allowedDepths": [
+        1,
+        2
+      ],
+      "reference": "index.html#components"
+    },
+    {
+      "id": "drawer",
+      "name": "Drawer",
+      "family": "navigation-and-overlays",
+      "states": [
+        "closed",
+        "open",
+        "focus-trapped",
+        "dismissing",
+        "left",
+        "right"
+      ],
+      "allowedDepths": [
+        1,
+        2
+      ],
+      "reference": "index.html#components"
+    },
+    {
+      "id": "progress",
+      "name": "Progress",
+      "family": "data-and-status",
+      "states": [
+        "determinate",
+        "indeterminate",
+        "complete",
+        "error"
+      ],
+      "allowedDepths": [
+        0,
+        1,
+        2
+      ],
+      "reference": "index.html#components"
+    },
+    {
+      "id": "meter",
+      "name": "Meter",
+      "family": "data-and-status",
+      "states": [
+        "low",
+        "optimum",
+        "high",
+        "critical"
+      ],
+      "allowedDepths": [
+        1,
+        2
+      ],
+      "reference": "index.html#components"
+    },
+    {
+      "id": "data-table",
+      "name": "DataTable",
+      "family": "data-and-status",
+      "states": [
+        "populated",
+        "empty",
+        "loading",
+        "overflow",
+        "selected"
+      ],
+      "allowedDepths": [
+        1,
+        2
+      ],
+      "reference": "index.html#components"
+    },
+    {
+      "id": "breadcrumb",
+      "name": "Breadcrumb",
+      "family": "navigation-and-overlays",
+      "states": [
+        "default",
+        "current",
+        "collapsed",
+        "overflow"
+      ],
+      "allowedDepths": [
+        0,
+        1,
+        2
+      ],
+      "reference": "index.html#components"
+    },
+    {
+      "id": "navigation",
+      "name": "Navigation",
+      "family": "navigation-and-overlays",
+      "states": [
+        "default",
+        "hover",
+        "active",
+        "focus",
+        "compact",
+        "expanded"
+      ],
+      "allowedDepths": [
+        0,
+        1,
+        2
+      ],
+      "reference": "index.html#components"
+    },
+    {
+      "id": "pagination",
+      "name": "Pagination",
+      "family": "navigation-and-overlays",
+      "states": [
+        "first",
+        "middle",
+        "last",
+        "current",
+        "disabled",
+        "compact"
+      ],
+      "allowedDepths": [
+        1,
+        2
+      ],
+      "reference": "index.html#components"
+    },
+    {
+      "id": "step-indicator",
+      "name": "StepIndicator",
+      "family": "navigation-and-overlays",
+      "states": [
+        "complete",
+        "current",
+        "upcoming",
+        "error",
+        "vertical",
+        "horizontal"
+      ],
+      "allowedDepths": [
+        1,
+        2
+      ],
+      "reference": "index.html#components"
+    },
+    {
+      "id": "toolbar",
+      "name": "Toolbar",
+      "family": "navigation-and-overlays",
+      "states": [
+        "horizontal",
+        "vertical",
+        "focus",
+        "disabled",
+        "overflow"
+      ],
+      "allowedDepths": [
+        1,
+        2
+      ],
+      "reference": "index.html#components"
+    },
+    {
+      "id": "code-snippet",
+      "name": "CodeSnippet",
+      "family": "data-and-status",
+      "states": [
+        "default",
+        "copied",
+        "multiline",
+        "overflow"
+      ],
+      "allowedDepths": [
+        0,
+        1,
+        2
+      ],
+      "reference": "index.html#components"
+    },
+    {
+      "id": "banner",
+      "name": "Banner",
+      "family": "feedback-and-surfaces",
+      "states": [
+        "info",
+        "success",
+        "warning",
+        "error",
+        "dismissible"
+      ],
+      "allowedDepths": [
+        0,
+        1,
+        2
+      ],
+      "reference": "index.html#components"
+    },
+    {
+      "id": "toast-provider",
+      "name": "ToastProvider",
+      "family": "feedback-and-surfaces",
+      "states": [
+        "queued",
+        "visible",
+        "dismissing",
+        "info",
+        "success",
+        "warning",
+        "error"
+      ],
+      "allowedDepths": [
+        1,
+        2
+      ],
+      "reference": "index.html#components"
+    },
+    {
+      "id": "menu",
+      "name": "Menu",
+      "family": "navigation-and-overlays",
+      "states": [
+        "closed",
+        "open",
+        "hover",
+        "focus",
+        "disabled",
+        "destructive"
+      ],
+      "allowedDepths": [
+        1,
+        2
+      ],
+      "reference": "index.html#components"
+    },
+    {
+      "id": "disclosure",
+      "name": "Disclosure",
+      "family": "navigation-and-overlays",
+      "states": [
+        "closed",
+        "open",
+        "hover",
+        "focus",
+        "disabled"
+      ],
+      "allowedDepths": [
+        0,
+        1,
+        2
+      ],
+      "reference": "index.html#components"
+    },
+    {
+      "id": "tag",
+      "name": "Tag",
+      "family": "data-and-status",
+      "states": [
+        "static",
+        "interactive",
+        "removable",
+        "selected",
+        "disabled"
+      ],
+      "allowedDepths": [
+        1,
+        2
+      ],
+      "reference": "index.html#components"
+    },
+    {
+      "id": "summary-box",
+      "name": "SummaryBox",
+      "family": "layout-and-composition",
+      "states": [
+        "default",
+        "priority",
+        "info"
+      ],
+      "allowedDepths": [
+        0,
+        1,
+        2
+      ],
+      "reference": "index.html#components"
+    },
+    {
+      "id": "depth-boundary",
+      "name": "DepthBoundary",
+      "family": "layout-and-composition",
+      "states": [
+        "signal",
+        "mission",
+        "systems",
+        "editorial",
+        "operational"
+      ],
+      "allowedDepths": [
+        0,
+        1,
+        2
+      ],
+      "reference": "index.html#components"
+    },
+    {
+      "id": "container",
+      "name": "Container",
+      "family": "layout-and-composition",
+      "states": [
+        "responsive",
+        "constrained",
+        "full-bleed"
+      ],
+      "allowedDepths": [
+        0,
+        1,
+        2
+      ],
+      "reference": "index.html#components"
+    },
+    {
+      "id": "stack",
+      "name": "Stack",
+      "family": "layout-and-composition",
+      "states": [
+        "vertical",
+        "responsive"
+      ],
+      "allowedDepths": [
+        0,
+        1,
+        2
+      ],
+      "reference": "index.html#components"
+    },
+    {
+      "id": "cluster",
+      "name": "Cluster",
+      "family": "layout-and-composition",
+      "states": [
+        "wrapped",
+        "aligned",
+        "distributed"
+      ],
+      "allowedDepths": [
+        0,
+        1,
+        2
+      ],
+      "reference": "index.html#components"
+    },
+    {
+      "id": "auto-grid",
+      "name": "AutoGrid",
+      "family": "layout-and-composition",
+      "states": [
+        "responsive",
+        "dense",
+        "auto-fit"
+      ],
+      "allowedDepths": [
+        0,
+        1,
+        2
+      ],
+      "reference": "index.html#components"
+    },
+    {
+      "id": "description-list",
+      "name": "DescriptionList",
+      "family": "layout-and-composition",
+      "states": [
+        "stacked",
+        "inline",
+        "compact"
+      ],
+      "allowedDepths": [
+        0,
+        1,
+        2
+      ],
+      "reference": "index.html#components"
+    }
+  ]
+}

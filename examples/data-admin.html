@@ -1,30 +1,13 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Orbital Archive No. 01 · Data Admin</title>
-  <link rel="stylesheet" href="example.css">
-</head>
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="dark"><title>Orbital Archive No. 01 · Data Admin</title><link rel="stylesheet" href="example.css"></head>
 <body>
-  <header class="topnav">
-    <a class="brand" href="index.html">Registry Admin</a>
-    <a aria-current="page" href="#records">Records</a>
-    <a href="dashboard.html">Overview</a>
-    <a href="settings.html">Settings</a>
-  </header>
+  <header class="topnav"><a class="brand" href="index.html">Registry Admin</a><a aria-current="page" href="#records">Records</a><a href="dashboard.html">Overview</a><a href="catalog.html">Schema</a><a href="settings.html">Settings</a></header>
   <main id="records" class="main">
-    <div class="pagehead"><div><p class="eyebrow">Depth 1 · Registry</p><h2>Records</h2><p>428 results · Updated 14:32 UTC</p></div><a class="button" href="staged-flow.html">Add record</a></div>
-    <section class="panel surface-scanline schematic-surface">
-      <div class="admin-tools"><input type="search" aria-label="Search records" placeholder="Search by name or identifier"><a class="button secondary" href="#table">Filter</a><a class="button secondary" href="#table">Export</a></div>
-      <div class="table-scroll">
-        <table id="table" class="table">
-          <thead><tr><th scope="col">Name</th><th scope="col">Owner</th><th scope="col">Modified</th><th scope="col">State</th></tr></thead>
-          <tbody><tr><td>Relay field guide</td><td>M. Chen</td><td>2 min ago</td><td>Nominal</td></tr><tr><td>Aperture index</td><td>K. Singh</td><td>Yesterday</td><td>Review</td></tr><tr><td>Horizon archive</td><td>A. Rivera</td><td>Jul 21</td><td>Nominal</td></tr><tr><td>Signal taxonomy</td><td>J. Okafor</td><td>Jul 19</td><td>Draft</td></tr></tbody>
-        </table>
-      </div>
-      <p class="datum">Registry datum / 428 records</p>
+    <div class="pagehead"><div><p class="eyebrow">Depth 1 / Registry / 428 records</p><h1>Records</h1><p>Dense information remains calm through stable alignment, a measurement rail, and a scoped inspector.</p></div><a class="button" href="staged-flow.html">Add record</a></div>
+    <section class="grid queue-layout">
+      <article class="panel surface-scanline"><div class="admin-tools"><input type="search" aria-label="Search records" placeholder="Search by name or identifier"><a class="button secondary" href="#table">Filter</a><a class="button secondary" href="#table">Export</a></div><div class="calibration-rail"><span>0</span><span>128</span><span>256</span><span>384</span><span>428 / end</span></div><div class="table-scroll"><table id="table" class="table"><thead><tr><th>Name</th><th>Owner</th><th>Identifier</th><th>Modified</th><th>State</th></tr></thead><tbody><tr aria-selected="true"><td>Relay field guide</td><td>M. Chen</td><td>RFG–042</td><td>2 min ago</td><td class="nominal">Nominal</td></tr><tr><td>Aperture index</td><td>K. Singh</td><td>API–118</td><td>Yesterday</td><td class="review">Review</td></tr><tr><td>Horizon archive</td><td>A. Rivera</td><td>HZN–207</td><td>Jul 21</td><td class="nominal">Nominal</td></tr><tr><td>Signal taxonomy</td><td>J. Okafor</td><td>SGT–301</td><td>Jul 19</td><td class="draft">Draft</td></tr><tr><td>Mission glossary</td><td>T. Singh</td><td>MSG–315</td><td>Jul 18</td><td class="nominal">Nominal</td></tr></tbody></table></div></article>
+      <aside class="work-stack"><article class="panel surface-blueprint"><span class="label">Selected record</span><h3 style="margin-top:12px">Relay field guide</h3><div class="system-stat"><span>ID</span><strong>RFG–042</strong></div><div class="system-stat"><span>Owner</span><strong>M. Chen</strong></div><div class="system-stat"><span>Revision</span><strong>07</strong></div><div class="system-stat"><span>State</span><strong>Nominal</strong></div><a class="button" href="#table" style="margin-top:18px">Open record</a></article><article class="panel surface-paper"><span class="label">Registry datum</span><p style="margin-top:12px">The inspector describes only the current selection. It never displaces the table.</p></article></aside>
     </section>
   </main>
-</body>
-</html>
+</body></html>

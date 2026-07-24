@@ -1,37 +1,15 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Orbital Archive No. 01 · Sidebar Application</title>
-  <link rel="stylesheet" href="example.css">
-</head>
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="dark"><title>Orbital Archive No. 01 · Sidebar Application</title><link rel="stylesheet" href="example.css"></head>
 <body>
   <div class="app">
-    <nav class="side" aria-label="Primary">
-      <a class="brand" href="index.html">OA / Control</a>
-      <a aria-current="page" href="#overview">Overview</a>
-      <a href="#queue">Queue</a>
-      <a href="dashboard.html">Reports</a>
-      <a href="top-navigation.html">People</a>
-      <a href="../index.html#governance">Settings</a>
-    </nav>
+    <nav class="side" aria-label="Primary"><a class="brand" href="index.html">OA / Control</a><a aria-current="page" href="#overview">Overview</a><a href="#queue">Queue</a><a href="dashboard.html">Reports</a><a href="mission-timeline.html">Timeline</a><a href="settings.html">Settings</a><div class="side-meta">Scope / Team Alpha<br>Status / Nominal<br>Depth / Mission</div></nav>
     <main id="overview" class="main">
-      <div class="pagehead">
-        <div><p class="eyebrow">Depth 1 · Mission</p><h2>Active queue</h2></div>
-        <a class="button" href="staged-flow.html">New item</a>
-      </div>
-      <section id="queue" class="panel">
-        <table class="table">
-          <thead><tr><th>Item</th><th>Owner</th><th>Status</th></tr></thead>
-          <tbody>
-            <tr><td>Relay review</td><td>A. Rivera</td><td>Ready</td></tr>
-            <tr><td>Archive sync</td><td>M. Chen</td><td>In progress</td></tr>
-            <tr><td>Policy check</td><td>T. Singh</td><td>Waiting</td></tr>
-          </tbody>
-        </table>
+      <div class="pagehead"><div><p class="eyebrow">Depth 1 / Mission / Team Alpha</p><h1>Active queue</h1><p>Persistent wayfinding, visible scope, and a selection detail that never hides the list.</p></div><a class="button" href="staged-flow.html">New item</a></div>
+      <section class="grid queue-layout">
+        <article id="queue" class="panel surface-scanline"><div class="admin-tools"><input type="search" aria-label="Search queue" placeholder="Search queue"><a class="button secondary" href="#queue">Filter</a><a class="button secondary" href="#queue">Sort</a></div><div class="table-scroll"><table class="table"><thead><tr><th>Item</th><th>Owner</th><th>Modified</th><th>Status</th></tr></thead><tbody><tr aria-selected="true"><td>Relay review</td><td>A. Rivera</td><td>4 min ago</td><td class="nominal">Ready</td></tr><tr><td>Archive sync</td><td>M. Chen</td><td>22 min ago</td><td class="review">In progress</td></tr><tr><td>Policy check</td><td>T. Singh</td><td>Yesterday</td><td class="draft">Waiting</td></tr><tr><td>Field packet</td><td>J. Okafor</td><td>Jul 21</td><td class="nominal">Ready</td></tr></tbody></table></div><div class="calibration-rail"><span>04 visible / 18 total</span><span>Updated 14:32 UTC</span></div></article>
+        <aside class="work-stack"><article class="panel selection-map surface-blueprint"><span class="label">Selected / Relay review</span><svg viewBox="0 0 360 220" aria-hidden="true"><g fill="none" stroke="#56656e"><path d="M34 184C98 78 204 50 330 90"/><path d="M54 198C130 126 222 112 326 132" stroke="#54bcd9"/><path d="M76 208C152 164 236 158 314 170" stroke="#cbae67" stroke-dasharray="7 8"/><circle cx="202" cy="104" r="6"/><path d="M202 84v40M182 104h40" opacity=".45"/><path d="M202 104v-52h86" opacity=".6"/></g><circle cx="202" cy="104" r="3" fill="#e7e1d5"/></svg><p>Review access changes for Relay 07 before the next synchronization window.</p><a class="button" href="staged-flow.html">Open item</a></article><article class="panel surface-paper"><span class="label">Selection state</span><div class="system-stat"><span>Owner</span><strong>A. Rivera</strong></div><div class="system-stat"><span>Window</span><strong>16:00 UTC</strong></div><div class="system-stat"><span>Risk</span><strong>Low</strong></div></article></aside>
       </section>
     </main>
   </div>
-</body>
-</html>
+</body></html>
