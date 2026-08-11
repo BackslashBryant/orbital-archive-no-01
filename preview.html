@@ -192,6 +192,7 @@
     .button.primary { border-color: var(--orange); color: var(--orbit); background: var(--orange); }
     .button.secondary:hover { border-color: var(--teal); color: var(--teal); }
     .button.primary:hover { background: color-mix(in srgb, var(--orange), var(--bone) 12%); }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
     .button:disabled { cursor: not-allowed; opacity: .62; }
 
     .signal-figure { position: relative; min-height: 430px; }
@@ -241,10 +242,13 @@
     .workspace { padding: 22px; }
     .aside { padding: 22px; border-left: 1px solid var(--grid); background: color-mix(in srgb, var(--alloy), transparent 24%); }
     .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 18px; }
-    .stat { position: relative; min-height: 124px; padding: 17px; border: 1px solid var(--grid); background: color-mix(in srgb, var(--slate), var(--orbit) 12%); }
-    .stat::before { content: ""; position: absolute; inset: 0 auto auto 0; width: 44%; height: 2px; background: var(--teal); }
-    .stat:nth-child(2)::before { background: var(--gold); }
-    .stat:nth-child(3)::before { background: var(--signal); }
+    .stat { position: relative; min-height: 124px; padding: 17px; border: 1px solid var(--grid); background: color-mix(in srgb, var(--slate), var(--orbit) 12%); --accent: var(--teal); }
+    .stat:nth-child(2) { --accent: var(--gold); }
+    .stat:nth-child(3) { --accent: var(--signal); }
+    /* Registration brackets on opposing corners (top-left + bottom-right), in the card's accent. */
+    .stat::before, .stat::after { content: ""; position: absolute; width: 18px; height: 18px; border: 0 solid var(--accent); pointer-events: none; }
+    .stat::before { top: -1px; left: -1px; border-top-width: 2px; border-left-width: 2px; }
+    .stat::after { right: -1px; bottom: -1px; border-bottom-width: 2px; border-right-width: 2px; }
     .stat strong { display: block; font: 700 40px var(--display); }
     .stat span { color: var(--dust); font: 10px var(--mono); letter-spacing: .08em; text-transform: uppercase; }
     .stat small { display: block; margin-top: 10px; color: var(--teal); }
@@ -335,17 +339,21 @@
       <svg class="brand-mark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"></circle><path d="M14.1 9.9 16.2 7.8"></path><circle cx="12" cy="12" r="2.1" fill="currentColor" stroke="none"></circle><circle cx="18" cy="6" r="1.9" fill="currentColor" stroke="none"></circle></svg>
       Orbital Archive / 01
     </a>
-    <nav aria-label="Preview sections"><a href="#signal">Signal</a><a href="#mission">Mission</a><a href="#systems">Systems</a></nav>
-    <span class="release-chip">Preview · v1.8.0</span>
+    <nav aria-label="Primary"><a href="index.html">Visual guide</a><a href="examples/index.html">Applications</a><a href="#mission">Components</a></nav>
+    <span class="release-chip">v1.8.0</span>
   </header>
 
   <main id="main">
     <section class="signal" id="signal" aria-labelledby="signal-title">
       <div class="shell signal-grid">
         <div>
-          <p class="eyebrow">Orbital Archive · Release 1.8.0</p>
-          <h1 id="signal-title">Palette &amp;<br><span class="textured-word">interaction</span></h1>
-          <p class="lede">Release proof for the canonical token export, application states, responsive behavior, and the single reusable dither asset.</p>
+          <p class="eyebrow">Orbital Archive No. 01 · Lunar Signal Modernism</p>
+          <h1 id="signal-title"><span class="textured-word">Aerospace</span><br>design system</h1>
+          <p class="lede">Stack-neutral and framework-free: design tokens, 49 component contracts, 161 icons, and 13 responsive reference applications in plain HTML and CSS. This page shows the palette, components, and behavior at each depth — the visual guide documents the rest.</p>
+          <div class="hero-actions">
+            <a class="button primary" href="index.html">Open the visual guide →</a>
+            <a class="button secondary" href="examples/index.html">Browse applications</a>
+          </div>
           <dl class="release-facts" aria-label="Public package inventory">
             <div><dt>Applications</dt><dd>13</dd></div>
             <div><dt>Contracts</dt><dd>49</dd></div>
@@ -382,7 +390,7 @@
       <div class="shell">
         <div class="section-head">
           <div><p class="depth-label">Depth 1 · Mission</p><h2 id="mission-title">Application surface</h2></div>
-          <p>This specimen verifies navigation, selected rows, form focus, semantic status, and an orange primary action on the shared neutral surfaces.</p>
+          <p>A representative product screen at Mission depth: navigation, a data table with a selected row, form focus, the semantic status colors, and the primary action.</p>
         </div>
         <div class="mission-shell">
           <header class="mission-bar"><strong>Review workspace</strong><span class="active">Overview</span><span>Activity</span><span>Settings</span></header>
@@ -424,7 +432,7 @@
       <div class="shell">
         <div class="section-head">
           <div><p class="depth-label">Depth 2 · Systems</p><h2 id="systems-title">System surface</h2></div>
-          <p>This specimen verifies dense diagnostics, public inventory counts, and the same semantic color mapping at the highest information density.</p>
+          <p>A diagnostics screen at Systems depth: dense data, a verification log, and the same semantic color roles carried through at high information density.</p>
         </div>
         <div class="systems-grid">
           <article class="systems-card">
@@ -455,7 +463,7 @@ Result: 13 examples · 49 contracts · 9 patterns · 161 icons</pre>
     </section>
   </main>
 
-  <footer class="shell"><span>Orbital Archive No. 01 · v1.8.0 preview</span><span>Framework-free · Real package tokens</span><span><a href="index.html">Return to visual guide</a></span></footer>
+  <footer class="shell"><span>Orbital Archive No. 01 · v1.8.0</span><span>Plain HTML and CSS · No build step</span><span><a href="index.html">Open the visual guide →</a></span></footer>
   <script>
     const reviewAction = document.getElementById('review-action')
     const reviewCopy = document.getElementById('review-copy')
