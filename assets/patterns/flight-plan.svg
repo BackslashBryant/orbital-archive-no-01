@@ -10,6 +10,6 @@
     <path d="M64 650H1134" stroke="#56656E"/><path d="M64 640V660M104 644V656M144 644V656M184 644V656M224 640V660M264 644V656M304 644V656M344 644V656M384 640V660M424 644V656M464 644V656M504 644V656M544 640V660M584 644V656M624 644V656M664 644V656M704 640V660M744 644V656M784 644V656M824 644V656M864 640V660M904 644V656M944 644V656M984 644V656M1024 640V660M1064 644V656M1104 644V656" stroke="#98A4AC" stroke-opacity=".72"/>
   </g>
   <g fill="#11181E" stroke="#5CA3A6" stroke-width="2"><circle cx="64" cy="604" r="7"/><circle cx="456" cy="330" r="7"/><circle cx="746" cy="314" r="7"/><circle cx="1134" cy="248" r="7"/></g>
-  <circle cx="905" cy="216" r="5" fill="#E66A2C"/>
+  <circle cx="905" cy="216" r="5" fill="#CB7248"/>
   <g fill="#98A4AC" font-family="ui-monospace, SFMono-Regular, Consolas, monospace" font-size="12" letter-spacing="1.4"><text x="76" y="588">ORIGIN / 00</text><text x="472" y="316">VECTOR / 04-A</text><text x="762" y="300">APOGEE / 28.572° N</text><text x="966" y="216">BURN WINDOW / T+04:18</text><text x="64" y="684">CALIBRATION RAIL / NOMINAL FLIGHT ENVELOPE</text></g>
 </svg>

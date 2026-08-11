@@ -23,7 +23,7 @@
     <circle cx="132" cy="600" r="6"/>
     <circle cx="700" cy="287" r="6"/>
   </g>
-  <circle cx="1160" cy="262" r="6" fill="#E66A2C"/>
+  <circle cx="1160" cy="262" r="6" fill="#CB7248"/>
   <!-- corner registration frame -->
   <g stroke="#98A4AC" stroke-width="1" opacity=".55">
     <path d="M24 24H62M24 24V62M1176 24H1138M1176 24V62M24 696H62M24 696V658M1176 696H1138M1176 696V658"/>
@@ -31,6 +31,6 @@
   <g font-family="ui-monospace, SFMono-Regular, Consolas, monospace" fill="#98A4AC" font-size="12" letter-spacing="1.4">
     <text x="150" y="592">ORIGIN / 00</text>
     <text x="620" y="250" fill="#5CA3A6">APOGEE / TRACK</text>
-    <text x="1088" y="248" fill="#E66A2C">DESTINATION</text>
+    <text x="1088" y="248" fill="#CB7248">DESTINATION</text>
   </g>
 </svg>

@@ -11,7 +11,7 @@
   /* Deprecated compatibility alias; use --lsm-color-palette-teal. Remove in v2. */
   --lsm-color-palette-relay: #5CA3A6;
   --lsm-color-palette-gold: #CBAE67;
-  --lsm-color-palette-orange: #E66A2C;
+  --lsm-color-palette-orange: #CB7248;
   --lsm-color-palette-signal: #7EB79E;
   --lsm-color-palette-rust: #C97A60;
   --lsm-color-palette-fault: #EA7468;
@@ -24,7 +24,7 @@
   --lsm-color-semantic-card-foreground: #E7E1D5;
   --lsm-color-semantic-popover: #37464F;
   --lsm-color-semantic-popover-foreground: #E7E1D5;
-  --lsm-color-semantic-primary: #E66A2C;
+  --lsm-color-semantic-primary: #CB7248;
   --lsm-color-semantic-primary-foreground: #11181E;
   --lsm-color-semantic-secondary: #37464F;
   --lsm-color-semantic-secondary-foreground: #E7E1D5;
@@ -32,7 +32,7 @@
   --lsm-color-semantic-muted-foreground: #B3BBC2;
   --lsm-color-semantic-accent: #CBAE67;
   --lsm-color-semantic-accent-foreground: #11181E;
-  --lsm-color-semantic-editorial-signal: #E66A2C;
+  --lsm-color-semantic-editorial-signal: #CB7248;
   --lsm-color-semantic-editorial-signal-foreground: #11181E;
   --lsm-color-semantic-info: #5CA3A6;
   --lsm-color-semantic-info-foreground: #11181E;
@@ -58,7 +58,7 @@
   --lsm-color-mode-operational-surface: #2D3A42;
   --lsm-color-mode-operational-surface-elevated: #37464F;
   --lsm-color-mode-operational-border: #56656E;
-  --lsm-color-data-1: #E66A2C;
+  --lsm-color-data-1: #CB7248;
   --lsm-color-data-2: #5CA3A6;
   --lsm-color-data-3: #CBAE67;
   --lsm-color-data-4: #7EB79E;

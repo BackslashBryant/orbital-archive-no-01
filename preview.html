@@ -18,7 +18,7 @@
       --bone: var(--lsm-color-palette-bone, #E7E1D5);
       --teal: var(--lsm-color-palette-teal, #5CA3A6);
       --gold: var(--lsm-color-palette-gold, #CBAE67);
-      --orange: var(--lsm-color-palette-orange, #E66A2C);
+      --orange: var(--lsm-color-palette-orange, #CB7248);
       --signal: var(--lsm-color-palette-signal, #7EB79E);
       --rust: var(--lsm-color-palette-rust, #C97A60);
       --fault: var(--lsm-color-palette-fault, #EA7468);
@@ -175,7 +175,7 @@
     .lede { max-width: 680px; color: var(--dust); font-size: clamp(16px, 1.45vw, 19px); }
     .release-facts { display: flex; flex-wrap: wrap; gap: 10px 22px; margin: 30px 0 0; padding-top: 16px; border-top: 1px solid var(--grid); }
     .release-facts div { display: flex; align-items: baseline; gap: 8px; }
-    .release-facts dt { color: var(--dust); font: 9px var(--mono); letter-spacing: .1em; text-transform: uppercase; }
+    .release-facts dt { color: var(--dust); font: 10px var(--mono); letter-spacing: .1em; text-transform: uppercase; }
     .release-facts dd { margin: 0; color: var(--bone); font: 11px var(--mono); }
     .button {
       position: relative;
@@ -208,6 +208,8 @@
     .button.primary { border-color: var(--orange); color: var(--orbit); background: var(--orange); box-shadow: 0 0 26px color-mix(in srgb, var(--orange), transparent 60%); }
     .button.secondary:hover { border-color: var(--teal); color: var(--teal); }
     .button.primary:hover { background: color-mix(in srgb, var(--orange), var(--bone) 12%); }
+    @keyframes oa-scan { to { background-position: 0 -3px; } }
+    .button:hover::after, .button:focus-visible::after { animation: oa-scan .5s linear infinite; opacity: .24; }
     .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
     .button:disabled { cursor: not-allowed; opacity: .62; }
 
@@ -300,7 +302,7 @@
     .field:focus { border-color: var(--teal); }
     .aside .button { width: 100%; margin-top: 12px; }
     .status-row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 22px; }
-    .status { display: inline-flex; align-items: center; gap: 7px; padding: 6px 8px; border: 1px solid var(--grid); font: 9px var(--mono); letter-spacing: .06em; text-transform: uppercase; }
+    .status { display: inline-flex; align-items: center; gap: 7px; padding: 6px 8px; border: 1px solid var(--grid); font: 10px var(--mono); letter-spacing: .06em; text-transform: uppercase; }
     .status::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: currentColor; }
     .status.info { color: var(--teal); border-color: var(--teal); }
     .status.success { color: var(--signal); border-color: var(--signal); }
@@ -328,7 +330,7 @@
     .texture-proof strong { padding: 6px 9px; color: var(--bone); background: color-mix(in srgb, var(--orbit), transparent 12%); font: 700 16px var(--display); letter-spacing: .08em; text-transform: uppercase; }
     .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
 
-    footer { display: flex; justify-content: space-between; gap: 20px; padding: 28px 0 42px; color: var(--dust); font: 9px var(--mono); letter-spacing: .08em; text-transform: uppercase; }
+    footer { display: flex; justify-content: space-between; gap: 20px; padding: 28px 0 42px; color: var(--dust); font: 10px var(--mono); letter-spacing: .08em; text-transform: uppercase; }
 
     @media (max-width: 900px) {
       .signal-grid, .section-head, .mission-layout, .systems-grid { grid-template-columns: 1fr; }
@@ -408,7 +410,7 @@
           </svg>
           <dl class="figure-note" aria-label="Release token checks">
             <div><dt>Token source</dt><dd>tokens.css</dd></div>
-            <div><dt>Primary</dt><dd>#E66A2C</dd></div>
+            <div><dt>Primary</dt><dd>#CB7248</dd></div>
             <div><dt>Interaction</dt><dd>#5CA3A6</dd></div>
             <div><dt>Status</dt><dd>Validated</dd></div>
           </dl>
@@ -479,7 +481,7 @@ Result: 13 examples · 49 contracts · 9 patterns · 161 icons</pre>
           <article class="systems-card">
             <header><h3>Semantic roles</h3><code>v1.8.0</code></header>
             <div class="token-list">
-              <div class="token"><i style="--color:var(--orange)"></i><span>Primary action</span><code>#E66A2C</code></div>
+              <div class="token"><i style="--color:var(--orange)"></i><span>Primary action</span><code>#CB7248</code></div>
               <div class="token"><i style="--color:var(--teal)"></i><span>Focus / active / link</span><code>#5CA3A6</code></div>
               <div class="token"><i style="--color:var(--gold)"></i><span>Priority</span><code>#CBAE67</code></div>
               <div class="token"><i style="--color:var(--signal)"></i><span>Success</span><code>#7EB79E</code></div>

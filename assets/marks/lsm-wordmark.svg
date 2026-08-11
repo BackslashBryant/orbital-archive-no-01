@@ -7,7 +7,7 @@
     <circle cx="84" cy="80" r="36" stroke-width="1.8" stroke-opacity=".62"/>
     <path d="M89.7 74.3 105.2 58.8" stroke="#5CA3A6" stroke-width="1.8"/>
   </g>
-  <circle cx="84" cy="80" r="4.5" fill="#E66A2C"/>
+  <circle cx="84" cy="80" r="4.5" fill="#CB7248"/>
   <circle cx="109.5" cy="54.5" r="4.6" fill="#5CA3A6"/>
   <text x="152" y="74" fill="#E7E1D5" font-family="'Arial Narrow', 'Roboto Condensed', sans-serif" font-size="48" font-weight="700" letter-spacing="4">ORBITAL ARCHIVE</text>
   <text x="154" y="104" fill="#5CA3A6" font-family="ui-monospace, 'SFMono-Regular', Consolas, monospace" font-size="13" letter-spacing="5">NO. 01 · LUNAR SIGNAL MODERNISM</text>

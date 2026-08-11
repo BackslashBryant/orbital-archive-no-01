@@ -13,7 +13,7 @@ export const LSMNativeTokens = {
       /** @deprecated Use teal; relay will be removed in v2. */
       "relay": "#5CA3A6",
       "gold": "#CBAE67",
-      "orange": "#E66A2C",
+      "orange": "#CB7248",
       "signal": "#7EB79E",
       "rust": "#C97A60",
       "fault": "#EA7468"
@@ -28,7 +28,7 @@ export const LSMNativeTokens = {
       "cardForeground": "#E7E1D5",
       "popover": "#37464F",
       "popoverForeground": "#E7E1D5",
-      "primary": "#E66A2C",
+      "primary": "#CB7248",
       "primaryForeground": "#11181E",
       "secondary": "#37464F",
       "secondaryForeground": "#E7E1D5",
@@ -36,7 +36,7 @@ export const LSMNativeTokens = {
       "mutedForeground": "#B3BBC2",
       "accent": "#CBAE67",
       "accentForeground": "#11181E",
-      "editorialSignal": "#E66A2C",
+      "editorialSignal": "#CB7248",
       "editorialSignalForeground": "#11181E",
       "info": "#5CA3A6",
       "infoForeground": "#11181E",

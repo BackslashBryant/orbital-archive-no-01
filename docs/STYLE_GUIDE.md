@@ -34,7 +34,7 @@ The system should feel calm, precise, intelligent, archival, engineered, and qui
 | Archive Bone | `#E7E1D5` | Primary content |
 | Signal Teal | `#5CA3A6` | Active, focused, linked, selected — narrow role, never primary |
 | Mission Gold | `#CBAE67` | Priority and editorial hierarchy |
-| Ignition Orange | `#E66A2C` | Primary action and editorial signal — the dominant brand hue, one job per surface |
+| Ignition Orange | `#CB7248` | Primary action and editorial signal — the dominant brand hue, one job per surface |
 | Signal Green | `#7EB79E` | Success, available, nominal |
 | Alert Rust | `#C97A60` | Warning, degraded, attention |
 | Fault Red | `#EA7468` | Error, critical, destructive |
