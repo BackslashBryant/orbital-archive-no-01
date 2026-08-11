@@ -8,7 +8,9 @@
   <color name="lsm_color_palette_gridline">#FF56656E</color>
   <color name="lsm_color_palette_dust">#FFB3BBC2</color>
   <color name="lsm_color_palette_bone">#FFE7E1D5</color>
-  <color name="lsm_color_palette_relay">#FF54BCD9</color>
+  <color name="lsm_color_palette_teal">#FF5CA3A6</color>
+  <!-- Deprecated compatibility alias; use lsm_color_palette_teal. Remove in v2. -->
+  <color name="lsm_color_palette_relay">@color/lsm_color_palette_teal</color>
   <color name="lsm_color_palette_gold">#FFCBAE67</color>
   <color name="lsm_color_palette_orange">#FFE66A2C</color>
   <color name="lsm_color_palette_signal">#FF7EB79E</color>
@@ -23,7 +25,7 @@
   <color name="lsm_color_semantic_card_foreground">#FFE7E1D5</color>
   <color name="lsm_color_semantic_popover">#FF37464F</color>
   <color name="lsm_color_semantic_popover_foreground">#FFE7E1D5</color>
-  <color name="lsm_color_semantic_primary">#FF54BCD9</color>
+  <color name="lsm_color_semantic_primary">#FFE66A2C</color>
   <color name="lsm_color_semantic_primary_foreground">#FF11181E</color>
   <color name="lsm_color_semantic_secondary">#FF37464F</color>
   <color name="lsm_color_semantic_secondary_foreground">#FFE7E1D5</color>
@@ -33,7 +35,7 @@
   <color name="lsm_color_semantic_accent_foreground">#FF11181E</color>
   <color name="lsm_color_semantic_editorial_signal">#FFE66A2C</color>
   <color name="lsm_color_semantic_editorial_signal_foreground">#FF11181E</color>
-  <color name="lsm_color_semantic_info">#FF54BCD9</color>
+  <color name="lsm_color_semantic_info">#FF5CA3A6</color>
   <color name="lsm_color_semantic_info_foreground">#FF11181E</color>
   <color name="lsm_color_semantic_success">#FF7EB79E</color>
   <color name="lsm_color_semantic_success_foreground">#FF11181E</color>
@@ -45,10 +47,10 @@
   <color name="lsm_color_semantic_destructive_foreground">#FF11181E</color>
   <color name="lsm_color_semantic_border">#FF56656E</color>
   <color name="lsm_color_semantic_input">#FF37464F</color>
-  <color name="lsm_color_semantic_ring">#FF54BCD9</color>
-  <color name="lsm_color_semantic_focus">#FF54BCD9</color>
+  <color name="lsm_color_semantic_ring">#FF5CA3A6</color>
+  <color name="lsm_color_semantic_focus">#FF5CA3A6</color>
   <color name="lsm_color_semantic_disabled">#FFB3BBC2</color>
-  <color name="lsm_color_semantic_link">#FF54BCD9</color>
+  <color name="lsm_color_semantic_link">#FF5CA3A6</color>
   <color name="lsm_color_mode_editorial_background">#FF11181E</color>
   <color name="lsm_color_mode_editorial_surface">#FF253139</color>
   <color name="lsm_color_mode_editorial_surface_elevated">#FF2D3A42</color>
@@ -57,9 +59,9 @@
   <color name="lsm_color_mode_operational_surface">#FF2D3A42</color>
   <color name="lsm_color_mode_operational_surface_elevated">#FF37464F</color>
   <color name="lsm_color_mode_operational_border">#FF56656E</color>
-  <color name="lsm_color_data_1">#FF54BCD9</color>
-  <color name="lsm_color_data_2">#FFCBAE67</color>
-  <color name="lsm_color_data_3">#FFE66A2C</color>
+  <color name="lsm_color_data_1">#FFE66A2C</color>
+  <color name="lsm_color_data_2">#FF5CA3A6</color>
+  <color name="lsm_color_data_3">#FFCBAE67</color>
   <color name="lsm_color_data_4">#FF7EB79E</color>
   <color name="lsm_color_data_5">#FFB3BBC2</color>
   <color name="lsm_color_data_6">#FFC97A60</color>

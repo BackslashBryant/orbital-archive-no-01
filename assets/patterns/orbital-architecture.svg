@@ -6,7 +6,7 @@
   </g>
   <g stroke-linecap="round">
     <path d="M-180 680C140 190 580 50 1170 180" stroke="#56656E" stroke-width="1.5" opacity=".66"/>
-    <path d="M-80 720C250 310 650 198 1280 330" stroke="#54BCD9" stroke-width="2" opacity=".76"/>
+    <path d="M-80 720C250 310 650 198 1280 330" stroke="#5CA3A6" stroke-width="2" opacity=".76"/>
     <path d="M50 760C350 430 720 350 1260 455" stroke="#CBAE67" stroke-width="1.5" stroke-dasharray="9 10" opacity=".78"/>
     <path d="M260 720C485 535 790 500 1190 555" stroke="#E66A2C" stroke-width="2" opacity=".72"/>
   </g>
@@ -15,12 +15,12 @@
     <circle cx="945" cy="155" r="132" opacity=".38"/>
   </g>
   <g fill="#E7E1D5">
-    <circle cx="420" cy="328" r="3"/>
+    <circle cx="425" cy="342" r="3"/>
     <circle cx="945" cy="155" r="3"/>
   </g>
-  <circle cx="1100" cy="286" r="5" fill="#54BCD9"/>
-  <circle cx="718" cy="425" r="4" fill="#CBAE67"/>
-  <circle cx="860" cy="519" r="5" fill="#E66A2C"/>
+  <circle cx="1098" cy="288" r="5" fill="#5CA3A6"/>
+  <circle cx="720" cy="424" r="4" fill="#CBAE67"/>
+  <circle cx="860" cy="531" r="5" fill="#E66A2C"/>
   <g stroke="#98A4AC" stroke-width="1" opacity=".58">
     <path d="M24 24H62M24 24V62M1176 24H1138M1176 24V62M24 696H62M24 696V658M1176 696H1138M1176 696V658"/>
     <path d="M932 155H958M945 142V168"/>

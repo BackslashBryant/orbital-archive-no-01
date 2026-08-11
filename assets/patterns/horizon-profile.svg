@@ -3,10 +3,10 @@
   <rect width="1200" height="560" fill="#253139"/>
   <g stroke="#56656E" stroke-opacity=".2"><path d="M0 56H1200M0 112H1200M0 168H1200M0 224H1200M0 280H1200M0 336H1200M0 392H1200M0 448H1200M0 504H1200"/><path d="M100 0V560M200 0V560M300 0V560M400 0V560M500 0V560M600 0V560M700 0V560M800 0V560M900 0V560M1000 0V560M1100 0V560"/></g>
   <path d="M-60 492C202 278 488 242 728 318S1046 360 1260 244V620H-60Z" fill="#11181E" fill-opacity=".9"/>
-  <path d="M-60 492C202 278 488 242 728 318S1046 360 1260 244" stroke="#54BCD9" stroke-width="2"/>
+  <path d="M-60 492C202 278 488 242 728 318S1046 360 1260 244" stroke="#5CA3A6" stroke-width="2"/>
   <path d="M-40 522C214 350 478 326 716 386S1032 424 1238 326" stroke="#CBAE67" stroke-width="1.4" stroke-dasharray="9 11"/>
   <path d="M0 412C208 322 414 308 612 344S982 392 1200 292" stroke="#56656E" stroke-opacity=".74"/>
   <g stroke="#98A4AC" stroke-opacity=".6"><path d="M520 302h132M586 236v132"/><circle cx="586" cy="302" r="34" fill="none"/><path d="M952 340h92M998 294v92"/></g>
-  <circle cx="586" cy="302" r="5" fill="#CBAE67"/><circle cx="998" cy="340" r="5" fill="#54BCD9"/>
+  <circle cx="586" cy="302" r="5" fill="#CBAE67"/><circle cx="998" cy="340" r="5" fill="#5CA3A6"/>
   <g fill="#98A4AC" font-family="ui-monospace, SFMono-Regular, Consolas, monospace" font-size="12" letter-spacing="1.3"><text x="42" y="62">HORIZON PROFILE / LAYER 03</text><text x="602" y="288">DATUM / 21.4°</text><text x="1014" y="326">RELAY / 07</text><text x="42" y="526">ARCHIVE FIELD / VERTICAL EXAGGERATION 1.00</text></g>
 </svg>

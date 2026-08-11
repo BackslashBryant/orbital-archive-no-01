@@ -8,7 +8,9 @@ export const lunarSignalTheme = {
     "gridline": "#56656E",
     "dust": "#B3BBC2",
     "bone": "#E7E1D5",
-    "relay": "#54BCD9",
+    "teal": "#5CA3A6",
+    /** @deprecated Use teal; relay will be removed in v2. */
+    "relay": "#5CA3A6",
     "gold": "#CBAE67",
     "orange": "#E66A2C",
     "signal": "#7EB79E",
@@ -23,7 +25,7 @@ export const lunarSignalTheme = {
     "cardForeground": "#E7E1D5",
     "popover": "#37464F",
     "popoverForeground": "#E7E1D5",
-    "primary": "#54BCD9",
+    "primary": "#E66A2C",
     "primaryForeground": "#11181E",
     "secondary": "#37464F",
     "secondaryForeground": "#E7E1D5",
@@ -33,7 +35,7 @@ export const lunarSignalTheme = {
     "accentForeground": "#11181E",
     "editorialSignal": "#E66A2C",
     "editorialSignalForeground": "#11181E",
-    "info": "#54BCD9",
+    "info": "#5CA3A6",
     "infoForeground": "#11181E",
     "success": "#7EB79E",
     "successForeground": "#11181E",
@@ -45,10 +47,10 @@ export const lunarSignalTheme = {
     "destructiveForeground": "#11181E",
     "border": "#56656E",
     "input": "#37464F",
-    "ring": "#54BCD9",
-    "focus": "#54BCD9",
+    "ring": "#5CA3A6",
+    "focus": "#5CA3A6",
     "disabled": "#B3BBC2",
-    "link": "#54BCD9"
+    "link": "#5CA3A6"
   },
   "spacing": {
     "0": "0px",
@@ -152,6 +154,6 @@ export const lunarSignalTheme = {
     "none": "none",
     "raised": "0 8px 24px rgb(17 24 30 / 0.24)",
     "overlay": "0 24px 64px rgb(17 24 30 / 0.44)",
-    "focus": "0 0 0 3px rgb(84 188 217 / 0.28)"
+    "focus": "0 0 0 3px rgb(92 163 166 / 0.28)"
   }
 } as const

@@ -1,6 +1,6 @@
 {
   "name": "Orbital Archive No. 01 Native Icons",
-  "version": "1.7.0",
+  "version": "1.8.0",
   "artboard": 24,
   "defaultStrokeWidth": 1.5,
   "supportedSizes": [
@@ -11,6 +11,13 @@
     48
   ],
   "license": "MIT",
+  "source": {
+    "library": "Tabler Icons",
+    "version": "3.46.0",
+    "license": "MIT",
+    "url": "https://tabler.io/icons",
+    "notice": "THIRD_PARTY_NOTICES.md"
+  },
   "count": 161,
   "categories": {
     "navigation": 36,
@@ -24,775 +31,904 @@
       "name": "arrow-up",
       "category": "navigation",
       "description": "Move or navigate upward",
-      "aliases": []
+      "aliases": [],
+      "source": "arrow-up"
     },
     {
       "name": "arrow-down",
       "category": "navigation",
       "description": "Move or navigate downward",
-      "aliases": []
+      "aliases": [],
+      "source": "arrow-down"
     },
     {
       "name": "arrow-left",
       "category": "navigation",
       "description": "Move or navigate left",
-      "aliases": []
+      "aliases": [],
+      "source": "arrow-left"
     },
     {
       "name": "arrow-right",
       "category": "navigation",
       "description": "Move or navigate right",
-      "aliases": []
+      "aliases": [],
+      "source": "arrow-right"
     },
     {
       "name": "chevron-up",
       "category": "navigation",
       "description": "Expand or move upward",
-      "aliases": []
+      "aliases": [],
+      "source": "chevron-up"
     },
     {
       "name": "chevron-down",
       "category": "navigation",
       "description": "Expand or move downward",
-      "aliases": []
+      "aliases": [],
+      "source": "chevron-down"
     },
     {
       "name": "chevron-left",
       "category": "navigation",
       "description": "Navigate to the previous item",
-      "aliases": []
+      "aliases": [],
+      "source": "chevron-left"
     },
     {
       "name": "chevron-right",
       "category": "navigation",
       "description": "Navigate to the next item",
-      "aliases": []
+      "aliases": [],
+      "source": "chevron-right"
     },
     {
       "name": "home",
       "category": "navigation",
       "description": "Home destination",
-      "aliases": []
+      "aliases": [],
+      "source": "home"
     },
     {
       "name": "return",
       "category": "navigation",
       "description": "Return to a shallower context",
-      "aliases": []
+      "aliases": [],
+      "source": "corner-down-left"
     },
     {
       "name": "external-link",
       "category": "navigation",
       "description": "Open an external destination",
-      "aliases": []
+      "aliases": [],
+      "source": "external-link"
     },
     {
       "name": "expand",
       "category": "navigation",
       "description": "Expand view",
-      "aliases": []
+      "aliases": [],
+      "source": "arrows-diagonal"
     },
     {
       "name": "collapse",
       "category": "navigation",
       "description": "Collapse view",
-      "aliases": []
+      "aliases": [],
+      "source": "arrows-diagonal-minimize-2"
     },
     {
       "name": "maximize",
       "category": "navigation",
       "description": "Maximize panel",
-      "aliases": []
+      "aliases": [],
+      "source": "maximize"
     },
     {
       "name": "minimize",
       "category": "navigation",
       "description": "Minimize panel",
-      "aliases": []
+      "aliases": [],
+      "source": "minimize"
     },
     {
       "name": "menu",
       "category": "navigation",
       "description": "Open navigation menu",
-      "aliases": []
+      "aliases": [],
+      "source": "menu-2"
     },
     {
       "name": "close",
       "category": "navigation",
       "description": "Close or dismiss",
-      "aliases": []
+      "aliases": [],
+      "source": "x"
     },
     {
       "name": "more-horizontal",
       "category": "navigation",
       "description": "More actions",
-      "aliases": []
+      "aliases": [],
+      "source": "dots"
     },
     {
       "name": "more-vertical",
       "category": "navigation",
       "description": "More actions",
-      "aliases": []
+      "aliases": [],
+      "source": "dots-vertical"
     },
     {
       "name": "corner-up-left",
       "category": "navigation",
       "description": "Turn or reply left",
-      "aliases": []
+      "aliases": [],
+      "source": "corner-up-left"
     },
     {
       "name": "corner-up-right",
       "category": "navigation",
       "description": "Turn or forward right",
-      "aliases": []
+      "aliases": [],
+      "source": "corner-up-right"
     },
     {
       "name": "move",
       "category": "navigation",
       "description": "Move in any direction",
-      "aliases": []
+      "aliases": [],
+      "source": "arrows-move"
     },
     {
       "name": "navigation",
       "category": "navigation",
       "description": "Directional navigation pointer",
-      "aliases": []
+      "aliases": [],
+      "source": "navigation"
     },
     {
       "name": "route",
       "category": "navigation",
       "description": "Route between points",
-      "aliases": []
+      "aliases": [],
+      "source": "route"
     },
     {
       "name": "add",
       "category": "action",
       "description": "Add an item",
-      "aliases": []
+      "aliases": [],
+      "source": "plus"
     },
     {
       "name": "remove",
       "category": "action",
       "description": "Remove an item",
-      "aliases": []
+      "aliases": [],
+      "source": "minus"
     },
     {
       "name": "edit",
       "category": "action",
       "description": "Edit content",
-      "aliases": []
+      "aliases": [],
+      "source": "pencil"
     },
     {
       "name": "copy",
       "category": "action",
       "description": "Copy content",
-      "aliases": []
+      "aliases": [],
+      "source": "copy"
     },
     {
       "name": "check",
       "category": "action",
       "description": "Confirm or complete",
-      "aliases": []
+      "aliases": [],
+      "source": "check"
     },
     {
       "name": "search",
       "category": "action",
       "description": "Search content",
-      "aliases": []
+      "aliases": [],
+      "source": "search"
     },
     {
       "name": "filter",
       "category": "action",
       "description": "Filter results",
-      "aliases": []
+      "aliases": [],
+      "source": "filter"
     },
     {
       "name": "download",
       "category": "action",
       "description": "Download an asset",
-      "aliases": []
+      "aliases": [],
+      "source": "download"
     },
     {
       "name": "upload",
       "category": "action",
       "description": "Upload an asset",
-      "aliases": []
+      "aliases": [],
+      "source": "upload"
     },
     {
       "name": "refresh",
       "category": "action",
       "description": "Refresh content",
-      "aliases": []
+      "aliases": [],
+      "source": "refresh"
     },
     {
       "name": "sync",
       "category": "action",
       "description": "Synchronize state",
-      "aliases": []
+      "aliases": [],
+      "source": "reload"
     },
     {
       "name": "play",
       "category": "action",
       "description": "Start playback or process",
-      "aliases": []
+      "aliases": [],
+      "source": "player-play"
     },
     {
       "name": "pause",
       "category": "action",
       "description": "Pause playback or process",
-      "aliases": []
+      "aliases": [],
+      "source": "player-pause"
     },
     {
       "name": "stop",
       "category": "action",
       "description": "Stop playback or process",
-      "aliases": []
+      "aliases": [],
+      "source": "player-stop"
     },
     {
       "name": "power",
       "category": "action",
       "description": "Power control",
-      "aliases": []
+      "aliases": [],
+      "source": "power"
     },
     {
       "name": "settings",
       "category": "action",
       "description": "System settings",
-      "aliases": []
+      "aliases": [],
+      "source": "settings"
     },
     {
       "name": "lock",
       "category": "action",
       "description": "Locked state",
-      "aliases": []
+      "aliases": [],
+      "source": "lock"
     },
     {
       "name": "unlock",
       "category": "action",
       "description": "Unlocked state",
-      "aliases": []
+      "aliases": [],
+      "source": "lock-open"
     },
     {
       "name": "eye",
       "category": "action",
       "description": "Show or view content",
-      "aliases": []
+      "aliases": [],
+      "source": "eye"
     },
     {
       "name": "eye-off",
       "category": "action",
       "description": "Hide content",
-      "aliases": []
+      "aliases": [],
+      "source": "eye-off"
     },
     {
       "name": "pin",
       "category": "action",
       "description": "Pin an item",
-      "aliases": []
+      "aliases": [],
+      "source": "pin"
     },
     {
       "name": "archive",
       "category": "action",
       "description": "Archive content",
-      "aliases": []
+      "aliases": [],
+      "source": "archive"
     },
     {
       "name": "trash",
       "category": "action",
       "description": "Delete content",
-      "aliases": []
+      "aliases": [],
+      "source": "trash"
     },
     {
       "name": "save",
       "category": "action",
       "description": "Save content",
-      "aliases": []
+      "aliases": [],
+      "source": "device-floppy"
     },
     {
       "name": "print",
       "category": "action",
       "description": "Print content",
-      "aliases": []
+      "aliases": [],
+      "source": "printer"
     },
     {
       "name": "share",
       "category": "action",
       "description": "Share content",
-      "aliases": []
+      "aliases": [],
+      "source": "share"
     },
     {
       "name": "link",
       "category": "action",
       "description": "Link content",
-      "aliases": []
+      "aliases": [],
+      "source": "link"
     },
     {
       "name": "unlink",
       "category": "action",
       "description": "Remove a link",
-      "aliases": []
+      "aliases": [],
+      "source": "unlink"
     },
     {
       "name": "scan",
       "category": "action",
       "description": "Scan or acquire target",
-      "aliases": []
+      "aliases": [],
+      "source": "scan"
     },
     {
       "name": "crop",
       "category": "action",
       "description": "Crop or frame content",
-      "aliases": []
+      "aliases": [],
+      "source": "crop"
     },
     {
       "name": "sort",
       "category": "action",
       "description": "Sort a collection",
-      "aliases": []
+      "aliases": [],
+      "source": "arrows-sort"
     },
     {
       "name": "info",
       "category": "status",
       "description": "Informational status",
-      "aliases": []
+      "aliases": [],
+      "source": "info-circle"
     },
     {
       "name": "help",
       "category": "status",
       "description": "Help or unknown status",
-      "aliases": []
+      "aliases": [],
+      "source": "help"
     },
     {
       "name": "alert",
       "category": "status",
       "description": "Warning status",
-      "aliases": []
+      "aliases": [],
+      "source": "alert-circle"
     },
     {
       "name": "error",
       "category": "status",
       "description": "Error or fault status",
-      "aliases": []
+      "aliases": [],
+      "source": "alert-octagon"
     },
     {
       "name": "warning",
       "category": "status",
       "description": "Degraded or warning status",
-      "aliases": []
+      "aliases": [],
+      "source": "alert-triangle"
     },
     {
       "name": "success",
       "category": "status",
       "description": "Success or nominal status",
-      "aliases": []
+      "aliases": [],
+      "source": "circle-check"
     },
     {
       "name": "prohibited",
       "category": "status",
       "description": "Prohibited action",
-      "aliases": []
+      "aliases": [],
+      "source": "ban"
     },
     {
       "name": "offline",
       "category": "status",
       "description": "Offline or disconnected state",
-      "aliases": []
+      "aliases": [],
+      "source": "wifi-off"
     },
     {
       "name": "shield",
       "category": "status",
       "description": "Protection or security",
-      "aliases": []
+      "aliases": [],
+      "source": "shield"
     },
     {
       "name": "shield-check",
       "category": "status",
       "description": "Verified protection",
-      "aliases": []
+      "aliases": [],
+      "source": "shield-check"
     },
     {
       "name": "shield-alert",
       "category": "status",
       "description": "Security alert",
-      "aliases": []
+      "aliases": [],
+      "source": "shield-exclamation"
     },
     {
       "name": "bell",
       "category": "status",
       "description": "Notification",
-      "aliases": []
+      "aliases": [],
+      "source": "bell"
     },
     {
       "name": "bell-off",
       "category": "status",
       "description": "Notifications disabled",
-      "aliases": []
+      "aliases": [],
+      "source": "bell-off"
     },
     {
       "name": "flag",
       "category": "status",
       "description": "Flag or priority marker",
-      "aliases": []
+      "aliases": [],
+      "source": "flag"
     },
     {
       "name": "spark",
       "category": "status",
       "description": "New or enhanced state",
-      "aliases": []
+      "aliases": [],
+      "source": "sparkles"
     },
     {
       "name": "activity",
       "category": "status",
       "description": "System activity",
-      "aliases": []
+      "aliases": [],
+      "source": "activity"
     },
     {
       "name": "file",
       "category": "data",
       "description": "File asset",
-      "aliases": []
+      "aliases": [],
+      "source": "file"
     },
     {
       "name": "file-text",
       "category": "data",
       "description": "Text document",
-      "aliases": []
+      "aliases": [],
+      "source": "file-text"
     },
     {
       "name": "folder",
       "category": "data",
       "description": "Folder",
-      "aliases": []
+      "aliases": [],
+      "source": "folder"
     },
     {
       "name": "folder-open",
       "category": "data",
       "description": "Open folder",
-      "aliases": []
+      "aliases": [],
+      "source": "folder-open"
     },
     {
       "name": "clipboard",
       "category": "data",
       "description": "Clipboard",
-      "aliases": []
+      "aliases": [],
+      "source": "clipboard"
     },
     {
       "name": "database",
       "category": "data",
       "description": "Database",
-      "aliases": []
+      "aliases": [],
+      "source": "database"
     },
     {
       "name": "server",
       "category": "data",
       "description": "Server resource",
-      "aliases": []
+      "aliases": [],
+      "source": "server"
     },
     {
       "name": "terminal",
       "category": "data",
       "description": "Command terminal",
-      "aliases": []
+      "aliases": [],
+      "source": "terminal-2"
     },
     {
       "name": "code",
       "category": "data",
       "description": "Source code",
-      "aliases": []
+      "aliases": [],
+      "source": "code"
     },
     {
       "name": "table",
       "category": "data",
       "description": "Data table",
-      "aliases": []
+      "aliases": [],
+      "source": "table"
     },
     {
       "name": "chart-line",
       "category": "data",
       "description": "Line chart",
-      "aliases": []
+      "aliases": [],
+      "source": "chart-line"
     },
     {
       "name": "chart-bar",
       "category": "data",
       "description": "Bar chart",
-      "aliases": []
+      "aliases": [],
+      "source": "chart-bar"
     },
     {
       "name": "chart-pie",
       "category": "data",
       "description": "Pie chart",
-      "aliases": []
+      "aliases": [],
+      "source": "chart-pie"
     },
     {
       "name": "grid",
       "category": "data",
       "description": "Grid view",
-      "aliases": []
+      "aliases": [],
+      "source": "layout-grid"
     },
     {
       "name": "list",
       "category": "data",
       "description": "List view",
-      "aliases": []
+      "aliases": [],
+      "source": "list"
     },
     {
       "name": "layers",
       "category": "data",
       "description": "Layer stack",
-      "aliases": []
+      "aliases": [],
+      "source": "stack-2"
     },
     {
       "name": "package",
       "category": "data",
       "description": "Package or module",
-      "aliases": []
+      "aliases": [],
+      "source": "package"
     },
     {
       "name": "inbox",
       "category": "data",
       "description": "Incoming items",
-      "aliases": []
+      "aliases": [],
+      "source": "inbox"
     },
     {
       "name": "outbox",
       "category": "data",
       "description": "Outgoing items",
-      "aliases": []
+      "aliases": [],
+      "source": "package-export"
     },
     {
       "name": "hard-drive",
       "category": "data",
       "description": "Storage device",
-      "aliases": []
+      "aliases": [],
+      "source": "device-sd-card"
     },
     {
       "name": "cpu",
       "category": "data",
       "description": "Processor or compute",
-      "aliases": []
+      "aliases": [],
+      "source": "cpu"
     },
     {
       "name": "network",
       "category": "data",
       "description": "Connected network",
-      "aliases": []
+      "aliases": [],
+      "source": "network"
     },
     {
       "name": "key",
       "category": "data",
       "description": "Access key or credential",
-      "aliases": []
+      "aliases": [],
+      "source": "key"
     },
     {
       "name": "hash",
       "category": "data",
       "description": "Identifier or number",
-      "aliases": []
+      "aliases": [],
+      "source": "hash"
     },
     {
       "name": "sliders",
       "category": "data",
       "description": "Adjust parameters",
-      "aliases": []
+      "aliases": [],
+      "source": "adjustments"
     },
     {
       "name": "brackets",
       "category": "data",
       "description": "Structured data",
-      "aliases": []
+      "aliases": [],
+      "source": "brackets"
     },
     {
       "name": "binary",
       "category": "data",
       "description": "Binary data",
-      "aliases": []
+      "aliases": [],
+      "source": "binary"
     },
     {
       "name": "user",
       "category": "communication",
       "description": "User account",
-      "aliases": []
+      "aliases": [],
+      "source": "user"
     },
     {
       "name": "users",
       "category": "communication",
       "description": "User group",
-      "aliases": []
+      "aliases": [],
+      "source": "users"
     },
     {
       "name": "message",
       "category": "communication",
       "description": "Message",
-      "aliases": []
+      "aliases": [],
+      "source": "message"
     },
     {
       "name": "messages",
       "category": "communication",
       "description": "Message thread",
-      "aliases": []
+      "aliases": [],
+      "source": "messages"
     },
     {
       "name": "mail",
       "category": "communication",
       "description": "Email",
-      "aliases": []
+      "aliases": [],
+      "source": "mail"
     },
     {
       "name": "send",
       "category": "communication",
       "description": "Send message",
-      "aliases": []
+      "aliases": [],
+      "source": "send"
     },
     {
       "name": "calendar",
       "category": "communication",
       "description": "Calendar date",
-      "aliases": []
+      "aliases": [],
+      "source": "calendar"
     },
     {
       "name": "clock",
       "category": "communication",
       "description": "Time",
-      "aliases": []
+      "aliases": [],
+      "source": "clock"
     },
     {
       "name": "timer",
       "category": "communication",
       "description": "Countdown timer",
-      "aliases": []
+      "aliases": [],
+      "source": "hourglass"
     },
     {
       "name": "history",
       "category": "communication",
       "description": "History or recent activity",
-      "aliases": []
+      "aliases": [],
+      "source": "history"
     },
     {
       "name": "phone",
       "category": "communication",
       "description": "Phone contact",
-      "aliases": []
+      "aliases": [],
+      "source": "phone"
     },
     {
       "name": "radio",
       "category": "communication",
       "description": "Radio communications",
-      "aliases": []
+      "aliases": [],
+      "source": "radio"
     },
     {
       "name": "microphone",
       "category": "communication",
       "description": "Voice input",
-      "aliases": []
+      "aliases": [],
+      "source": "microphone"
     },
     {
       "name": "volume",
       "category": "communication",
       "description": "Audio volume",
-      "aliases": []
+      "aliases": [],
+      "source": "volume"
     },
     {
       "name": "mute",
       "category": "communication",
       "description": "Audio muted",
-      "aliases": []
+      "aliases": [],
+      "source": "volume-off"
     },
     {
       "name": "first-page",
       "category": "navigation",
       "description": "Navigate to the first page",
-      "aliases": []
+      "aliases": [],
+      "source": "chevrons-left"
     },
     {
       "name": "last-page",
       "category": "navigation",
       "description": "Navigate to the last page",
-      "aliases": []
+      "aliases": [],
+      "source": "chevrons-right"
     },
     {
       "name": "skip-back",
       "category": "navigation",
       "description": "Skip to the previous item",
-      "aliases": []
+      "aliases": [],
+      "source": "player-skip-back"
     },
     {
       "name": "skip-forward",
       "category": "navigation",
       "description": "Skip to the next item",
-      "aliases": []
+      "aliases": [],
+      "source": "player-skip-forward"
     },
     {
       "name": "login",
       "category": "navigation",
       "description": "Enter or sign in",
-      "aliases": []
+      "aliases": [],
+      "source": "login"
     },
     {
       "name": "logout",
       "category": "navigation",
       "description": "Exit or sign out",
-      "aliases": []
+      "aliases": [],
+      "source": "logout"
     },
     {
       "name": "rotate-cw",
       "category": "navigation",
       "description": "Rotate clockwise",
-      "aliases": []
+      "aliases": [],
+      "source": "rotate-clockwise"
     },
     {
       "name": "rotate-ccw",
       "category": "navigation",
       "description": "Rotate counterclockwise",
-      "aliases": []
+      "aliases": [],
+      "source": "rotate"
     },
     {
       "name": "zoom-in",
       "category": "navigation",
       "description": "Increase magnification",
-      "aliases": []
+      "aliases": [],
+      "source": "zoom-in"
     },
     {
       "name": "zoom-out",
       "category": "navigation",
       "description": "Decrease magnification",
-      "aliases": []
+      "aliases": [],
+      "source": "zoom-out"
     },
     {
       "name": "panel-left",
       "category": "navigation",
       "description": "Toggle the left panel",
-      "aliases": []
+      "aliases": [],
+      "source": "layout-sidebar"
     },
     {
       "name": "panel-right",
       "category": "navigation",
       "description": "Toggle the right panel",
-      "aliases": []
+      "aliases": [],
+      "source": "layout-sidebar-right"
     },
     {
       "name": "undo",
       "category": "action",
       "description": "Undo the previous action",
-      "aliases": []
+      "aliases": [],
+      "source": "arrow-back-up"
     },
     {
       "name": "redo",
       "category": "action",
       "description": "Redo the previous action",
-      "aliases": []
+      "aliases": [],
+      "source": "arrow-forward-up"
     },
     {
       "name": "cut",
       "category": "action",
       "description": "Cut selected content",
-      "aliases": []
+      "aliases": [],
+      "source": "scissors"
     },
     {
       "name": "paste",
       "category": "action",
       "description": "Paste clipboard content",
-      "aliases": []
+      "aliases": [],
+      "source": "clipboard-text"
     },
     {
       "name": "attach",
@@ -800,13 +936,15 @@
       "description": "Attach a file",
       "aliases": [
         "paperclip"
-      ]
+      ],
+      "source": "paperclip"
     },
     {
       "name": "bookmark",
       "category": "action",
       "description": "Bookmark content",
-      "aliases": []
+      "aliases": [],
+      "source": "bookmark"
     },
     {
       "name": "heart",
@@ -814,181 +952,211 @@
       "description": "Favorite or save for later",
       "aliases": [
         "favorite"
-      ]
+      ],
+      "source": "heart"
     },
     {
       "name": "format-bold",
       "category": "action",
       "description": "Apply bold text style",
-      "aliases": []
+      "aliases": [],
+      "source": "bold"
     },
     {
       "name": "format-italic",
       "category": "action",
       "description": "Apply italic text style",
-      "aliases": []
+      "aliases": [],
+      "source": "italic"
     },
     {
       "name": "align-left",
       "category": "action",
       "description": "Align content left",
-      "aliases": []
+      "aliases": [],
+      "source": "align-left"
     },
     {
       "name": "align-center",
       "category": "action",
       "description": "Align content center",
-      "aliases": []
+      "aliases": [],
+      "source": "align-center"
     },
     {
       "name": "align-right",
       "category": "action",
       "description": "Align content right",
-      "aliases": []
+      "aliases": [],
+      "source": "align-right"
     },
     {
       "name": "indent",
       "category": "action",
       "description": "Increase indentation",
-      "aliases": []
+      "aliases": [],
+      "source": "indent-increase"
     },
     {
       "name": "outdent",
       "category": "action",
       "description": "Decrease indentation",
-      "aliases": []
+      "aliases": [],
+      "source": "indent-decrease"
     },
     {
       "name": "cloud-download",
       "category": "action",
       "description": "Download from cloud storage",
-      "aliases": []
+      "aliases": [],
+      "source": "cloud-download"
     },
     {
       "name": "cloud-upload",
       "category": "action",
       "description": "Upload to cloud storage",
-      "aliases": []
+      "aliases": [],
+      "source": "cloud-upload"
     },
     {
       "name": "pending",
       "category": "status",
       "description": "Pending or waiting state",
-      "aliases": []
+      "aliases": [],
+      "source": "circle-dashed"
     },
     {
       "name": "queued",
       "category": "status",
       "description": "Queued work item",
-      "aliases": []
+      "aliases": [],
+      "source": "stack"
     },
     {
       "name": "verified",
       "category": "status",
       "description": "Verified identity or result",
-      "aliases": []
+      "aliases": [],
+      "source": "rosette-discount-check"
     },
     {
       "name": "degraded",
       "category": "status",
       "description": "Degraded operational state",
-      "aliases": []
+      "aliases": [],
+      "source": "trending-down"
     },
     {
       "name": "critical",
       "category": "status",
       "description": "Critical fault state",
-      "aliases": []
+      "aliases": [],
+      "source": "alert-hexagon"
     },
     {
       "name": "neutral",
       "category": "status",
       "description": "Neutral or unchanged state",
-      "aliases": []
+      "aliases": [],
+      "source": "circle"
     },
     {
       "name": "cloud",
       "category": "data",
       "description": "Cloud resource",
-      "aliases": []
+      "aliases": [],
+      "source": "cloud"
     },
     {
       "name": "cloud-off",
       "category": "data",
       "description": "Unavailable cloud resource",
-      "aliases": []
+      "aliases": [],
+      "source": "cloud-off"
     },
     {
       "name": "image",
       "category": "data",
       "description": "Image asset",
-      "aliases": []
+      "aliases": [],
+      "source": "photo"
     },
     {
       "name": "video",
       "category": "data",
       "description": "Video asset",
-      "aliases": []
+      "aliases": [],
+      "source": "video"
     },
     {
       "name": "dashboard",
       "category": "data",
       "description": "Dashboard layout",
-      "aliases": []
+      "aliases": [],
+      "source": "layout-dashboard"
     },
     {
       "name": "timeline",
       "category": "data",
       "description": "Timeline or event sequence",
-      "aliases": []
+      "aliases": [],
+      "source": "timeline"
     },
     {
       "name": "analytics",
       "category": "data",
       "description": "Analytics or trends",
-      "aliases": []
+      "aliases": [],
+      "source": "chart-dots"
     },
     {
       "name": "columns",
       "category": "data",
       "description": "Column layout",
-      "aliases": []
+      "aliases": [],
+      "source": "layout-columns"
     },
     {
       "name": "rows",
       "category": "data",
       "description": "Row layout",
-      "aliases": []
+      "aliases": [],
+      "source": "layout-rows"
     },
     {
       "name": "at-sign",
       "category": "communication",
       "description": "Mention or email address",
-      "aliases": []
+      "aliases": [],
+      "source": "at"
     },
     {
       "name": "reply",
       "category": "communication",
       "description": "Reply to a message",
-      "aliases": []
+      "aliases": [],
+      "source": "arrow-back"
     },
     {
       "name": "forward",
       "category": "communication",
       "description": "Forward a message",
-      "aliases": []
+      "aliases": [],
+      "source": "arrow-forward"
     },
     {
       "name": "headset",
       "category": "communication",
       "description": "Support or headset audio",
-      "aliases": []
+      "aliases": [],
+      "source": "headset"
     },
     {
       "name": "video-camera",
       "category": "communication",
       "description": "Video call or camera",
-      "aliases": []
+      "aliases": [],
+      "source": "movie"
     }
   ]
 }

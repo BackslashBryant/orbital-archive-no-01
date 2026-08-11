@@ -9,7 +9,9 @@ abstract final class LSMTokens {
   static const colorPaletteGridline = Color(0xFF56656E);
   static const colorPaletteDust = Color(0xFFB3BBC2);
   static const colorPaletteBone = Color(0xFFE7E1D5);
-  static const colorPaletteRelay = Color(0xFF54BCD9);
+  static const colorPaletteTeal = Color(0xFF5CA3A6);
+  @Deprecated('Use colorPaletteTeal; colorPaletteRelay will be removed in v2.')
+  static const colorPaletteRelay = colorPaletteTeal;
   static const colorPaletteGold = Color(0xFFCBAE67);
   static const colorPaletteOrange = Color(0xFFE66A2C);
   static const colorPaletteSignal = Color(0xFF7EB79E);
@@ -24,7 +26,7 @@ abstract final class LSMTokens {
   static const colorSemanticCardForeground = Color(0xFFE7E1D5);
   static const colorSemanticPopover = Color(0xFF37464F);
   static const colorSemanticPopoverForeground = Color(0xFFE7E1D5);
-  static const colorSemanticPrimary = Color(0xFF54BCD9);
+  static const colorSemanticPrimary = Color(0xFFE66A2C);
   static const colorSemanticPrimaryForeground = Color(0xFF11181E);
   static const colorSemanticSecondary = Color(0xFF37464F);
   static const colorSemanticSecondaryForeground = Color(0xFFE7E1D5);
@@ -34,7 +36,7 @@ abstract final class LSMTokens {
   static const colorSemanticAccentForeground = Color(0xFF11181E);
   static const colorSemanticEditorialSignal = Color(0xFFE66A2C);
   static const colorSemanticEditorialSignalForeground = Color(0xFF11181E);
-  static const colorSemanticInfo = Color(0xFF54BCD9);
+  static const colorSemanticInfo = Color(0xFF5CA3A6);
   static const colorSemanticInfoForeground = Color(0xFF11181E);
   static const colorSemanticSuccess = Color(0xFF7EB79E);
   static const colorSemanticSuccessForeground = Color(0xFF11181E);
@@ -46,10 +48,10 @@ abstract final class LSMTokens {
   static const colorSemanticDestructiveForeground = Color(0xFF11181E);
   static const colorSemanticBorder = Color(0xFF56656E);
   static const colorSemanticInput = Color(0xFF37464F);
-  static const colorSemanticRing = Color(0xFF54BCD9);
-  static const colorSemanticFocus = Color(0xFF54BCD9);
+  static const colorSemanticRing = Color(0xFF5CA3A6);
+  static const colorSemanticFocus = Color(0xFF5CA3A6);
   static const colorSemanticDisabled = Color(0xFFB3BBC2);
-  static const colorSemanticLink = Color(0xFF54BCD9);
+  static const colorSemanticLink = Color(0xFF5CA3A6);
   static const colorModeEditorialBackground = Color(0xFF11181E);
   static const colorModeEditorialSurface = Color(0xFF253139);
   static const colorModeEditorialSurfaceElevated = Color(0xFF2D3A42);
@@ -58,9 +60,9 @@ abstract final class LSMTokens {
   static const colorModeOperationalSurface = Color(0xFF2D3A42);
   static const colorModeOperationalSurfaceElevated = Color(0xFF37464F);
   static const colorModeOperationalBorder = Color(0xFF56656E);
-  static const colorData1 = Color(0xFF54BCD9);
-  static const colorData2 = Color(0xFFCBAE67);
-  static const colorData3 = Color(0xFFE66A2C);
+  static const colorData1 = Color(0xFFE66A2C);
+  static const colorData2 = Color(0xFF5CA3A6);
+  static const colorData3 = Color(0xFFCBAE67);
   static const colorData4 = Color(0xFF7EB79E);
   static const colorData5 = Color(0xFFB3BBC2);
   static const colorData6 = Color(0xFFC97A60);

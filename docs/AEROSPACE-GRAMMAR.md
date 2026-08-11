@@ -108,9 +108,9 @@ Do not stack every treatment. Keep texture below the contrast of borders and mut
 ## Color within schematics
 
 - Grid Line: construction, inactive relationships, boundaries.
-- Relay Blue: active path, selected vector, informational point.
+- Signal Teal: active path, selected vector, informational point — narrow role, never the terminal launch point.
 - Mission Gold: priority, forecast, or editorial hierarchy.
-- Ignition Orange: rare editorial terminal point or launch invitation.
+- Ignition Orange: the primary editorial terminal point or launch invitation — the dominant signal, used once per diagram.
 - Signal Green: completed or nominal.
 - Alert Rust: degraded or attention.
 - Fault Red: failure, critical, or destructive only.
