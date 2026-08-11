@@ -111,12 +111,23 @@
       overflow: hidden;
       padding: clamp(72px, 8vw, 108px) 0 64px;
       background:
-        repeating-linear-gradient(0deg, transparent 0 2px, color-mix(in srgb, var(--bone), transparent 94%) 2px 3px),
-        linear-gradient(color-mix(in srgb, var(--teal), transparent 95%) 1px, transparent 1px),
-        linear-gradient(90deg, color-mix(in srgb, var(--teal), transparent 95%) 1px, transparent 1px),
+        linear-gradient(color-mix(in srgb, var(--teal), transparent 94%) 1px, transparent 1px),
+        linear-gradient(90deg, color-mix(in srgb, var(--teal), transparent 94%) 1px, transparent 1px),
+        radial-gradient(135% 105% at 50% 42%, transparent 52%, rgba(6, 10, 13, .6) 100%),
         var(--orbit);
-      background-size: auto, 24px 24px, 24px 24px, auto;
+      background-size: 24px 24px, 24px 24px, cover, auto;
       border-bottom: 1px solid var(--grid);
+    }
+    /* CRT scanlines fill the field behind content — holographic volume, text stays crisp. */
+    .signal::before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      inset: 0;
+      pointer-events: none;
+      opacity: .55;
+      background: repeating-linear-gradient(0deg, rgba(0, 0, 0, .3) 0 1px, transparent 1px 3px);
+      mix-blend-mode: multiply;
     }
     .signal::after {
       content: "";
@@ -124,8 +135,8 @@
       z-index: -2;
       inset: 0;
       pointer-events: none;
-      opacity: .16;
-      background: url("assets/patterns/phosphor-dither.svg") center / 480px 180px repeat;
+      opacity: .3;
+      background: url("assets/patterns/phosphor-dither.svg") center / 420px 158px repeat;
       mix-blend-mode: screen;
     }
     .signal-grid { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(360px, .9fr); gap: clamp(36px, 6vw, 88px); align-items: center; }
@@ -145,6 +156,11 @@
       font: 700 clamp(64px, 8.4vw, 126px)/.84 var(--display);
       letter-spacing: -.025em;
       text-transform: uppercase;
+      /* Phosphor glow + a 0.6px chromatic fringe — a grounded CRT artifact, not decoration. */
+      text-shadow:
+        0 0 26px color-mix(in srgb, var(--teal), transparent 82%),
+        -0.6px 0 color-mix(in srgb, var(--teal), transparent 55%),
+        0.6px 0 color-mix(in srgb, var(--orange), transparent 62%);
     }
     /* Restrained CRT scanline rendered into the display word itself; stays legible, degrades to solid bone. */
     .textured-word { color: var(--bone); }
@@ -189,7 +205,7 @@
       opacity: .14;
       background: repeating-linear-gradient(0deg, transparent 0 2px, rgba(0, 0, 0, .55) 2px 3px);
     }
-    .button.primary { border-color: var(--orange); color: var(--orbit); background: var(--orange); }
+    .button.primary { border-color: var(--orange); color: var(--orbit); background: var(--orange); box-shadow: 0 0 26px color-mix(in srgb, var(--orange), transparent 60%); }
     .button.secondary:hover { border-color: var(--teal); color: var(--teal); }
     .button.primary:hover { background: color-mix(in srgb, var(--orange), var(--bone) 12%); }
     .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
@@ -228,11 +244,25 @@
     .systems-section { background: var(--orbit); border-top: 1px solid var(--grid); }
 
     .mission-shell {
+      position: relative;
+      isolation: isolate;
       overflow: hidden;
       border: 1px solid var(--grid);
       background: var(--slate);
       box-shadow: 0 30px 80px color-mix(in srgb, var(--orbit), transparent 45%);
     }
+    /* Lighter scanline on the demo screens — reads as a device, stays calm at Mission/Systems depth. */
+    .mission-shell::before, .systems-card::before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      inset: 0;
+      pointer-events: none;
+      opacity: .28;
+      background: repeating-linear-gradient(0deg, rgba(0, 0, 0, .26) 0 1px, transparent 1px 3px);
+      mix-blend-mode: multiply;
+    }
+    .systems-card { position: relative; isolation: isolate; }
     .mission-bar { display: flex; align-items: center; gap: 20px; min-height: 58px; padding: 10px 18px; border-bottom: 1px solid var(--grid); background: var(--orbit); }
     .mission-bar strong { margin-right: auto; font: 700 18px var(--display); letter-spacing: .04em; text-transform: uppercase; }
     .mission-bar span { color: var(--dust); font: 10px var(--mono); text-transform: uppercase; }

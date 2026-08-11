@@ -1,28 +1,36 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" fill="none">
   <rect width="1200" height="720" fill="#11181E"/>
-  <g stroke="#56656E" stroke-width="1" opacity=".22">
+  <g stroke="#56656E" stroke-width="1" opacity=".16">
     <path d="M0 72H1200M0 144H1200M0 216H1200M0 288H1200M0 360H1200M0 432H1200M0 504H1200M0 576H1200M0 648H1200"/>
     <path d="M120 0V720M240 0V720M360 0V720M480 0V720M600 0V720M720 0V720M840 0V720M960 0V720M1080 0V720"/>
   </g>
-  <g stroke-linecap="round">
-    <path d="M-180 680C140 190 580 50 1170 180" stroke="#56656E" stroke-width="1.5" opacity=".66"/>
-    <path d="M-80 720C250 310 650 198 1280 330" stroke="#5CA3A6" stroke-width="2" opacity=".76"/>
-    <path d="M50 760C350 430 720 350 1260 455" stroke="#CBAE67" stroke-width="1.5" stroke-dasharray="9 10" opacity=".78"/>
-    <path d="M260 720C485 535 790 500 1190 555" stroke="#E66A2C" stroke-width="2" opacity=".72"/>
+  <!-- faint horizon -->
+  <path d="M0 596C300 566 900 566 1200 590" fill="none" stroke="#56656E" stroke-width="1.2" opacity=".4"/>
+  <!-- planned trajectory (gold, dashed) shares the origin with the primary -->
+  <path d="M132 600C420 392 812 330 1140 372" fill="none" stroke="#CBAE67" stroke-width="1.4" stroke-dasharray="9 10" opacity=".78"/>
+  <!-- primary trajectory (teal) -->
+  <path id="primary" d="M132 600C412 300 812 232 1160 262" fill="none" stroke="#5CA3A6" stroke-width="2" opacity=".9"/>
+  <!-- bearing line from reticle center to the destination, drawn along the arc tangent region -->
+  <!-- reticle tracking the apex node (snapped onto the primary arc) -->
+  <g stroke="#98A4AC" fill="none">
+    <circle cx="700" cy="287" r="60" stroke-opacity=".4"/>
+    <circle cx="700" cy="287" r="98" stroke-opacity=".22"/>
+    <path d="M700 213v-16M700 361v16M626 287h-16M774 287h16" stroke-opacity=".5"/>
+    <path d="M688 287h24M700 275v24" stroke-opacity=".7"/>
   </g>
-  <g fill="#11181E" stroke="#56656E">
-    <circle cx="945" cy="155" r="82" opacity=".72"/>
-    <circle cx="945" cy="155" r="132" opacity=".38"/>
+  <!-- waypoint nodes (snapped onto the primary arc) + destination -->
+  <g fill="#11181E" stroke="#5CA3A6" stroke-width="2">
+    <circle cx="132" cy="600" r="6"/>
+    <circle cx="700" cy="287" r="6"/>
   </g>
-  <g fill="#E7E1D5">
-    <circle cx="425" cy="342" r="3"/>
-    <circle cx="945" cy="155" r="3"/>
-  </g>
-  <circle cx="1098" cy="288" r="5" fill="#5CA3A6"/>
-  <circle cx="720" cy="424" r="4" fill="#CBAE67"/>
-  <circle cx="860" cy="531" r="5" fill="#E66A2C"/>
-  <g stroke="#98A4AC" stroke-width="1" opacity=".58">
+  <circle cx="1160" cy="262" r="6" fill="#E66A2C"/>
+  <!-- corner registration frame -->
+  <g stroke="#98A4AC" stroke-width="1" opacity=".55">
     <path d="M24 24H62M24 24V62M1176 24H1138M1176 24V62M24 696H62M24 696V658M1176 696H1138M1176 696V658"/>
-    <path d="M932 155H958M945 142V168"/>
+  </g>
+  <g font-family="ui-monospace, SFMono-Regular, Consolas, monospace" fill="#98A4AC" font-size="12" letter-spacing="1.4">
+    <text x="150" y="592">ORIGIN / 00</text>
+    <text x="620" y="250" fill="#5CA3A6">APOGEE / TRACK</text>
+    <text x="1088" y="248" fill="#E66A2C">DESTINATION</text>
   </g>
 </svg>

@@ -1,10 +1,21 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256">
-  <rect width="256" height="256" fill="#253139"/>
-  <g fill="none" stroke="#56656E" stroke-width="1" opacity=".28">
+  <rect width="256" height="256" fill="#11181E"/>
+  <g fill="none" stroke="#56656E" stroke-width="1" opacity=".22">
     <path d="M0 32h256M0 64h256M0 96h256M0 128h256M0 160h256M0 192h256M0 224h256"/>
     <path d="M32 0v256M64 0v256M96 0v256M128 0v256M160 0v256M192 0v256M224 0v256"/>
-    <circle cx="128" cy="128" r="72"/>
-    <circle cx="128" cy="128" r="40"/>
   </g>
-  <circle cx="128" cy="128" r="3" fill="#5CA3A6"/>
+  <g fill="none" stroke="#5CA3A6">
+    <circle cx="128" cy="128" r="40" stroke-opacity=".3"/>
+    <circle cx="128" cy="128" r="72" stroke-opacity=".5"/>
+    <circle cx="128" cy="128" r="104" stroke-opacity=".24"/>
+    <path stroke="#E7E1D5" stroke-opacity=".5" d="M128 116v-14M128 154v-14M116 128h-14M154 128h14"/>
+    <path d="M128 24v18M128 232v-18M24 128h18M232 128h-18" stroke-opacity=".4"/>
+    <path stroke-opacity=".28" d="M128 128 183 82"/>
+  </g>
+  <circle cx="128" cy="128" r="2.5" fill="#E7E1D5"/>
+  <g fill="none" stroke="#5CA3A6" stroke-width="1.4">
+    <path d="M175 74v-6h6M191 74v-6h-6M175 90v6h6M191 90v6h-6"/>
+  </g>
+  <circle cx="183" cy="82" r="3.5" fill="#5CA3A6"/>
+  <text x="200" y="86" fill="#5CA3A6" fill-opacity=".8" font-family="ui-monospace, SFMono-Regular, Consolas, monospace" font-size="9" letter-spacing="1">R-072</text>
 </svg>

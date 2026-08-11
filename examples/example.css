@@ -38,12 +38,14 @@ body {
 }
 body.mode-signal {
   background:
+    repeating-linear-gradient(0deg, rgba(0, 0, 0, .24) 0 1px, transparent 1px 3px),
     radial-gradient(circle at 82% 10%, color-mix(in srgb, var(--teal), transparent 86%), transparent 30rem),
     radial-gradient(circle at 64% 100%, color-mix(in srgb, var(--gold), transparent 93%), transparent 38rem),
     linear-gradient(color-mix(in srgb, var(--teal), transparent 95%) 1px, transparent 1px),
     linear-gradient(90deg, color-mix(in srgb, var(--teal), transparent 95%) 1px, transparent 1px),
     var(--orbit);
-  background-size: auto, auto, 32px 32px, 32px 32px, auto;
+  background-size: auto, auto, auto, 32px 32px, 32px 32px, auto;
+  background-blend-mode: multiply, normal, normal, normal, normal, normal;
 }
 body.mode-systems {
   background:
