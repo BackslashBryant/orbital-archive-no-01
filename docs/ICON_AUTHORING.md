@@ -2,6 +2,10 @@
 
 The native catalog contains conventional product icons. Aerospace identity comes from the surrounding design system, not from adding obscure theme-specific glyphs.
 
+## Provenance
+
+The catalog geometry is adapted from [Tabler Icons](https://tabler.io/icons) 3.46.0 (MIT), normalized to the Orbital contract below. Orbital's public icon filenames and API are the source of truth; the upstream Tabler source name for each icon is recorded in the `source` field of `assets/icons/manifest.json`, and the license is reproduced in `THIRD_PARTY_NOTICES.md`. Prefer mapping a new name to an existing Tabler glyph over drawing a bespoke one; keep the two-space normalized format so `scripts/build-icon-sprite.mjs` can rebuild the sprite.
+
 ## Before adding an icon
 
 1. Search `assets/icons/manifest.json` by name, description, and aliases.

@@ -17,4 +17,4 @@ The file is intentionally implementation-agnostic. A React, Vue, Svelte, native,
 
 Use [the visual component specimen](../index.html#components) for appearance and [the style guide](../docs/STYLE_GUIDE.md) for interaction, accessibility, color, and depth rules.
 
-Version: `1.7.0` · Contracts: `49`
+Version: `1.8.0` · Contracts: `49`

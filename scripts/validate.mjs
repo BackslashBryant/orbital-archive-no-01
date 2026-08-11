@@ -12,6 +12,7 @@ const parse = (path) => JSON.parse(read(path))
 
 const required = [
   'index.html',
+  'preview.html',
   'README.md',
   'RELEASE_NOTES.md',
   'AGENTS.md',
@@ -27,6 +28,7 @@ const required = [
   'assets/patterns/flight-plan.svg',
   'assets/patterns/horizon-profile.svg',
   'assets/patterns/calibration-rail.svg',
+  'assets/patterns/phosphor-dither.svg',
   'docs/STYLE_GUIDE.md',
   'docs/LAYOUT-UX.md',
   'docs/AEROSPACE-GRAMMAR.md',
@@ -42,8 +44,18 @@ const manifest = parse('manifest.json')
 const assetManifest = parse('assets/manifest.json')
 const iconManifest = parse('assets/icons/manifest.json')
 const contracts = parse('components/contracts.json')
+const tokenSource = parse('tokens/tokens.json')
 
 if (manifest.framework !== 'none') fail('portable manifest must remain framework-free')
+if (tokenSource.color?.palette?.teal?.$value !== '#5CA3A6') fail('canonical Signal Teal token is stale')
+if (tokenSource.color?.palette?.relay?.$value !== '{color.palette.teal}') fail('deprecated relay token must alias Signal Teal')
+for (const [name, expected] of [
+  ['primary', '{color.palette.orange}'],
+  ['info', '{color.palette.teal}'],
+  ['ring', '{color.palette.teal}'],
+  ['focus', '{color.palette.teal}'],
+  ['link', '{color.palette.teal}'],
+]) if (tokenSource.color?.semantic?.[name]?.$value !== expected) fail(`semantic color ${name} must resolve through ${expected}`)
 for (const [label, version] of [
   ['asset manifest', assetManifest.version],
   ['icon manifest', iconManifest.version],
@@ -108,6 +120,12 @@ function walk(directory) {
 }
 walk(ROOT)
 
+const retiredBrightBlue = new RegExp(`#${'54'}${'BCD9'}`, 'i')
+for (const file of allFiles) {
+  const content = readFileSync(file, 'utf8')
+  if (retiredBrightBlue.test(content)) fail(`${rel(file)} contains the retired bright-blue value`)
+}
+
 function localTarget(file, value) {
   if (!value || /^(?:https?:|mailto:|tel:|data:|javascript:|#)/i.test(value)) return null
   const clean = value.split('#')[0].split('?')[0]
@@ -164,11 +182,39 @@ for (const path of activeDocs) {
 }
 
 const index = read('index.html')
+const preview = read('preview.html')
 if (!index.includes(`OA-${manifest.version}`)) fail('standalone guide archive ref is stale')
 if (index.includes('left:7%;right:-8%;bottom:23%')) fail('standalone guide still contains the copy-crossing hero rule')
 if (!index.includes('hero-flightplan')) fail('standalone guide lacks the safe-corridor flight plan')
+if (!index.includes(`Orbital Archive No. 01 · ${manifest.version}`)) fail('standalone guide footer version is stale')
+if (!index.includes(`${assetManifest.patterns.length} patterns`)) fail('standalone guide footer pattern count is stale')
+if (!preview.includes('tokens/dist/tokens.css')) fail('v1.8 preview does not consume the distributed CSS tokens')
+if (!preview.includes('--teal: var(--lsm-color-palette-teal, #5CA3A6);')) fail('v1.8 preview lacks canonical token fallbacks for a dropped local dependency')
+if (!preview.includes('assets/patterns/phosphor-dither.svg')) fail('v1.8 preview does not demonstrate the phosphor dither asset')
+for (const id of ['signal', 'mission', 'systems']) if (!preview.includes(`id="${id}"`)) fail(`v1.8 preview lacks ${id} depth`)
+for (const marker of ['id="review-action"', 'aria-live="polite"']) if (!preview.includes(marker)) fail(`v1.8 preview lacks interaction contract: ${marker}`)
+if (/make the\s*<br>\s*<span[^>]*>signal count/i.test(preview)) fail('v1.8 preview contains campaign copy instead of a factual release specimen')
+if (preview.includes('.pixel-word::after')) fail('v1.8 preview contains the rejected decorative title rail')
 if (!read('README.md').includes(`VERSION ${manifest.version}`)) fail('README version is stale')
 if (!read('docs/STYLE_GUIDE.md').includes(`Version ${manifest.version}`)) fail('style guide version is stale')
+if (!read('RELEASE_NOTES.md').includes(`— ${manifest.version}`)) fail('release notes version is stale')
+if (!read('components/README.md').includes(`Version: \`${manifest.version}\``)) fail('component README version is stale')
+if (!read('examples/index.html').includes(`<strong>${manifest.version}</strong>`)) fail('application atlas version is stale')
+if (!read('docs/DEPLOYMENT.md').includes(`v${manifest.version}`)) fail('deployment release example is stale')
+for (const [path, snippets] of Object.entries({
+  'tokens/dist/tokens.css': ['--lsm-color-palette-teal: #5CA3A6;', '--lsm-color-palette-relay: #5CA3A6;'],
+  'tokens/dist/tokens.ts': ['"teal": "#5CA3A6"', '"relay": "#5CA3A6"', '"color.palette.relay": "#5CA3A6"'],
+  'tokens/dist/tokens.native.ts': ['"teal": "#5CA3A6"', '"relay": "#5CA3A6"', '"color.palette.relay": "#5CA3A6"'],
+  'tokens/dist/tailwind-theme.ts': ['"teal": "#5CA3A6"', '"relay": "#5CA3A6"'],
+  'tokens/dist/react-native.ts': ['"teal": "#5CA3A6"', '"relay": "#5CA3A6"'],
+  'tokens/dist/Tokens.swift': ['ColorPaletteTeal = Color(red: 0.3608, green: 0.6392, blue: 0.6510)', 'ColorPaletteRelay = ColorPaletteTeal'],
+  'tokens/dist/LSMTokens.kt': ['ColorPaletteTeal = Color(0xFF5CA3A6)', 'ColorPaletteRelay = ColorPaletteTeal'],
+  'tokens/dist/tokens.dart': ['colorPaletteTeal = Color(0xFF5CA3A6)', 'colorPaletteRelay = colorPaletteTeal'],
+  'tokens/dist/android/colors.xml': ['lsm_color_palette_teal">#FF5CA3A6', 'lsm_color_palette_relay">@color/lsm_color_palette_teal'],
+})) {
+  const content = read(path)
+  for (const snippet of snippets) if (!content.includes(snippet)) fail(`${path} lacks token export contract: ${snippet}`)
+}
 
 if (failures.length) {
   console.error(failures.map((message) => `- ${message}`).join('\n'))

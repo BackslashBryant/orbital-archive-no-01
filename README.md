@@ -4,15 +4,15 @@
 
 <p align="center"><strong>A stack-neutral aerospace design system for expressive entry, calm operation, and exact systems work.</strong></p>
 
-<p align="center"><code>VERSION 1.7.0</code> · <code>161 REVIEWED ICONS</code> · <code>13 APPLICATIONS</code> · <code>49 CONTRACTS</code> · <code>8 SCHEMATIC PATTERNS</code></p>
+<p align="center"><code>VERSION 1.8.0</code> · <code>161 REVIEWED ICONS</code> · <code>13 APPLICATIONS</code> · <code>49 CONTRACTS</code> · <code>9 SCHEMATIC PATTERNS</code></p>
 
 ## Present dramatically. Operate calmly. Scale completely.
 
 Orbital Archive No. 01 is the first theme in the **Lunar Signal Modernism** design language. It combines archival aerospace drafting, condensed editorial typography, controlled signal color, pragmatic product UX, and tactile surface texture without turning normal work into a cockpit simulation.
 
-**[Open the visual guide](index.html)** · **[Browse the application atlas](examples/index.html)** · **[Read the aerospace grammar](docs/AEROSPACE-GRAMMAR.md)**
+**[Review the v1.8 preview](preview.html)** · **[Open the visual guide](index.html)** · **[Browse the application atlas](examples/index.html)** · **[Read the aerospace grammar](docs/AEROSPACE-GRAMMAR.md)**
 
-No install or framework is required. The guide and every example can be opened directly in a browser.
+No install or framework is required. The pages are self-contained and open directly in a browser. For full fidelity — and to match GitHub Pages — serve the folder over a local HTTP server (`python -m http.server`) and open `http://localhost:8000/`. If a page ever renders unstyled, it means `tokens/dist/tokens.css` did not load; serve over HTTP.
 
 ## What ships
 
@@ -22,7 +22,7 @@ No install or framework is required. The guide and every example can be opened d
 | Application atlas | 13 distinct responsive references spanning editorial, product, administration, documentation, mobile, sequencing, and diagnostics |
 | Aerospace grammar | Orbit and horizon arcs, plotted trajectories, datum marks, vectors, leader lines, calibration rails, coordinate notation, and blueprint structure |
 | Surface language | Restrained paper grain, blueprint grids, scanlines, film noise, vignette, and registration marks |
-| Asset kit | 161 conventional SVG icons, a symbol sprite, 3 marks, and 8 reusable schematic patterns |
+| Asset kit | 161 conventional SVG icons (adapted from [Tabler Icons](https://tabler.io/icons), MIT — see [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)), a symbol sprite, 3 marks, and 9 reusable schematic patterns |
 | Token package | DTCG source plus CSS, TypeScript, Tailwind, React Native, Swift, Kotlin, Dart, and native exports |
 | Governance | 49 machine-readable component contracts, binding agent rules, validation, contribution guidance, and CI |
 
@@ -65,15 +65,18 @@ Every deeper context keeps scope visible and provides a clear return path.
 
 ## Quick start
 
-1. Open [`index.html`](index.html).
-2. Choose the closest reference in [`examples/`](examples/index.html).
-3. Reuse semantic values from [`tokens/tokens.json`](tokens/tokens.json) or a generated export in [`tokens/dist/`](tokens/dist/).
-4. Preserve required behavior from [`components/contracts.json`](components/contracts.json).
-5. Validate before release:
+1. Review [`preview.html`](preview.html) for the v1.8 color and depth treatment.
+2. Open [`index.html`](index.html) for the complete system guide.
+3. Choose the closest reference in [`examples/`](examples/index.html).
+4. Reuse semantic values from [`tokens/tokens.json`](tokens/tokens.json) or a generated export in [`tokens/dist/`](tokens/dist/).
+5. Preserve required behavior from [`components/contracts.json`](components/contracts.json).
+6. Validate before release:
 
 ```bash
 node scripts/validate.mjs
 ```
+
+`color.palette.teal` is the canonical active/focus/link token in v1.8. The former `color.palette.relay` name remains as a deprecated teal-valued compatibility alias and will be removed in v2.
 
 When editing icons, rebuild the sprite first:
 
@@ -93,7 +96,7 @@ node scripts/validate.mjs
 ├── assets/
 │   ├── icons/                    # individual SVGs, sprite, metadata
 │   ├── marks/                    # roundel, wordmark, README banner
-│   └── patterns/                 # 8 reusable aerospace fields
+│   └── patterns/                 # 9 reusable aerospace fields
 ├── tokens/
 │   ├── tokens.json               # DTCG source
 │   └── dist/                     # platform exports
@@ -112,4 +115,4 @@ Read [AGENTS.md](AGENTS.md) before generating or changing UI. Human contribution
 
 ## License
 
-MIT. See [LICENSE](LICENSE).
+MIT. See [LICENSE](LICENSE). Third-party material (Tabler Icons, MIT) is credited in [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).

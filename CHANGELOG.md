@@ -1,5 +1,18 @@
 # Changelog
 
+## 1.8.0 — 2026-08-10
+
+- Rebalanced the public color contract: Ignition Orange now carries primary action and editorial signal, while Signal Teal carries active, focused, selected, linked, and informational state.
+- Added `color.palette.teal` across every platform export and retained `color.palette.relay` as a deprecated teal-valued compatibility alias until v2.
+- Migrated the visual guide, all thirteen application examples, and reusable mark/pattern assets away from the retired bright-blue treatment.
+- Added a permanent responsive `preview.html` showing Signal, Mission, and Systems depth with real distributed tokens, accessible focus, and restrained pixel texture.
+- Added the reusable Phosphor Dither pattern and raised the public pattern count from eight to nine.
+- Applied the restrained CRT/pixel motif through shared CSS — scanline-filled display accents and a neutral scanline sheen on primary actions — and removed the arbitrary two-tone (orange/teal) pixel treatment.
+- Replaced the bespoke native icon set with geometry adapted from Tabler Icons 3.46.0 (MIT), normalized to the 24×24 / 1.5-stroke / `currentColor` contract; public icon filenames and API are preserved and the upstream source name for each icon is recorded in `assets/icons/manifest.json`. Added `THIRD_PARTY_NOTICES.md`.
+- Rebuilt the brand mark as a deliberately constructed orbital device (ring, core, plotted node, trajectory) that stays crisp at 16–48 px, and reissued the roundel, wordmark, and README banner from it.
+- Audited every standalone and inline trajectory diagram so plotted nodes sit on their paths, removed purposeless floating geometry, and refreshed the README banner to v1.8.0.
+- Strengthened validation for preview presence, release/count consistency, retired-color residue, and token/export compatibility.
+
 ## 1.7.0 — 2026-07-24
 
 - Migrated the aerospace instrument grammar into the component library: cards now carry grain texture, corner registration ticks, a monospaced coordinate index, and a hairline relay top-datum instead of reading as flat boxes.

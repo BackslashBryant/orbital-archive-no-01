@@ -1,6 +1,6 @@
 # Orbital Archive No. 01 Style Guide
 
-**Theme 01 · Lunar Signal Modernism · Version 1.7.0**
+**Theme 01 · Lunar Signal Modernism · Version 1.8.0**
 
 ## Identity
 
@@ -32,9 +32,9 @@ The system should feel calm, precise, intelligent, archival, engineered, and qui
 | Grid Line | `#56656E` | Borders, dividers, and schematics |
 | Lunar Dust | `#98A4AC` | Muted content |
 | Archive Bone | `#E7E1D5` | Primary content |
-| Relay Blue | `#54BCD9` | Active, selected, system, informational |
+| Signal Teal | `#5CA3A6` | Active, focused, linked, selected — narrow role, never primary |
 | Mission Gold | `#CBAE67` | Priority and editorial hierarchy |
-| Ignition Orange | `#E66A2C` | Rare editorial signal and high-energy emphasis |
+| Ignition Orange | `#E66A2C` | Primary action and editorial signal — the dominant brand hue, one job per surface |
 | Signal Green | `#7EB79E` | Success, available, nominal |
 | Alert Rust | `#C97A60` | Warning, degraded, attention |
 | Fault Red | `#EA7468` | Error, critical, destructive |
@@ -44,9 +44,11 @@ Rules:
 - Do not use pure black or pure white application screens.
 - Do not introduce purple, pink, or magenta.
 - Operational backgrounds remain gray-blue and mid-tone.
-- Operational primary actions use Relay Blue. Ignition Orange is not a status color.
+- Operational primary actions use Ignition Orange, rationed to one job per surface. Signal Teal marks focus, links, and active state — it is not the primary action color.
 - Warning and error remain distinct.
 - Color always has text, shape, position, or icon support.
+- One hue does one job. No color should read as the ambient tone of a whole surface — the base field stays desaturated; saturated color is spent deliberately.
+- `color.palette.relay` is retained only as a deprecated compatibility alias for Signal Teal in v1.x exports. Author new work against `color.palette.teal`.
 
 ## Typography
 

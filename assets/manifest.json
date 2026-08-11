@@ -1,6 +1,6 @@
 {
   "name": "Orbital Archive No. 01 Asset Pack",
-  "version": "1.7.0",
+  "version": "1.8.0",
   "license": "MIT",
   "marks": [
     {
@@ -51,6 +51,10 @@
     {
       "name": "Calibration Rail",
       "path": "assets/patterns/calibration-rail.svg"
+    },
+    {
+      "name": "Phosphor Dither",
+      "path": "assets/patterns/phosphor-dither.svg"
     }
   ],
   "icons": {

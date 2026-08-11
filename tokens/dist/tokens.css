@@ -7,7 +7,9 @@
   --lsm-color-palette-gridline: #56656E;
   --lsm-color-palette-dust: #B3BBC2;
   --lsm-color-palette-bone: #E7E1D5;
-  --lsm-color-palette-relay: #54BCD9;
+  --lsm-color-palette-teal: #5CA3A6;
+  /* Deprecated compatibility alias; use --lsm-color-palette-teal. Remove in v2. */
+  --lsm-color-palette-relay: #5CA3A6;
   --lsm-color-palette-gold: #CBAE67;
   --lsm-color-palette-orange: #E66A2C;
   --lsm-color-palette-signal: #7EB79E;
@@ -22,7 +24,7 @@
   --lsm-color-semantic-card-foreground: #E7E1D5;
   --lsm-color-semantic-popover: #37464F;
   --lsm-color-semantic-popover-foreground: #E7E1D5;
-  --lsm-color-semantic-primary: #54BCD9;
+  --lsm-color-semantic-primary: #E66A2C;
   --lsm-color-semantic-primary-foreground: #11181E;
   --lsm-color-semantic-secondary: #37464F;
   --lsm-color-semantic-secondary-foreground: #E7E1D5;
@@ -32,7 +34,7 @@
   --lsm-color-semantic-accent-foreground: #11181E;
   --lsm-color-semantic-editorial-signal: #E66A2C;
   --lsm-color-semantic-editorial-signal-foreground: #11181E;
-  --lsm-color-semantic-info: #54BCD9;
+  --lsm-color-semantic-info: #5CA3A6;
   --lsm-color-semantic-info-foreground: #11181E;
   --lsm-color-semantic-success: #7EB79E;
   --lsm-color-semantic-success-foreground: #11181E;
@@ -44,10 +46,10 @@
   --lsm-color-semantic-destructive-foreground: #11181E;
   --lsm-color-semantic-border: #56656E;
   --lsm-color-semantic-input: #37464F;
-  --lsm-color-semantic-ring: #54BCD9;
-  --lsm-color-semantic-focus: #54BCD9;
+  --lsm-color-semantic-ring: #5CA3A6;
+  --lsm-color-semantic-focus: #5CA3A6;
   --lsm-color-semantic-disabled: #B3BBC2;
-  --lsm-color-semantic-link: #54BCD9;
+  --lsm-color-semantic-link: #5CA3A6;
   --lsm-color-mode-editorial-background: #11181E;
   --lsm-color-mode-editorial-surface: #253139;
   --lsm-color-mode-editorial-surface-elevated: #2D3A42;
@@ -56,9 +58,9 @@
   --lsm-color-mode-operational-surface: #2D3A42;
   --lsm-color-mode-operational-surface-elevated: #37464F;
   --lsm-color-mode-operational-border: #56656E;
-  --lsm-color-data-1: #54BCD9;
-  --lsm-color-data-2: #CBAE67;
-  --lsm-color-data-3: #E66A2C;
+  --lsm-color-data-1: #E66A2C;
+  --lsm-color-data-2: #5CA3A6;
+  --lsm-color-data-3: #CBAE67;
   --lsm-color-data-4: #7EB79E;
   --lsm-color-data-5: #B3BBC2;
   --lsm-color-data-6: #C97A60;
@@ -133,7 +135,7 @@
   --lsm-shadow-none: none;
   --lsm-shadow-raised: 0 8px 24px rgb(17 24 30 / 0.24);
   --lsm-shadow-overlay: 0 24px 64px rgb(17 24 30 / 0.44);
-  --lsm-shadow-focus: 0 0 0 3px rgb(84 188 217 / 0.28);
+  --lsm-shadow-focus: 0 0 0 3px rgb(92 163 166 / 0.28);
   --lsm-opacity-disabled: 0.42;
   --lsm-opacity-muted: 0.68;
   --lsm-opacity-scrim: 0.72;

@@ -40,7 +40,7 @@ A custom domain or different account configuration may produce another URL; the 
 node scripts/build-icon-sprite.mjs
 node scripts/validate.mjs
 git add -A
-git commit -m "Release Orbital Archive No. 01 v1.7.0"
+git commit -m "Release Orbital Archive No. 01 v1.8.0"
 git push origin main
 ```
 
