@@ -209,7 +209,7 @@
     .button.secondary:hover { border-color: var(--teal); color: var(--teal); }
     .button.primary:hover { background: color-mix(in srgb, var(--orange), var(--bone) 12%); }
     @keyframes oa-scan { to { background-position: 0 -3px; } }
-    .button:hover::after, .button:focus-visible::after { animation: oa-scan .5s linear infinite; opacity: .24; }
+    .button:hover::after, .button:focus-visible::after { animation: oa-scan .5s linear infinite; opacity: .34; }
     .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
     .button:disabled { cursor: not-allowed; opacity: .62; }
 
@@ -240,7 +240,8 @@
 
     .section { padding: clamp(64px, 8vw, 112px) 0; }
     .section-head { display: grid; grid-template-columns: minmax(0, .8fr) minmax(300px, .5fr); gap: 40px; align-items: end; margin-bottom: 34px; }
-    .section h2 { margin-bottom: 0; font: 700 clamp(44px, 6vw, 78px)/.9 var(--display); text-transform: uppercase; }
+    .section h2 { margin-bottom: 0; font: 700 clamp(44px, 6vw, 78px)/.9 var(--display); text-transform: uppercase; text-shadow: 0 0 26px color-mix(in srgb, var(--teal), transparent 85%); }
+    @supports ((-webkit-background-clip: text) or (background-clip: text)) { .section h2 { background-image: repeating-linear-gradient(0deg, var(--bone) 0 2px, color-mix(in srgb, var(--bone), transparent 52%) 2px 4px); -webkit-background-clip: text; background-clip: text; color: transparent; } }
     .section-head p { margin-bottom: 0; color: var(--dust); }
     .mission { background: var(--graphite); }
     .systems-section { background: var(--orbit); border-top: 1px solid var(--grid); }
