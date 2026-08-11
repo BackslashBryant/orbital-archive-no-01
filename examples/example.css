@@ -228,12 +228,12 @@ h3 { font-size: 28px; line-height: 1; }
   inset: 0;
   z-index: -1;
   pointer-events: none;
-  opacity: .11;
+  opacity: .2;
   background:
-    repeating-linear-gradient(0deg, transparent 0 4px, color-mix(in srgb, var(--bone), transparent 95%) 5px),
+    repeating-linear-gradient(0deg, rgba(0, 0, 0, .28) 0 1px, transparent 1px 3px),
     radial-gradient(circle, color-mix(in srgb, var(--bone), transparent 90%) 0 1px, transparent 1.4px);
   background-size: auto, 9px 9px;
-  mix-blend-mode: soft-light;
+  background-blend-mode: multiply, normal;
 }
 .panel::after, .aero-frame::after {
   content: "";
