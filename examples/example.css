@@ -657,3 +657,8 @@ h3 { font-size: 28px; line-height: 1; }
 @keyframes oa-flow { to { background-position: 22px 0; } }
 
 .topnav a.button, .side a.button { font-size: 14px; }
+
+/* Primary CTA legibility wins: no texture over the label at rest; scan only on hover. */
+.button:not(.secondary):not(.ghost)::after { animation: none; opacity: 0; }
+.button:not(.secondary):not(.ghost):hover::after, .button:not(.secondary):not(.ghost):focus-visible::after { animation: oa-scan .5s linear infinite; opacity: .28; }
+.button { font-weight: 700; letter-spacing: .06em; }

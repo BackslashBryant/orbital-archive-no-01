@@ -240,3 +240,8 @@ document.querySelectorAll('.oa-toggle').forEach(btn=>{btn.addEventListener('clic
 .btn{font-size:14px}
 .btn:not(.secondary):not(.danger)::after{animation:oa-scan 2.4s linear infinite;opacity:.18}
 </style>
+
+<style>
+.btn:not(.secondary):not(.danger)::after{animation:none;opacity:0}
+.btn:not(.secondary):not(.danger):hover::after{animation:oa-scan .5s linear infinite;opacity:.28}
+</style>
