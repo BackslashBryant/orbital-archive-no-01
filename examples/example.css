@@ -649,3 +649,9 @@ h3 { font-size: 28px; line-height: 1; }
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
 }
+
+/* Larger CTA text and clearly-visible (tasteful) always-on scanline motion. */
+.button { font-size: 14px; }
+.button:not(.secondary):not(.ghost)::after { animation: oa-scan 2.4s linear infinite; opacity: .18; }
+.topnav::after { animation: oa-flow 2.4s linear infinite; }
+@keyframes oa-flow { to { background-position: 22px 0; } }

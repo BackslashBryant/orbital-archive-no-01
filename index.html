@@ -235,3 +235,8 @@ document.querySelectorAll('.oa-toggle').forEach(btn=>{btn.addEventListener('clic
 .section-head h2{text-shadow:0 0 26px color-mix(in srgb,var(--teal),transparent 85%)}
 @supports((-webkit-background-clip:text) or (background-clip:text)){.section-head h2{background-image:repeating-linear-gradient(0deg,var(--bone) 0 2px,color-mix(in srgb,var(--bone),transparent 52%) 2px 4px);-webkit-background-clip:text;background-clip:text;color:transparent}}
 </style>
+
+<style>
+.btn{font-size:14px}
+.btn:not(.secondary):not(.danger)::after{animation:oa-scan 2.4s linear infinite;opacity:.18}
+</style>
