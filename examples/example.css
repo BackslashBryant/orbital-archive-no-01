@@ -655,3 +655,5 @@ h3 { font-size: 28px; line-height: 1; }
 .button:not(.secondary):not(.ghost)::after { animation: oa-scan 2.4s linear infinite; opacity: .18; }
 .topnav::after { animation: oa-flow 2.4s linear infinite; }
 @keyframes oa-flow { to { background-position: 22px 0; } }
+
+.topnav a.button, .side a.button { font-size: 14px; }
