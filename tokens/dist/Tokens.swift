@@ -67,7 +67,7 @@ public enum LSMTokens {
     public static let ColorData5 = Color(red: 0.5961, green: 0.6431, blue: 0.6745)
     public static let ColorData6 = Color(red: 0.7882, green: 0.4784, blue: 0.3765)
     public static let ColorData7 = Color(red: 0.9176, green: 0.4549, blue: 0.4078)
-    public static let FontDisplay = "Barlow Condensed"
+    public static let FontDisplay = "Oswald"
     public static let FontSans = "Inter"
     public static let FontMono = "IBM Plex Mono"
     public static let FontSizeDisplay2: CGFloat = 96

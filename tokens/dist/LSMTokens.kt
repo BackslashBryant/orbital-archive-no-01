@@ -70,7 +70,7 @@ object LSMTokens {
     val ColorData5 = Color(0xFFB3BBC2)
     val ColorData6 = Color(0xFFC97A60)
     val ColorData7 = Color(0xFFEA7468)
-    const val FontDisplay = "Barlow Condensed"
+    const val FontDisplay = "Oswald"
     const val FontSans = "Inter"
     const val FontMono = "IBM Plex Mono"
     val FontSizeDisplay2 = 96.dp

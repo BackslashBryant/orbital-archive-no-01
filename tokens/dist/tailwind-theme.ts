@@ -79,7 +79,7 @@ export const lunarSignalTheme = {
   },
   "fontFamily": {
     "display": [
-      "Barlow Condensed",
+      "Oswald",
       "Arial Narrow",
       "sans-serif"
     ],

@@ -67,7 +67,7 @@ abstract final class LSMTokens {
   static const colorData5 = Color(0xFFB3BBC2);
   static const colorData6 = Color(0xFFC97A60);
   static const colorData7 = Color(0xFFEA7468);
-  static const String fontDisplay = "Barlow Condensed";
+  static const String fontDisplay = "Oswald";
   static const String fontSans = "Inter";
   static const String fontMono = "IBM Plex Mono";
   static const double fontSizeDisplay2 = 96;

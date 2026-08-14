@@ -81,7 +81,7 @@ export const color = {
 
 export const font = {
   "display": [
-    "Barlow Condensed",
+    "Oswald",
     "Arial Narrow",
     "sans-serif"
   ],
@@ -314,7 +314,7 @@ export const flatTokens = {
   "color.data.6": "#C97A60",
   "color.data.7": "#EA7468",
   "font.display": [
-    "Barlow Condensed",
+    "Oswald",
     "Arial Narrow",
     "sans-serif"
   ],

@@ -113,7 +113,7 @@ export const LSMNativeTokens = {
   },
   "font": {
     "display": [
-      "Barlow Condensed",
+      "Oswald",
       "Arial Narrow",
       "sans-serif"
     ],
