@@ -1,0 +1,19 @@
+node_modules/
+package-lock.json
+_qa/
+
+# Generated token exports (owned by Style Dictionary via tokens/build.mjs)
+tokens/dist/
+
+# Embedded base64 font faces — machine data, not hand-edited
+assets/fonts.css
+
+# SVG assets
+**/*.svg
+
+# Hand-authored presentation HTML (guide, preview, application atlas).
+# These carry deliberate structure and a large generated icon catalog; Prettier
+# is not allowed to reflow them. CSS/JS/MD/JSON are formatted.
+index.html
+preview.html
+examples/**/*.html

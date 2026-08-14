@@ -6,14 +6,14 @@ The file is intentionally implementation-agnostic. A React, Vue, Svelte, native,
 
 ## Fields
 
-| Field | Meaning |
-| --- | --- |
-| `id` | Stable kebab-case contract identifier |
-| `name` | Human-readable component name |
-| `family` | Functional grouping |
-| `states` | Consumer-visible states that must remain represented |
-| `allowedDepths` | `0` Signal, `1` Mission, `2` Systems |
-| `reference` | Visual reference in the standalone guide |
+| Field           | Meaning                                              |
+| --------------- | ---------------------------------------------------- |
+| `id`            | Stable kebab-case contract identifier                |
+| `name`          | Human-readable component name                        |
+| `family`        | Functional grouping                                  |
+| `states`        | Consumer-visible states that must remain represented |
+| `allowedDepths` | `0` Signal, `1` Mission, `2` Systems                 |
+| `reference`     | Visual reference in the standalone guide             |
 
 Use [the visual component specimen](../index.html#components) for appearance and [the style guide](../docs/STYLE_GUIDE.md) for interaction, accessibility, color, and depth rules.
 

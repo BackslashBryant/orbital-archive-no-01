@@ -8,19 +8,19 @@ Keep `README.md`, `index.html`, `AGENTS.md`, `LICENSE`, `CONTRIBUTING.md`, `CODE
 
 ## Content ownership
 
-| Path | Responsibility |
-| --- | --- |
-| `index.html` | Authoritative standalone visual overview |
-| `examples/` | 13 copyable, responsive, plain-HTML application references |
-| `components/contracts.json` | 49 stack-neutral component state and depth contracts |
-| `assets/icons/` | Individual SVGs, sprite, and icon metadata |
-| `assets/marks/` | Identity marks and README banner |
-| `assets/patterns/` | Reusable aerospace diagrams and fields |
-| `tokens/tokens.json` | Design-token source |
-| `tokens/dist/` | Generated platform exports |
-| `docs/` | Style, layout, aerospace grammar, icon, and deployment guidance |
-| `scripts/` | Zero-dependency maintenance and validation tools |
-| `.github/workflows/` | Quality validation and Pages deployment |
+| Path                        | Responsibility                                                  |
+| --------------------------- | --------------------------------------------------------------- |
+| `index.html`                | Authoritative standalone visual overview                        |
+| `examples/`                 | 13 copyable, responsive, plain-HTML application references      |
+| `components/contracts.json` | 49 stack-neutral component state and depth contracts            |
+| `assets/icons/`             | Individual SVGs, sprite, and icon metadata                      |
+| `assets/marks/`             | Identity marks and README banner                                |
+| `assets/patterns/`          | Reusable aerospace diagrams and fields                          |
+| `tokens/tokens.json`        | Design-token source                                             |
+| `tokens/dist/`              | Generated platform exports                                      |
+| `docs/`                     | Style, layout, aerospace grammar, icon, and deployment guidance |
+| `scripts/`                  | Zero-dependency maintenance and validation tools                |
+| `.github/workflows/`        | Quality validation and Pages deployment                         |
 
 ## Relative-path requirement
 

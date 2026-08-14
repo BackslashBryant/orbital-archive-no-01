@@ -23,21 +23,21 @@ The system should feel calm, precise, intelligent, archival, engineered, and qui
 
 ## Color
 
-| Token | Value | Use |
-| --- | ---: | --- |
-| Deep Orbit | `#11181E` | Deepest editorial and systems surface |
-| Calm Graphite | `#253139` | Default operational background |
-| Lunar Slate | `#2D3A42` | Cards and raised surfaces |
-| Elevated Alloy | `#37464F` | Inputs, controls, and popovers |
-| Grid Line | `#56656E` | Borders, dividers, and schematics |
-| Lunar Dust | `#98A4AC` | Muted content |
-| Archive Bone | `#E7E1D5` | Primary content |
-| Signal Teal | `#5CA3A6` | Active, focused, linked, selected — narrow role, never primary |
-| Mission Gold | `#CBAE67` | Priority and editorial hierarchy |
+| Token           |     Value | Use                                                                               |
+| --------------- | --------: | --------------------------------------------------------------------------------- |
+| Deep Orbit      | `#11181E` | Deepest editorial and systems surface                                             |
+| Calm Graphite   | `#253139` | Default operational background                                                    |
+| Lunar Slate     | `#2D3A42` | Cards and raised surfaces                                                         |
+| Elevated Alloy  | `#37464F` | Inputs, controls, and popovers                                                    |
+| Grid Line       | `#56656E` | Borders, dividers, and schematics                                                 |
+| Lunar Dust      | `#98A4AC` | Muted content                                                                     |
+| Archive Bone    | `#E7E1D5` | Primary content                                                                   |
+| Signal Teal     | `#5CA3A6` | Active, focused, linked, selected — narrow role, never primary                    |
+| Mission Gold    | `#CBAE67` | Priority and editorial hierarchy                                                  |
 | Ignition Orange | `#CB7248` | Primary action and editorial signal — the dominant brand hue, one job per surface |
-| Signal Green | `#7EB79E` | Success, available, nominal |
-| Alert Rust | `#C97A60` | Warning, degraded, attention |
-| Fault Red | `#EA7468` | Error, critical, destructive |
+| Signal Green    | `#7EB79E` | Success, available, nominal                                                       |
+| Alert Rust      | `#C97A60` | Warning, degraded, attention                                                      |
+| Fault Red       | `#EA7468` | Error, critical, destructive                                                      |
 
 Rules:
 

@@ -3,13 +3,7 @@
   "version": "1.8.0",
   "artboard": 24,
   "defaultStrokeWidth": 1.5,
-  "supportedSizes": [
-    16,
-    20,
-    24,
-    32,
-    48
-  ],
+  "supportedSizes": [16, 20, 24, 32, 48],
   "license": "MIT",
   "source": {
     "library": "Tabler Icons",
@@ -934,9 +928,7 @@
       "name": "attach",
       "category": "action",
       "description": "Attach a file",
-      "aliases": [
-        "paperclip"
-      ],
+      "aliases": ["paperclip"],
       "source": "paperclip"
     },
     {
@@ -950,9 +942,7 @@
       "name": "heart",
       "category": "action",
       "description": "Favorite or save for later",
-      "aliases": [
-        "favorite"
-      ],
+      "aliases": ["favorite"],
       "source": "heart"
     },
     {

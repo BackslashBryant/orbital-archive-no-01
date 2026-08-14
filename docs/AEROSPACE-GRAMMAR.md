@@ -8,20 +8,20 @@ This document defines how Orbital Archive No. 01 uses space, horizon, aerospace,
 
 ## Vocabulary
 
-| Family | Appropriate job | Typical placement |
-| --- | --- | --- |
-| Horizon arcs | Establish scale, boundary, or calm forward movement | Hero edge, section transition, dedicated figure |
-| Orbital arcs | Relate objects or frame a focal region | Media field, identity moment, diagram |
-| Trajectory curves | Express sequence, direction, or planned progression | Timeline, workflow, chart, launch surface |
-| Plotted vectors | Show relationship between named points | Diagram canvas, systems topology, annotated media |
-| Datum crosshairs | Establish a visual origin or inspected point | Plot, schematic, instrument summary |
-| Leader lines | Attach a label to a real object or measurement | Diagram only; never through unrelated content |
-| Calibration rails | Show phase, range, scale, or ordered depth | Navigation edge, timeline, comparison band |
-| Measurement ticks | Create precise rhythm and comparative scale | Rules, axes, panel edges |
-| Blueprint grid | Reveal alignment and construction | Background at low contrast |
-| Registration marks | Signal deliberate framing or print/archive provenance | Corners and crop boundaries |
-| Coordinate notation | Identify actual scope or position | Metadata, plot annotation, archive reference |
-| Grain / scanlines / film noise | Give surfaces tactile material character | Behind content at low opacity |
+| Family                         | Appropriate job                                       | Typical placement                                 |
+| ------------------------------ | ----------------------------------------------------- | ------------------------------------------------- |
+| Horizon arcs                   | Establish scale, boundary, or calm forward movement   | Hero edge, section transition, dedicated figure   |
+| Orbital arcs                   | Relate objects or frame a focal region                | Media field, identity moment, diagram             |
+| Trajectory curves              | Express sequence, direction, or planned progression   | Timeline, workflow, chart, launch surface         |
+| Plotted vectors                | Show relationship between named points                | Diagram canvas, systems topology, annotated media |
+| Datum crosshairs               | Establish a visual origin or inspected point          | Plot, schematic, instrument summary               |
+| Leader lines                   | Attach a label to a real object or measurement        | Diagram only; never through unrelated content     |
+| Calibration rails              | Show phase, range, scale, or ordered depth            | Navigation edge, timeline, comparison band        |
+| Measurement ticks              | Create precise rhythm and comparative scale           | Rules, axes, panel edges                          |
+| Blueprint grid                 | Reveal alignment and construction                     | Background at low contrast                        |
+| Registration marks             | Signal deliberate framing or print/archive provenance | Corners and crop boundaries                       |
+| Coordinate notation            | Identify actual scope or position                     | Metadata, plot annotation, archive reference      |
+| Grain / scanlines / film noise | Give surfaces tactile material character              | Behind content at low opacity                     |
 
 ## Safe corridors
 
@@ -47,11 +47,11 @@ A line may terminate near a label or lead toward a region. It may not pass throu
 
 ## Density by depth
 
-| Depth | Geometry | Texture | Motion |
-| --- | --- | --- | --- |
-| Signal | Large-scale arcs, trajectories, registration fields | Visible but restrained grain and scanline treatment | Optional slow reveal; nonessential |
-| Mission | One or two compact schematic cues tied to the task | Quiet grid or surface grain | Minimal state transitions only |
-| Systems | Finer grids, topology, rails, and data-linked vectors | Fine technical texture; no extra glow | Functional updates only |
+| Depth   | Geometry                                              | Texture                                             | Motion                             |
+| ------- | ----------------------------------------------------- | --------------------------------------------------- | ---------------------------------- |
+| Signal  | Large-scale arcs, trajectories, registration fields   | Visible but restrained grain and scanline treatment | Optional slow reveal; nonessential |
+| Mission | One or two compact schematic cues tied to the task    | Quiet grid or surface grain                         | Minimal state transitions only     |
+| Systems | Finer grids, topology, rails, and data-linked vectors | Fine technical texture; no extra glow               | Functional updates only            |
 
 Systems may be denser than Mission, but it should be more exact—not more theatrical.
 

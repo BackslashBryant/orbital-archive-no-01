@@ -4,11 +4,11 @@ Lunar Signal pages follow one promise: **orient first, enable work second, revea
 
 ## Shallow-to-deep path
 
-| Depth | User question | Page job | Default content | Must remain visible |
-| --- | --- | --- | --- | --- |
-| 0 — Signal | Where am I and what matters? | Orient and invite | identity, essential state, one next action | identity, invitation, calm entry/exit |
-| 1 — Mission | What do I need to do now? | Support active work | controls, scoped data, progress, useful context | title, scope, next step, return path |
-| 2 — Systems | What is behind this decision? | Inspect or configure deliberately | diagnostics, advanced controls, raw data, logs | mission context, danger meaning, return path |
+| Depth       | User question                 | Page job                          | Default content                                 | Must remain visible                          |
+| ----------- | ----------------------------- | --------------------------------- | ----------------------------------------------- | -------------------------------------------- |
+| 0 — Signal  | Where am I and what matters?  | Orient and invite                 | identity, essential state, one next action      | identity, invitation, calm entry/exit        |
+| 1 — Mission | What do I need to do now?     | Support active work               | controls, scoped data, progress, useful context | title, scope, next step, return path         |
+| 2 — Systems | What is behind this decision? | Inspect or configure deliberately | diagnostics, advanced controls, raw data, logs  | mission context, danger meaning, return path |
 
 Depth describes information density and consequence, not the number of screens. A deep link may open Systems for an expert, but it still needs visible context and a clear return to the active mission.
 
@@ -86,16 +86,16 @@ If a mark has no relationship to nearby content, remove it.
 
 ## Composition recipes
 
-| Application | Primary structure | Aerospace treatment |
-| --- | --- | --- |
-| Landing / portfolio | editorial split, one invitation | broad horizon, trajectory field, archival metadata |
-| Dashboard | metrics then active work | small plotted trajectory, calibration rail |
-| Data administration | filters, table, scoped inspector | ticks, datum line, compact registration marks |
-| Knowledge base | reading column with guide rail | horizon profile in a dedicated figure |
-| Settings | grouped controls plus impact summary | instrument crosshair or schematic thumbnail |
-| Staged flow | progress, form, review context | vector path that mirrors sequence |
-| Mission timeline | release phases and milestones | explicit plotted trajectory with labeled waypoints |
-| Deep systems | scope rail, diagnostics, logs | denser grid, topology, low-frequency signal marks |
+| Application         | Primary structure                    | Aerospace treatment                                |
+| ------------------- | ------------------------------------ | -------------------------------------------------- |
+| Landing / portfolio | editorial split, one invitation      | broad horizon, trajectory field, archival metadata |
+| Dashboard           | metrics then active work             | small plotted trajectory, calibration rail         |
+| Data administration | filters, table, scoped inspector     | ticks, datum line, compact registration marks      |
+| Knowledge base      | reading column with guide rail       | horizon profile in a dedicated figure              |
+| Settings            | grouped controls plus impact summary | instrument crosshair or schematic thumbnail        |
+| Staged flow         | progress, form, review context       | vector path that mirrors sequence                  |
+| Mission timeline    | release phases and milestones        | explicit plotted trajectory with labeled waypoints |
+| Deep systems        | scope rail, diagnostics, logs        | denser grid, topology, low-frequency signal marks  |
 
 ## Decision test
 

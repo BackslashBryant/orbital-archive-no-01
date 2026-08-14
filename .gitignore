@@ -10,3 +10,4 @@ tsconfig.tsbuildinfo
 qa/output/
 portable-toolkit/
 *.zip
+_qa/
