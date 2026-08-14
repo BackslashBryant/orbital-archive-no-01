@@ -139,7 +139,7 @@ export const LSMNativeTokens = {
     "body": "15px",
     "bodySm": "13px",
     "label": "12px",
-    "micro": "11px"
+    "micro": "12px"
   },
   "fontWeight": {
     "regular": 400,

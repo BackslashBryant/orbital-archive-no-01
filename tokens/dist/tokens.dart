@@ -80,7 +80,7 @@ abstract final class LSMTokens {
   static const double fontSizeBody = 15;
   static const double fontSizeBodySm = 13;
   static const double fontSizeLabel = 12;
-  static const double fontSizeMicro = 11;
+  static const double fontSizeMicro = 12;
   static const double letterSpacingTight = -0.02;
   static const double letterSpacingNormal = 0;
   static const double letterSpacingWide = 0.08;

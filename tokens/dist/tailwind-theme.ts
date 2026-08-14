@@ -105,7 +105,7 @@ export const lunarSignalTheme = {
     "body": "15px",
     "bodySm": "13px",
     "label": "12px",
-    "micro": "11px"
+    "micro": "12px"
   },
   "lineHeight": {
     "tight": 0.92,

@@ -11,7 +11,7 @@
   <dimen name="lsm_font_size_body">15dp</dimen>
   <dimen name="lsm_font_size_body_sm">13dp</dimen>
   <dimen name="lsm_font_size_label">12dp</dimen>
-  <dimen name="lsm_font_size_micro">11dp</dimen>
+  <dimen name="lsm_font_size_micro">12dp</dimen>
   <dimen name="lsm_space_0">0dp</dimen>
   <dimen name="lsm_space_1">4dp</dimen>
   <dimen name="lsm_space_2">8dp</dimen>

@@ -83,7 +83,7 @@ object LSMTokens {
     val FontSizeBody = 15.dp
     val FontSizeBodySm = 13.dp
     val FontSizeLabel = 12.dp
-    val FontSizeMicro = 11.dp
+    val FontSizeMicro = 12.dp
     val LetterSpacingTight = -0.02.dp
     val LetterSpacingNormal = 0.dp
     val LetterSpacingWide = 0.08.dp

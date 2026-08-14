@@ -108,7 +108,7 @@ export const fontSize = {
   "body": "15px",
   "bodySm": "13px",
   "label": "12px",
-  "micro": "11px"
+  "micro": "12px"
 } as const
 
 export const lineHeight = {
@@ -338,7 +338,7 @@ export const flatTokens = {
   "fontSize.body": "15px",
   "fontSize.bodySm": "13px",
   "fontSize.label": "12px",
-  "fontSize.micro": "11px",
+  "fontSize.micro": "12px",
   "lineHeight.tight": 0.92,
   "lineHeight.heading": 1.08,
   "lineHeight.compact": 1.25,

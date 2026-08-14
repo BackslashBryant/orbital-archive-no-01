@@ -80,7 +80,7 @@ public enum LSMTokens {
     public static let FontSizeBody: CGFloat = 15
     public static let FontSizeBodySm: CGFloat = 13
     public static let FontSizeLabel: CGFloat = 12
-    public static let FontSizeMicro: CGFloat = 11
+    public static let FontSizeMicro: CGFloat = 12
     public static let LetterSpacingTight: CGFloat = -0.02
     public static let LetterSpacingNormal: CGFloat = 0
     public static let LetterSpacingWide: CGFloat = 0.08
