@@ -408,6 +408,7 @@
               <circle cx="40" cy="344" r="5"></circle><circle cx="132" cy="300" r="5"></circle><circle cx="224" cy="318" r="5"></circle><circle cx="316" cy="236" r="5"></circle><circle cx="408" cy="268" r="5"></circle>
             </g>
             <circle class="node-end" cx="500" cy="196" r="6"></circle>
+            <g class="track" fill="none" stroke="var(--orange)" stroke-width="1.4"><path d="M302 230v-8h8M330 230v-8h-8M302 242v8h8M330 242v8h-8"></path></g>
           </svg>
           <dl class="figure-note" aria-label="Release token checks">
             <div><dt>Token source</dt><dd>tokens.css</dd></div>
@@ -430,9 +431,9 @@
           <div class="mission-layout">
             <div class="workspace">
               <div class="stat-grid">
-                <article class="stat"><strong>24</strong><span>Ready for review</span><small>6 added today</small></article>
-                <article class="stat"><strong>07</strong><span>Priority items</span><small>2 due this week</small></article>
-                <article class="stat"><strong>98%</strong><span>Records complete</span><small>Within target</small></article>
+                <article class="stat"><strong class="cnt" data-count="24">0</strong><span>Ready for review</span><small>6 added today</small></article>
+                <article class="stat"><strong class="cnt" data-count="7" data-pad="2">00</strong><span>Priority items</span><small>2 due this week</small></article>
+                <article class="stat"><strong class="cnt" data-count="98" data-suffix="%">0</strong><span>Records complete</span><small>Within target</small></article>
               </div>
               <div class="table-wrap">
                 <table>
@@ -509,6 +510,18 @@ Result: 13 examples · 49 contracts · 9 patterns · 161 icons</pre>
       reviewAction.disabled = true
       reviewLive.textContent = 'Quarterly access review queued for final review.'
     })
+    // Count-up on stat tiles when they scroll into view (respects reduced motion).
+    const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches
+    const fmt = (el, v) => { let s = String(v); if (el.dataset.pad) s = s.padStart(+el.dataset.pad, '0'); return s + (el.dataset.suffix || '') }
+    const io = new IntersectionObserver((es) => es.forEach(e => {
+      if (!e.isIntersecting) return
+      const el = e.target, t = +el.dataset.count
+      if (reduce) { el.textContent = fmt(el, t); io.unobserve(el); return }
+      const start = performance.now(), dur = 1100
+      const tick = (n) => { const p = Math.min(1, (n - start) / dur); el.textContent = fmt(el, Math.round(t * (1 - Math.pow(1 - p, 3)))); if (p < 1) requestAnimationFrame(tick) }
+      requestAnimationFrame(tick); io.unobserve(el)
+    }), { threshold: .4 })
+    document.querySelectorAll('.cnt').forEach(el => io.observe(el))
   </script>
 </body>
 </html>
