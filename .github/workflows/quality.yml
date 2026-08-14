@@ -2,7 +2,7 @@ name: quality
 
 on:
   push:
-    branches: ['**']
+    branches: ["**"]
   pull_request:
 
 permissions:
@@ -11,13 +11,39 @@ permissions:
 jobs:
   verify:
     runs-on: ubuntu-latest
-    timeout-minutes: 5
+    timeout-minutes: 10
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: 22
+          node-version-file: .nvmrc
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Regenerate design tokens
+        run: npm run build:tokens
+
+      - name: Assert token exports are in sync with source
+        run: |
+          if ! git diff --quiet -- tokens/dist; then
+            echo "::error::tokens/dist is out of date. Run 'npm run build:tokens' and commit the result."
+            git --no-pager diff -- tokens/dist
+            exit 1
+          fi
+
+      - name: Check formatting (Prettier)
+        run: npm run format:check
+
+      - name: Lint CSS (Stylelint)
+        run: npm run lint:css
+
+      - name: Lint Markdown (markdownlint)
+        run: npm run lint:md
+
       - name: Validate portable package
-        run: node scripts/validate.mjs
+        run: npm run validate

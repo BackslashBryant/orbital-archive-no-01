@@ -7,8 +7,8 @@ Orbital Archive No. 01 is MIT licensed. It includes third-party material under t
 The native icon set in `assets/icons/` is derived from **Tabler Icons v3.46.0**, an
 open-source icon library by Paweł Kuna, used under the MIT License.
 
-- Project: https://tabler.io/icons
-- Source: https://github.com/tabler/tabler-icons
+- Project: <https://tabler.io/icons>
+- Source: <https://github.com/tabler/tabler-icons>
 - Version vendored: `3.46.0`
 - License: MIT
 
@@ -20,7 +20,7 @@ with the Orbital semantic name. Orbital's public icon filenames and API are
 preserved; the upstream Tabler source name for every icon is recorded in the
 `source` field of each entry in `assets/icons/manifest.json`.
 
-```
+```text
 MIT License
 
 Copyright (c) 2020-2026 Paweł Kuna
