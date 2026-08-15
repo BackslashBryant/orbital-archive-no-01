@@ -2300,3 +2300,257 @@ footer {
     grid-template-columns: repeat(2, 1fr);
   }
 }
+
+/* ======== COMPONENT DOC — reference-grade, namespaced under .oa-comp ======== */
+.oa-comp .comp {
+  border: 1px solid color-mix(in srgb, var(--grid), transparent 40%);
+  background: color-mix(in srgb, var(--slate), var(--orbit) 22%);
+}
+.oa-comp .comp-head {
+  padding: 20px 22px;
+  border-bottom: 1px solid color-mix(in srgb, var(--grid), transparent 40%);
+}
+.oa-comp .comp-head h3 {
+  margin: 0;
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: 26px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+.oa-comp .comp-head p {
+  max-width: 64ch;
+  margin: 8px 0 0;
+  color: var(--dust);
+}
+.oa-comp .comp-cap {
+  margin-top: 12px;
+  color: var(--dust);
+  font: 11px var(--mono);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.oa-comp .comp-cap code {
+  color: var(--teal);
+}
+.oa-comp .comp-block {
+  padding: 22px;
+}
+.oa-comp .comp-block + .comp-block {
+  border-top: 1px solid color-mix(in srgb, var(--grid), transparent 40%);
+}
+.oa-comp .blk-label {
+  display: block;
+  margin-bottom: 16px;
+  color: var(--dust);
+  font: 10px var(--mono);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+.oa-comp .state-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 22px;
+}
+.oa-comp .state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.oa-comp .state .cap {
+  color: var(--dust);
+  font: 10px var(--mono);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.oa-comp .btn {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: max-content;
+  gap: 8px;
+  min-height: 46px;
+  padding: 0 20px;
+  border: 1px solid transparent;
+  background: var(--alloy);
+  color: var(--bone);
+  font: 700 14px var(--mono);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.oa-comp .btn.pri,
+.oa-comp .btn.hoverlook {
+  background: var(--orange);
+  color: var(--ink);
+  box-shadow: 0 0 26px color-mix(in srgb, var(--orange), transparent 55%);
+}
+.oa-comp .btn.hoverlook::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  opacity: 0.28;
+  background: repeating-linear-gradient(0deg, transparent 0 2px, rgba(0, 0, 0, 0.5) 2px 3px);
+}
+.oa-comp .btn.sec {
+  background: var(--alloy);
+  border-color: var(--grid);
+  color: var(--bone);
+}
+.oa-comp .btn.gho {
+  background: none;
+  border-color: color-mix(in srgb, var(--teal), transparent 55%);
+  color: var(--teal);
+}
+.oa-comp .btn.dis {
+  background: var(--slate);
+  border-color: color-mix(in srgb, var(--grid), transparent 40%);
+  color: var(--grid);
+  box-shadow: none;
+  cursor: not-allowed;
+}
+.oa-comp .usage {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 18px;
+  align-items: start;
+}
+.oa-comp .code {
+  margin: 0;
+  overflow-x: auto;
+  border: 1px solid color-mix(in srgb, var(--grid), transparent 40%);
+  background: color-mix(in srgb, var(--orbit), #000 40%);
+}
+.oa-comp .code-bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 14px;
+  border-bottom: 1px solid color-mix(in srgb, var(--grid), transparent 55%);
+  background: var(--orbit);
+  color: var(--dust);
+  font: 10px var(--mono);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.oa-comp .code-bar .dot {
+  width: 9px;
+  height: 9px;
+  border: 1px solid var(--grid);
+}
+.oa-comp .code-bar .dot.o {
+  border-color: var(--orange);
+  background: var(--orange);
+}
+.oa-comp .code pre {
+  margin: 0;
+  padding: 16px 18px;
+  color: var(--bone);
+  font: 13px/1.7 var(--mono);
+  white-space: pre;
+}
+.oa-comp .code .p {
+  color: var(--teal);
+}
+.oa-comp .code .a {
+  color: var(--gold);
+}
+.oa-comp .code .s {
+  color: var(--signal);
+}
+.oa-comp .code .c {
+  color: var(--dust);
+  opacity: 0.75;
+}
+.oa-comp .code .tk {
+  color: var(--orange);
+}
+.oa-comp .consumes {
+  padding: 16px 18px;
+  border: 1px solid color-mix(in srgb, var(--grid), transparent 40%);
+  background: var(--orbit);
+}
+.oa-comp .consumes h4 {
+  margin: 0 0 12px;
+  color: var(--dust);
+  font: 10px var(--mono);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+.oa-comp .consumes ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font: 12px/1.5 var(--mono);
+}
+.oa-comp .consumes li {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 7px 0;
+  border-bottom: 1px solid color-mix(in srgb, var(--grid), transparent 55%);
+}
+.oa-comp .consumes li:last-child {
+  border-bottom: 0;
+}
+.oa-comp .consumes .tok {
+  color: var(--teal);
+}
+.oa-comp .consumes .role {
+  color: var(--dust);
+  text-align: right;
+}
+.oa-comp .dodont {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+.oa-comp .guide-panel {
+  padding: 16px 18px;
+  border: 1px solid var(--c);
+  border-left-width: 3px;
+  background: color-mix(in srgb, var(--c), transparent 93%);
+}
+.oa-comp .guide-panel.do {
+  --c: var(--signal);
+}
+.oa-comp .guide-panel.dont {
+  --c: var(--fault);
+}
+.oa-comp .guide-panel h4 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 8px;
+  color: var(--c);
+  font: 700 12px var(--mono);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.oa-comp .guide-panel p {
+  margin: 0;
+  color: var(--bone);
+  font-size: 14px;
+}
+.oa-comp .guide-panel .demo {
+  margin-bottom: 12px;
+}
+.oa-comp .comp {
+  margin-bottom: 26px;
+}
+@media (max-width: 960px) {
+  .oa-comp .usage {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 860px) {
+  .oa-comp .dodont {
+    grid-template-columns: 1fr;
+  }
+}
