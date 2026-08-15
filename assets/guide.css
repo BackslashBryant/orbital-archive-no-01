@@ -161,128 +161,6 @@ select {
   background: var(--slate);
   outline: none;
 }
-.hero {
-  position: relative;
-  isolation: isolate;
-  min-height: 78vh;
-  display: grid;
-  align-content: space-between;
-  gap: 40px;
-  padding: clamp(44px, 7vw, 108px) clamp(20px, 5vw, 72px) 52px;
-  overflow: hidden;
-  background: var(--orbit);
-  background-image:
-    repeating-linear-gradient(0deg, rgba(0, 0, 0, 0.28) 0 1px, transparent 1px 3px),
-    radial-gradient(135% 105% at 50% 42%, transparent 52%, rgba(6, 10, 13, 0.6) 100%),
-    linear-gradient(color-mix(in srgb, var(--teal), transparent 94%) 1px, transparent 1px),
-    linear-gradient(90deg, color-mix(in srgb, var(--teal), transparent 94%) 1px, transparent 1px);
-  background-size:
-    auto,
-    cover,
-    24px 24px,
-    24px 24px;
-  background-blend-mode: multiply, normal, normal, normal;
-  border-bottom: 1px solid var(--grid);
-}
-.hero h1 {
-  text-shadow: 0 0 30px color-mix(in srgb, var(--teal), transparent 84%);
-}
-.hero::before {
-  content: "";
-  position: absolute;
-  z-index: -2;
-  width: min(100vw, 1180px);
-  aspect-ratio: 1;
-  right: -22%;
-  bottom: -92%;
-  border: 1px solid color-mix(in srgb, var(--teal), transparent 38%);
-  border-radius: 50%;
-  box-shadow:
-    0 0 0 80px color-mix(in srgb, var(--grid), transparent 78%),
-    0 0 0 205px color-mix(in srgb, var(--gold), transparent 88%),
-    0 0 0 360px color-mix(in srgb, var(--grid), transparent 90%);
-}
-.hero::after {
-  display: none;
-}
-.hero-grid {
-  display: grid;
-  gap: 28px;
-  grid-template-columns: minmax(0, 1.45fr) minmax(260px, 0.55fr);
-  align-items: end;
-}
-.eyebrow {
-  color: var(--teal);
-  font: 12px var(--mono);
-  text-transform: uppercase;
-  letter-spacing: 0.28em;
-}
-h1 {
-  max-width: 1050px;
-  margin: 14px 0 0;
-  font: 700 clamp(60px, 8.6vw, 132px)/0.8 var(--display);
-  letter-spacing: -0.035em;
-  text-transform: uppercase;
-  text-wrap: balance;
-}
-h1 .signal-word {
-  color: var(--orange);
-  text-shadow: 0 0 52px color-mix(in srgb, var(--orange), transparent 76%);
-}
-@supports ((-webkit-background-clip: text) or (background-clip: text)) {
-  h1 .signal-word {
-    color: transparent;
-    background-image: repeating-linear-gradient(
-      0deg,
-      var(--orange) 0 2px,
-      color-mix(in srgb, var(--orange), transparent 58%) 2px 4px
-    );
-    -webkit-background-clip: text;
-    background-clip: text;
-  }
-}
-.lede {
-  max-width: 560px;
-  margin: 0;
-  color: var(--dust);
-  font-size: 16px;
-}
-.meta {
-  display: grid;
-  gap: 10px;
-  align-self: end;
-  padding: 18px;
-  border: 1px solid color-mix(in srgb, var(--gold), transparent 40%);
-  font: 12px var(--mono);
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-}
-.meta div {
-  display: flex;
-  justify-content: space-between;
-  gap: 20px;
-}
-.meta span {
-  color: var(--dust);
-}
-.meta strong {
-  color: var(--gold);
-  font-weight: 500;
-}
-.motto {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px 34px;
-  padding-top: 16px;
-  border-top: 1px solid var(--grid);
-  color: var(--dust);
-  font: 12px var(--mono);
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-}
-.motto strong {
-  color: var(--gold);
-}
 main {
   max-width: 1540px;
   margin: auto;
@@ -1342,56 +1220,7 @@ footer {
   outline: 2px solid var(--teal);
   outline-offset: 3px;
 }
-/* v1.8.0 safe-corridor flight architecture and application atlas */
-.hero-grid,
-.hero > .lede,
-.hero > .motto {
-  position: relative;
-  z-index: 2;
-}
-.hero .meta {
-  position: relative;
-  background: color-mix(in srgb, var(--orbit), transparent 8%);
-  backdrop-filter: blur(8px);
-}
-.hero-flightplan {
-  position: absolute;
-  left: 55%;
-  right: -5%;
-  bottom: -1%;
-  z-index: 1;
-  width: 50%;
-  height: 78%;
-  pointer-events: none;
-  opacity: 0.92;
-}
-.hero-flightplan .construction {
-  stroke: var(--grid);
-  opacity: 0.3;
-}
-.hero-flightplan .primary-path {
-  stroke: var(--teal);
-  opacity: 0.88;
-}
-.hero-flightplan .projected-path {
-  stroke: var(--gold);
-  opacity: 0.74;
-}
-.hero-flightplan .editorial-path {
-  stroke: var(--orange);
-  opacity: 0.66;
-}
-.hero-flightplan .datum {
-  stroke: var(--dust);
-  opacity: 0.38;
-}
-.hero-flightplan .node {
-  fill: var(--orbit);
-  stroke: var(--teal);
-}
-.hero-flightplan .priority-node {
-  fill: var(--gold);
-}
+/* v1.8.0 application atlas */
 .application-atlas {
   display: grid;
   grid-template-columns: repeat(12, minmax(0, 1fr));
@@ -1626,7 +1455,6 @@ footer {
   .topbar nav::-webkit-scrollbar {
     display: none;
   }
-  .hero-grid,
   .asset-grid,
   .type-grid {
     grid-template-columns: 1fr;
@@ -1673,12 +1501,6 @@ footer {
   .icons {
     grid-template-columns: repeat(2, 1fr);
   }
-  .hero {
-    padding-top: 55px;
-  }
-  h1 {
-    font-size: 58px;
-  }
   .frame {
     inset: 6px;
   }
@@ -1715,11 +1537,6 @@ footer {
   .application-card.span-12 {
     grid-column: span 12;
   }
-  .hero-flightplan {
-    left: 61%;
-    width: 48%;
-    opacity: 0.72;
-  }
 }
 @media (max-width: 620px) {
   .application-card,
@@ -1741,9 +1558,6 @@ footer {
   .atlas-launch {
     align-items: flex-start;
     flex-direction: column;
-  }
-  .hero-flightplan {
-    display: none;
   }
 }
 @media (prefers-reduced-motion: reduce) {
@@ -2553,4 +2367,164 @@ footer {
   .oa-comp .dodont {
     grid-template-columns: 1fr;
   }
+}
+
+/* ==== COMPONENT DOC — form + status control demos (namespaced under .oa-comp) ==== */
+/* Input / text field */
+.oa-comp .fld {
+  width: 172px;
+  min-height: 44px;
+  padding: 0 12px;
+  border: 1px solid var(--grid);
+  background: var(--slate);
+  color: var(--bone);
+  font: 13px var(--mono);
+}
+.oa-comp .fld::placeholder {
+  color: var(--dust);
+  opacity: 0.7;
+}
+.oa-comp .fld:hover:not(:disabled):not([readonly]),
+.oa-comp .fld.is-hover {
+  border-color: var(--dust);
+}
+.oa-comp .fld:focus,
+.oa-comp .fld.is-focus {
+  border-color: var(--teal);
+  outline: none;
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--teal), transparent 72%);
+}
+.oa-comp .fld.is-invalid {
+  border-color: var(--fault);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--fault), transparent 78%);
+}
+.oa-comp .fld:disabled {
+  border-color: color-mix(in srgb, var(--grid), transparent 45%);
+  color: var(--grid);
+  cursor: not-allowed;
+}
+.oa-comp .fld[readonly] {
+  border-style: dashed;
+  background: color-mix(in srgb, var(--slate), var(--orbit) 45%);
+  color: var(--dust);
+}
+/* Select */
+.oa-comp .sel-wrap {
+  position: relative;
+  display: inline-block;
+}
+.oa-comp .sel-wrap::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 13px;
+  width: 7px;
+  height: 7px;
+  margin-top: -5px;
+  border-right: 1.5px solid var(--dust);
+  border-bottom: 1.5px solid var(--dust);
+  transform: rotate(45deg);
+  pointer-events: none;
+}
+.oa-comp .sel {
+  appearance: none;
+  width: 172px;
+  min-height: 44px;
+  padding: 0 34px 0 12px;
+  border: 1px solid var(--grid);
+  background: var(--slate);
+  color: var(--bone);
+  font: 13px var(--mono);
+}
+.oa-comp .sel:hover,
+.oa-comp .sel.is-hover {
+  border-color: var(--dust);
+}
+.oa-comp .sel:focus,
+.oa-comp .sel.is-focus {
+  border-color: var(--teal);
+  outline: none;
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--teal), transparent 72%);
+}
+.oa-comp .sel.is-selected {
+  border-color: color-mix(in srgb, var(--teal), transparent 42%);
+}
+.oa-comp .sel.is-invalid {
+  border-color: var(--fault);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--fault), transparent 78%);
+}
+.oa-comp .sel:disabled {
+  border-color: color-mix(in srgb, var(--grid), transparent 45%);
+  color: var(--grid);
+  cursor: not-allowed;
+}
+/* Toggle — static state replicas (interactive on/off reuse .oa-toggle) */
+.oa-comp .tgl {
+  display: inline-block;
+  width: 50px;
+  height: 28px;
+  padding: 3px;
+  border-radius: 20px;
+  background: var(--grid);
+}
+.oa-comp .tgl > i {
+  display: block;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--bone);
+}
+.oa-comp .tgl.on {
+  background: var(--teal);
+}
+.oa-comp .tgl.on > i {
+  margin-left: 22px;
+}
+.oa-comp .tgl.is-hover {
+  background: color-mix(in srgb, var(--grid), var(--bone) 16%);
+}
+.oa-comp .tgl.is-focus {
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--teal), transparent 70%);
+}
+.oa-comp .tgl.is-disabled {
+  opacity: 0.4;
+}
+/* Status chip severities */
+.oa-comp .chip.neutral,
+.oa-comp .chip.info,
+.oa-comp .chip.success,
+.oa-comp .chip.warning,
+.oa-comp .chip.error,
+.oa-comp .chip.standby {
+  background: none;
+}
+.oa-comp .chip.neutral {
+  color: var(--dust);
+}
+.oa-comp .chip.info {
+  color: var(--teal);
+}
+.oa-comp .chip.success {
+  color: var(--signal);
+}
+.oa-comp .chip.warning {
+  color: var(--rust);
+}
+.oa-comp .chip.error {
+  color: var(--fault);
+}
+.oa-comp .chip.standby {
+  color: var(--gold);
+}
+/* Segmented + tabs live demos inside comp blocks */
+.oa-comp .segmented {
+  width: min(360px, 100%);
+}
+.oa-comp .tabs-demo span:hover:not(.active):not(.dis) {
+  color: var(--bone);
+}
+.oa-comp .tabs-demo span.dis {
+  color: var(--grid);
+  cursor: not-allowed;
+  pointer-events: none;
 }
