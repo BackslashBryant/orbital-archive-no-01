@@ -12,24 +12,45 @@
 <body>
 <a class="skip" href="#main">Skip to content</a><div class="frame" aria-hidden="true"></div>
 <header class="topbar"><a class="brand" href="#identity"><svg class="brand-mark" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M14.1 9.9 16.2 7.8"/><circle cx="12" cy="12" r="2.1" fill="currentColor" stroke="none"/><circle cx="18" cy="6" r="1.9" fill="currentColor" stroke="none"/></svg> Orbital Archive / 01</a><nav aria-label="Section navigation"><a href="preview.html">v1.8 Preview</a><a href="#identity">Overview</a><a href="#foundations">Foundations</a><a href="#depth-model">Depth</a><a href="#page-anatomy">Layout</a><a href="#implementations">Examples</a><a href="#components">Components</a><a href="#iconography">Icons</a><a href="#governance">Governance</a></nav></header>
-<section class="hero" id="identity">
-  <svg class="hero-flightplan" viewBox="0 0 760 520" fill="none" aria-hidden="true">
-    <g stroke-linecap="round">
-      <path class="construction" d="M22 486C154 170 390 58 748 150"/>
-      <path class="primary-path" d="M96 514C246 258 458 186 754 246" stroke-width="1.5"/>
-      <path class="projected-path" d="M184 526C340 350 524 316 742 354" stroke-width="1.2" stroke-dasharray="8 10"/>
-      <path class="editorial-path" d="M414 484C526 398 626 386 748 405" stroke-width="1.5"/>
-      <path class="construction" d="M12 510L690 392"/>
-      <path class="datum" d="M510 98h132M576 32v132"/><circle class="datum" cx="576" cy="98" r="34"/>
-      <path class="datum" d="M396 302v128M386 302h20M386 430h20"/>
-    </g>
-    <g class="node" stroke-width="1.5"><circle cx="396" cy="302" r="5"/><circle cx="648" cy="335" r="5"/></g>
-    <circle class="priority-node" cx="576" cy="98" r="4"/>
-    <circle cx="714" cy="397" r="5" fill="var(--orange)"/>
+<section class="oa-signal" id="identity">
+  <svg class="oa-arcs" viewBox="0 0 1200 620" preserveAspectRatio="xMidYMid slice" fill="none" aria-hidden="true">
+    <path d="M-60 590C300 210 760 150 1320 300" stroke="var(--teal)" stroke-opacity=".14" stroke-width="1.25"/>
+    <path d="M-60 640C360 330 820 300 1320 420" stroke="var(--gold)" stroke-opacity=".10" stroke-width="1" stroke-dasharray="9 11"/>
+    <path d="M840 120h150M915 45v150" stroke="var(--teal)" stroke-opacity=".12" stroke-width="1"/>
+    <circle cx="915" cy="120" r="30" stroke="var(--teal)" stroke-opacity=".12" stroke-width="1"/>
   </svg>
-  <div class="hero-grid"><div><p class="eyebrow">Lunar Signal Modernism / Theme 01</p><h1>Orbital Archive<br><span class="signal-word">No. 01</span></h1></div><div class="meta"><div><span>Archive ref</span><strong>OA-1.8.0</strong></div><div><span>Native icons</span><strong>161</strong></div><div><span>Contracts</span><strong>49</strong></div><div><span>Status</span><strong>Nominal</strong></div></div></div>
-  <p class="lede">The first Lunar Signal Modernism theme: cinematic at entry, calm in operation, and exact at systems depth. Photo-free aerospace atmosphere is built from horizons, plotted trajectories, calibration marks, controlled typography, and restrained archival texture.</p>
-  <div class="motto"><strong>Calm</strong><span>Exact</span><span>Concise</span><span>Forward-looking</span><span>Every element must earn its position.</span></div>
+  <div>
+    <p class="eyebrow">Lunar Signal Modernism · Theme 01<span class="cur"></span></p>
+    <h1>From <span class="px">signal</span><br>to systems.</h1>
+    <p class="lede">A stack-neutral aerospace design system in plain HTML and CSS — design tokens, 49 component contracts, 161 native icons, and 13 responsive applications. Cinematic at entry, calm in operation, exact at systems depth.</p>
+    <div class="actions">
+      <a class="btn pri" href="examples/index.html">Browse applications →</a>
+      <a class="btn gho" href="#components">Jump to components</a>
+    </div>
+    <div class="badges">
+      <span class="badge t">8 Exports</span>
+      <span class="badge o">49 Contracts</span>
+      <span class="badge g">161 Icons</span>
+      <span class="badge s">9 Patterns</span>
+    </div>
+  </div>
+  <div class="figure">
+    <svg viewBox="0 0 380 260" aria-hidden="true">
+      <g stroke="var(--grid)" stroke-opacity=".25"><path d="M0 60h380M0 120h380M0 180h380M0 240h380"/></g>
+      <path d="M40 220 118 168 196 186 274 104 340 128" fill="none" stroke="var(--orange)" stroke-width="1.3" stroke-dasharray="8 9" opacity=".72"/>
+      <path d="M40 212 118 160 196 178 274 96 340 120" fill="none" stroke="var(--teal)" stroke-width="2"/>
+      <g fill="var(--orbit)" stroke="var(--teal)" stroke-width="2"><circle cx="40" cy="212" r="5"/><circle cx="118" cy="160" r="5"/><circle cx="196" cy="178" r="5"/><circle cx="274" cy="96" r="5"/></g>
+      <circle cx="340" cy="120" r="5" fill="var(--orange)"/>
+      <g fill="none" stroke="var(--orange)" stroke-width="1.4"><path d="M258 80h-12v12M290 80h12v12M258 112h-12v-12M290 112h12v-12"/></g>
+      <text x="150" y="52" fill="var(--dust)" font-family="'IBM Plex Mono',monospace" font-size="10">CURRENT VECTOR / 72%</text>
+    </svg>
+    <div class="readnote">
+      <div><span>Archive</span><b>OA-1.8.0</b></div>
+      <div><span>Primary</span><b>#CB7248</b></div>
+      <div><span>Active</span><b>#5CA3A6</b></div>
+      <div><span>Coverage</span><b>98</b></div>
+    </div>
+  </div>
 </section>
 <main id="main">
 <section id="principles"><div class="section-head"><span class="number">01</span><h2>Design principles</h2><p>Function before ornament. Signal over noise. Accent with intent. Structure creates calm.</p><p class="token-ref">TOKENS · <code>--lsm-font-display</code> · <code>--lsm-color-palette-teal</code> · <code>--lsm-space-6</code></p></div><div class="grid principles"><article class="principle"><b>P.01</b><h3>Clarity</h3><p>Make orientation, state, and next action legible before expression.</p></article><article class="principle"><b>P.02</b><h3>Precision</h3><p>Use exact labels, stable alignment, and deliberate state language.</p></article><article class="principle"><b>P.03</b><h3>Restraint</h3><p>Accent only where it carries hierarchy or meaning.</p></article><article class="principle"><b>P.04</b><h3>Optimism</h3><p>Technical systems should feel capable and understandable.</p></article></div></section>

@@ -20,6 +20,8 @@
   --display: var(--lsm-font-display, "Oswald", "Arial Narrow", "Roboto Condensed", sans-serif);
   --sans: var(--lsm-font-sans, Inter, ui-sans-serif, system-ui, sans-serif);
   --mono: var(--lsm-font-mono, "IBM Plex Mono", "SFMono-Regular", Consolas, monospace);
+  --pix: "Silkscreen", "IBM Plex Mono", monospace;
+  --ink: var(--lsm-color-semantic-primary-foreground, #11181e);
 }
 * {
   box-sizing: border-box;
@@ -1787,4 +1789,221 @@ footer {
 .btn:not(.secondary):not(.danger):hover::after {
   animation: oa-scan 0.5s linear infinite;
   opacity: 0.28;
+}
+
+/* ======== SIGNAL HERO — demonstrative, namespaced under .oa-signal ======== */
+.oa-signal {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 44px;
+  align-items: center;
+  padding: clamp(40px, 6vw, 92px) clamp(22px, 5vw, 72px);
+  border-bottom: 1px solid var(--grid);
+  background:
+    linear-gradient(color-mix(in srgb, var(--teal), transparent 93%) 1px, transparent 1px),
+    linear-gradient(90deg, color-mix(in srgb, var(--teal), transparent 93%) 1px, transparent 1px),
+    var(--orbit);
+  background-size:
+    28px 28px,
+    28px 28px,
+    auto;
+}
+.oa-signal .oa-arcs {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+.oa-signal::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0.28;
+  background: repeating-linear-gradient(0deg, rgba(0, 0, 0, 0.22) 0 1px, transparent 1px 3px);
+  mix-blend-mode: multiply;
+}
+.oa-signal .eyebrow {
+  display: flex;
+  align-items: center;
+  margin: 0 0 18px;
+  color: var(--teal);
+  font: 12px var(--mono);
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+.oa-signal .eyebrow .cur {
+  display: inline-block;
+  width: 0.5em;
+  height: 1em;
+  margin-left: 0.35em;
+  background: var(--teal);
+  animation: oa-blink 1.05s steps(1) infinite;
+}
+@keyframes oa-blink {
+  50% {
+    opacity: 0;
+  }
+}
+.oa-signal h1 {
+  max-width: none;
+  margin: 0 0 20px;
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: clamp(46px, 7vw, 92px);
+  line-height: 0.9;
+  letter-spacing: 0.005em;
+  text-transform: uppercase;
+  text-wrap: balance;
+}
+.oa-signal h1 .px {
+  color: var(--orange);
+}
+@supports ((-webkit-background-clip: text) or (background-clip: text)) {
+  .oa-signal h1 .px {
+    color: transparent;
+    background-image: repeating-linear-gradient(
+      0deg,
+      var(--orange) 0 2px,
+      color-mix(in srgb, var(--orange), transparent 55%) 2px 4px
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+  }
+}
+.oa-signal .lede {
+  max-width: 54ch;
+  margin: 0 0 28px;
+  color: var(--dust);
+  font-size: 16px;
+}
+.oa-signal .actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 26px;
+}
+.oa-signal .badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.oa-signal .badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 12px;
+  border: 1px solid var(--c);
+  color: var(--c);
+  font-family: var(--pix);
+  font-size: 12px;
+  letter-spacing: 0.02em;
+}
+.oa-signal .badge.t {
+  --c: var(--teal);
+}
+.oa-signal .badge.o {
+  --c: var(--orange);
+}
+.oa-signal .badge.g {
+  --c: var(--gold);
+}
+.oa-signal .badge.s {
+  --c: var(--signal);
+}
+.oa-signal .figure {
+  position: relative;
+  width: 100%;
+  max-width: 420px;
+  margin-inline: auto;
+}
+.oa-signal .figure svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+.oa-signal .readnote {
+  position: relative;
+  max-width: 236px;
+  margin: 16px 0 0 auto;
+  padding: 12px 14px;
+  border: 1px solid color-mix(in srgb, var(--grid), transparent 30%);
+  background: color-mix(in srgb, var(--orbit), transparent 6%);
+  color: var(--dust);
+  font: 12px/1.85 var(--mono);
+  text-transform: uppercase;
+}
+.oa-signal .readnote div {
+  display: flex;
+  justify-content: space-between;
+  gap: 14px;
+}
+.oa-signal .readnote b {
+  color: var(--gold);
+}
+.oa-signal .btn {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 46px;
+  padding: 0 20px;
+  border: 1px solid transparent;
+  background: var(--alloy);
+  color: var(--bone);
+  font: 700 14px var(--mono);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+}
+.oa-signal .btn.pri {
+  background: var(--orange);
+  color: var(--ink);
+  box-shadow: 0 0 26px color-mix(in srgb, var(--orange), transparent 60%);
+}
+.oa-signal .btn.pri::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  opacity: 0;
+  pointer-events: none;
+  background: repeating-linear-gradient(0deg, transparent 0 2px, rgba(0, 0, 0, 0.5) 2px 3px);
+}
+.oa-signal .btn.pri:hover::after {
+  opacity: 0.28;
+  animation: oa-scan 0.5s linear infinite;
+}
+.oa-signal .btn.gho {
+  background: none;
+  border-color: color-mix(in srgb, var(--teal), transparent 55%);
+  color: var(--teal);
+}
+.oa-signal .btn.gho:hover {
+  background: color-mix(in srgb, var(--teal), transparent 88%);
+}
+@media (max-width: 860px) {
+  .oa-signal {
+    grid-template-columns: 1fr;
+  }
+  .oa-signal .figure {
+    max-width: 300px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .oa-signal .eyebrow .cur,
+  .oa-signal .btn.pri:hover::after {
+    animation: none;
+  }
 }

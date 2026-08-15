@@ -234,8 +234,8 @@ const preview = read("preview.html");
 if (!index.includes(`OA-${manifest.version}`)) fail("standalone guide archive ref is stale");
 if (index.includes("left:7%;right:-8%;bottom:23%"))
   fail("standalone guide still contains the copy-crossing hero rule");
-if (!index.includes("hero-flightplan"))
-  fail("standalone guide lacks the safe-corridor flight plan");
+if (!index.includes("oa-arcs"))
+  fail("standalone guide lacks the safe-corridor flight-plan geometry");
 if (!index.includes(`Orbital Archive No. 01 · ${manifest.version}`))
   fail("standalone guide footer version is stale");
 if (!index.includes(`${assetManifest.patterns.length} patterns`))
