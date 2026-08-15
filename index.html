@@ -11,7 +11,7 @@
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a><div class="frame" aria-hidden="true"></div>
-<header class="topbar"><a class="brand" href="#identity"><svg class="brand-mark" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M14.1 9.9 16.2 7.8"/><circle cx="12" cy="12" r="2.1" fill="currentColor" stroke="none"/><circle cx="18" cy="6" r="1.9" fill="currentColor" stroke="none"/></svg> Orbital Archive / 01</a><nav aria-label="Section navigation"><a href="preview.html">v1.8 Preview</a><a href="#identity">Overview</a><a href="#foundations">Foundations</a><a href="#depth-model">Depth</a><a href="#page-anatomy">Layout</a><a href="#implementations">Examples</a><a href="#components">Components</a><a href="#iconography">Icons</a><a href="#governance">Governance</a></nav></header>
+<header class="topbar"><a class="brand" href="#identity"><svg class="brand-mark" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M14.1 9.9 16.2 7.8"/><circle cx="12" cy="12" r="2.1" fill="currentColor" stroke="none"/><circle cx="18" cy="6" r="1.9" fill="currentColor" stroke="none"/></svg> Orbital Archive / 01</a><nav aria-label="Section navigation"><a href="preview.html">v1.8 Preview</a><a href="#identity">Overview</a><a href="#system-in-use">System</a><a href="#foundations">Foundations</a><a href="#depth-model">Depth</a><a href="#page-anatomy">Layout</a><a href="#implementations">Examples</a><a href="#components">Components</a><a href="#iconography">Icons</a><a href="#governance">Governance</a></nav></header>
 <section class="oa-signal" id="identity">
   <svg class="oa-arcs" viewBox="0 0 1200 620" preserveAspectRatio="xMidYMid slice" fill="none" aria-hidden="true">
     <path d="M-60 590C300 210 760 150 1320 300" stroke="var(--teal)" stroke-opacity=".14" stroke-width="1.25"/>
@@ -53,6 +53,7 @@
   </div>
 </section>
 <main id="main">
+<section id="system-in-use"><div class="section-head"><span class="number">00</span><h2>System in use</h2><p>Before the documentation, the system demonstrates itself — an unretouched Mission-depth workspace built entirely from the contracts and tokens on this page.</p><p class="token-ref">TOKENS · <code>--lsm-color-semantic-surface</code> · <code>--lsm-color-semantic-primary</code> · <code>--lsm-font-display</code></p></div><div class="oa-surface"><div class="appbar"><strong>Review workspace</strong><span class="tab on">Overview</span><span class="tab">Activity</span><span class="tab">Settings</span><button class="btn pri" type="button">New review</button></div><div class="work"><div class="tiles"><div class="tile"><div class="v"><span class="cnt" data-count="24">0</span></div><div class="k">Ready for review</div><div class="s">6 added today</div></div><div class="tile"><div class="v"><span class="cnt" data-count="7">0</span></div><div class="k">Priority items</div><div class="s">2 due this week</div></div><div class="tile"><div class="v"><span class="cnt" data-count="98">0</span>%</div><div class="k">Records complete</div><div class="s">Within target</div></div></div><div class="tbl-wrap"><table class="data"><thead><tr><th>Record</th><th>Owner</th><th>Updated</th><th>State</th></tr></thead><tbody><tr aria-selected="true"><td>Quarterly access review</td><td>M. Chen</td><td><code>4 min ago</code></td><td><span class="status pr">Priority</span></td></tr><tr><td>Vendor evidence packet</td><td>A. Rivera</td><td><code>22 min ago</code></td><td><span class="status ok">Nominal</span></td></tr><tr><td>Policy exception register</td><td>T. Singh</td><td><code>Yesterday</code></td><td><span class="status at">Attention</span></td></tr><tr><td>Control owner roster</td><td>J. Okafor</td><td><code>Aug 08</code></td><td><span class="status ok">Nominal</span></td></tr></tbody></table></div></div></div></section>
 <section id="principles"><div class="section-head"><span class="number">01</span><h2>Design principles</h2><p>Function before ornament. Signal over noise. Accent with intent. Structure creates calm.</p><p class="token-ref">TOKENS · <code>--lsm-font-display</code> · <code>--lsm-color-palette-teal</code> · <code>--lsm-space-6</code></p></div><div class="grid principles"><article class="principle"><b>P.01</b><h3>Clarity</h3><p>Make orientation, state, and next action legible before expression.</p></article><article class="principle"><b>P.02</b><h3>Precision</h3><p>Use exact labels, stable alignment, and deliberate state language.</p></article><article class="principle"><b>P.03</b><h3>Restraint</h3><p>Accent only where it carries hierarchy or meaning.</p></article><article class="principle"><b>P.04</b><h3>Optimism</h3><p>Technical systems should feel capable and understandable.</p></article></div></section>
 <section id="foundations"><div class="section-head"><span class="number">02</span><h2>Color & severity</h2><p>Calm Graphite is the operational default. Ignition Orange is a controlled editorial signal—not a status color. Fault Red remains reserved for error, critical, and destructive state.</p><p class="token-ref">TOKENS · <code>--lsm-color-palette-orange</code> · <code>--lsm-color-semantic-editorial-signal</code> · <code>--lsm-color-semantic-error</code> · <code>--lsm-color-semantic-warning</code></p></div><div class="grid palette">
   <article class="swatch-card">
@@ -144,6 +145,23 @@ async function buildIconCatalog(){const grid=document.getElementById('icon-grid'
 if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',buildIconCatalog);}else{buildIconCatalog();}
 document.querySelectorAll('.segmented, .tabs-demo').forEach(group=>{group.addEventListener('click',e=>{const t=e.target.closest('span');if(!t)return;group.querySelectorAll('span').forEach(s=>s.classList.remove('active'));t.classList.add('active')})});
 document.querySelectorAll('.oa-toggle').forEach(btn=>{btn.addEventListener('click',()=>{const on=btn.getAttribute('aria-checked')==='true';btn.setAttribute('aria-checked',String(!on));btn.style.background=on?'var(--grid)':'var(--teal)';btn.firstElementChild.style.marginLeft=on?'0':'22px'})});
+// System-in-use: count-up on scroll (skipped under reduced-motion) + tab affordance.
+(function(){
+  var rm=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var cnts=document.querySelectorAll('.oa-surface .cnt');
+  if(rm){cnts.forEach(function(el){el.textContent=el.dataset.count;});}
+  else{
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){
+      if(!e.isIntersecting)return;var el=e.target,t=+el.dataset.count,d=1100,s=performance.now();
+      (function step(n){var p=Math.min(1,(n-s)/d);el.textContent=Math.round(t*(1-Math.pow(1-p,3)));if(p<1)requestAnimationFrame(step);})(s);
+      io.unobserve(el);});},{threshold:.4});
+    cnts.forEach(function(el){io.observe(el);});
+  }
+  document.querySelectorAll('.oa-surface .appbar').forEach(function(bar){
+    bar.addEventListener('click',function(e){var t=e.target.closest('.tab');if(!t)return;
+      bar.querySelectorAll('.tab').forEach(function(s){s.classList.remove('on');});t.classList.add('on');});
+  });
+})();
 </script>
 </body>
 </html>
