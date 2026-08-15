@@ -2188,3 +2188,115 @@ footer {
     grid-template-columns: 1fr;
   }
 }
+
+/* ======== COLOR & SEVERITY — reference-grade, namespaced under .oa-color ======== */
+.oa-color .palette {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+.oa-color .swatch-card {
+  border: 1px solid color-mix(in srgb, var(--grid), transparent 40%);
+  background: var(--slate);
+}
+.oa-color .swatch {
+  position: relative;
+  height: 96px;
+  overflow: hidden;
+  background: var(--sw);
+}
+.oa-color .swatch::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.18;
+  background:
+    linear-gradient(color-mix(in srgb, var(--orbit), transparent 45%) 1px, transparent 1px),
+    linear-gradient(90deg, color-mix(in srgb, var(--orbit), transparent 45%) 1px, transparent 1px);
+  background-size:
+    16px 16px,
+    16px 16px;
+  mix-blend-mode: soft-light;
+}
+.oa-color .swatch-copy {
+  padding: 14px;
+}
+.oa-color .swatch-copy .top {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 10px;
+}
+.oa-color .swatch-copy strong {
+  font: 700 18px var(--display);
+  text-transform: uppercase;
+}
+.oa-color .swatch-copy code {
+  color: var(--dust);
+  font: 12px var(--mono);
+}
+.oa-color .swatch-copy .tok {
+  display: block;
+  margin-top: 6px;
+  color: var(--teal);
+  font: 10px var(--mono);
+  letter-spacing: 0.02em;
+  word-break: break-all;
+}
+.oa-color .swatch-copy .role {
+  display: block;
+  margin-top: 6px;
+  color: var(--dust);
+  font-size: 12px;
+  line-height: 1.45;
+}
+.oa-color .sev-head {
+  margin: 26px 0 12px;
+  color: var(--dust);
+  font: 11px var(--mono);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+.oa-color .severity {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+.oa-color .severity div {
+  padding: 15px;
+  color: var(--ink);
+}
+.oa-color .severity strong {
+  display: block;
+  font: 700 13px var(--sans);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.oa-color .severity span {
+  display: block;
+  margin-top: 5px;
+  font: 10px var(--mono);
+  letter-spacing: 0.02em;
+  opacity: 0.85;
+}
+.oa-color .severity .info {
+  background: var(--teal);
+}
+.oa-color .severity .success {
+  background: var(--signal);
+}
+.oa-color .severity .warning {
+  background: var(--rust);
+}
+.oa-color .severity .error {
+  background: var(--fault);
+}
+@media (max-width: 860px) {
+  .oa-color .palette {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .oa-color .severity {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
